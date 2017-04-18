@@ -11,15 +11,20 @@ import RealmSwift
 
 protocol LandingViewModelProtocol {
     func numberOfRecords() -> Int
-    func recordDataAtIndex(index: Int) -> (data: Any, date: String)?
-    func addNewRecord(text: String)
-    func updateRecord(atIndex index: Int)
+    func recordDataAtIndex(index: Int) -> (data: Any, date: Date)?
+    func addNewRecord()
+    func selectRecord(atIndex index: Int)
     func removeRecord(atIndex index: Int)
     var updateBlock: ((_ rowIndex: Int?) -> Void)? { get set }
 }
 
 class LandingController: UITableViewController {
     private var viewModel: LandingViewModelProtocol
+    private lazy var timer: Timer = { () -> Timer in
+        return Timer.init(timeInterval: 0.2, repeats: true, block: { [weak self] _ in
+            self?.refreshCells()
+        })
+    }()
     
     init(viewModel: LandingViewModelProtocol) {
         self.viewModel = viewModel
@@ -30,8 +35,13 @@ class LandingController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        self.timer.invalidate()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.title = "Clipboard manager"
         let addButton = UIBarButtonItem(barButtonSystemItem: .add,
                                         target: self,
@@ -40,17 +50,33 @@ class LandingController: UITableViewController {
         self.viewModel.updateBlock = { [weak self] rowIndex in
             self?.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
         }
+        
+        RunLoop.current.add(self.timer, forMode: .defaultRunLoopMode)
+        
+        self.tableView.register(TextTVCell.nib(), forCellReuseIdentifier: TextTVCell.reuseId())
+        self.tableView.register(ImageTVCell.nib(), forCellReuseIdentifier: ImageTVCell.reuseId())
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.tableView.reloadData()
     }
-
-    func didTapAddButton() {
-        if let newRecord = UIPasteboard.general.string {
-            self.viewModel.addNewRecord(text: newRecord)
+    
+    private func refreshCells() {
+        guard let visibleCells = self.tableView?.visibleCells else {
+            return
         }
+        for cell in visibleCells {
+            if cell is RefreshableTVCell {
+                (cell as? RefreshableTVCell)?.refresh()
+            }
+        }
+    }
+    
+    // MARK: - user interactions
+    
+    @objc private func didTapAddButton() {
+        self.viewModel.addNewRecord()
     }
 
     // MARK: - UITableViewDelegate
@@ -69,11 +95,21 @@ class LandingController: UITableViewController {
         if let selectedRowIndexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRow(at: selectedRowIndexPath, animated: true)
         }
-        self.viewModel.updateRecord(atIndex: indexPath.row)
+        self.viewModel.selectRecord(atIndex: indexPath.row)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
+        guard let recordData = self.viewModel.recordDataAtIndex(index: indexPath.row) else {
+            return 0
+        }
+        switch recordData.data {
+        case is String:
+            return TextTVCell.height()
+        case is UIImage:
+            return ImageTVCell.height()
+        default: break
+        }
+        return 0
     }
     
     // MARK: - UITableViewDataSource
@@ -83,24 +119,26 @@ class LandingController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let reuseId = "reuseId"
-        var cell = tableView.dequeueReusableCell(withIdentifier: reuseId)
-        if cell == nil {
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: reuseId)
-            cell?.textLabel?.numberOfLines = 4
-            cell?.clipsToBounds = true
+        guard let recordData = self.viewModel.recordDataAtIndex(index: indexPath.row) else {
+            return UITableViewCell()
         }
-        if let recordData = self.viewModel.recordDataAtIndex(index: indexPath.row) {
-            switch recordData.data {
-            case is String:
-                cell?.textLabel?.text = recordData.data as? String
-            case is UIImage:
-                cell?.textLabel?.text = "<Image>"
-            default:
-                cell?.textLabel?.text = nil
+        
+        switch recordData.data {
+        case is String:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextTVCell.reuseId()) as? TextTVCell else {
+                break
             }
-            cell?.detailTextLabel?.text = recordData.date
+            cell.setText(recordData.data as? String, date: recordData.date)
+            return cell
+            
+        case is UIImage:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ImageTVCell.reuseId()) as? ImageTVCell else {
+                break
+            }
+            cell.setImage(recordData.data as? UIImage, date: recordData.date)
+            return cell
+        default: break
         }
-        return cell!
+        return UITableViewCell()
     }
 }

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		8350D3771E97F7E000B20551 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350D3761E97F7E000B20551 /* Record.swift */; };
+		8378156D1EA696720030CD07 /* TextTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378156B1EA696720030CD07 /* TextTVCell.swift */; };
+		8378156E1EA696720030CD07 /* TextTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8378156C1EA696720030CD07 /* TextTVCell.xib */; };
+		837815711EA69E180030CD07 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
+		837815741EA6ACB50030CD07 /* ImageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815721EA6ACB50030CD07 /* ImageTVCell.swift */; };
+		837815751EA6ACB50030CD07 /* ImageTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 837815731EA6ACB50030CD07 /* ImageTVCell.xib */; };
+		837815771EA6B7D60030CD07 /* PasteboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815761EA6B7D60030CD07 /* PasteboardManager.swift */; };
 		8392E6D81E9A360200539037 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* LandingViewModel.swift */; };
 		839589321E95506400CC7045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839589301E95506400CC7045 /* Main.storyboard */; };
 		839589341E95506400CC7045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839589331E95506400CC7045 /* Assets.xcassets */; };
@@ -21,6 +27,12 @@
 		1019FDA793565443E08240A0 /* Pods_ClipboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47053F302B9296E81A8C7D75 /* Pods-ClipboardManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager.debug.xcconfig"; sourceTree = "<group>"; };
 		8350D3761E97F7E000B20551 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		8378156B1EA696720030CD07 /* TextTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTVCell.swift; sourceTree = "<group>"; };
+		8378156C1EA696720030CD07 /* TextTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTVCell.xib; sourceTree = "<group>"; };
+		837815701EA69E180030CD07 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		837815721EA6ACB50030CD07 /* ImageTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTVCell.swift; sourceTree = "<group>"; };
+		837815731EA6ACB50030CD07 /* ImageTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTVCell.xib; sourceTree = "<group>"; };
+		837815761EA6B7D60030CD07 /* PasteboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardManager.swift; sourceTree = "<group>"; };
 		8392E6D71E9A360200539037 /* LandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
 		839589291E95506400CC7045 /* ClipboardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipboardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839589311E95506400CC7045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +65,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8378156A1EA6962F0030CD07 /* TVCells */ = {
+			isa = PBXGroup;
+			children = (
+				837815721EA6ACB50030CD07 /* ImageTVCell.swift */,
+				837815731EA6ACB50030CD07 /* ImageTVCell.xib */,
+				8378156B1EA696720030CD07 /* TextTVCell.swift */,
+				8378156C1EA696720030CD07 /* TextTVCell.xib */,
+			);
+			name = TVCells;
+			sourceTree = "<group>";
+		};
+		8378156F1EA69DE70030CD07 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				837815761EA6B7D60030CD07 /* PasteboardManager.swift */,
+				837815701EA69E180030CD07 /* Protocols.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		8392E6D91E9A48F200539037 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +115,7 @@
 		8395892B1E95506400CC7045 /* ClipboardManager */ = {
 			isa = PBXGroup;
 			children = (
+				8378156F1EA69DE70030CD07 /* Misc */,
 				83A0C3F21E956542007A6C39 /* AppDelegate.swift */,
 				83A0C3F11E956503007A6C39 /* Models */,
 				83A0C3F01E9564EE007A6C39 /* Views */,
@@ -106,6 +139,7 @@
 		83A0C3F01E9564EE007A6C39 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8378156A1EA6962F0030CD07 /* TVCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +224,8 @@
 			files = (
 				839589371E95506400CC7045 /* LaunchScreen.storyboard in Resources */,
 				839589341E95506400CC7045 /* Assets.xcassets in Resources */,
+				837815751EA6ACB50030CD07 /* ImageTVCell.xib in Resources */,
+				8378156E1EA696720030CD07 /* TextTVCell.xib in Resources */,
 				839589321E95506400CC7045 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,7 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A0C3F31E956542007A6C39 /* AppDelegate.swift in Sources */,
+				8378156D1EA696720030CD07 /* TextTVCell.swift in Sources */,
+				837815771EA6B7D60030CD07 /* PasteboardManager.swift in Sources */,
 				83A0C3F51E9565B0007A6C39 /* LandingController.swift in Sources */,
+				837815741EA6ACB50030CD07 /* ImageTVCell.swift in Sources */,
+				837815711EA69E180030CD07 /* Protocols.swift in Sources */,
 				8392E6D81E9A360200539037 /* LandingViewModel.swift in Sources */,
 				8350D3771E97F7E000B20551 /* Record.swift in Sources */,
 			);
