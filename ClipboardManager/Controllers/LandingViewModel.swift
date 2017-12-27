@@ -23,7 +23,7 @@ class LandingViewModel: LandingViewModelProtocol {
     init(pasteboardManager: PasteboardManagerProtocol) {
         self.pasteboard = pasteboardManager
         self.notificationToken = realm.objects(Record.self)
-            .addNotificationBlock { [weak self] changes in
+            .observe { [weak self] changes in
                 self?.resetObjects()
                 self?.updateBlock?(nil)
         }
@@ -31,7 +31,7 @@ class LandingViewModel: LandingViewModelProtocol {
     }
     
     deinit {
-        self.notificationToken?.stop()
+        self.notificationToken?.invalidate()
     }
     
     private func resetObjects() {
@@ -56,11 +56,7 @@ class LandingViewModel: LandingViewModelProtocol {
             }
             
         } else {
-            let newRecord = Record()
-            newRecord.text = newText
-            try! realm.write {
-                realm.add(newRecord)
-            }
+            self.createNewRecord(text: newText)
         }
     }
     
@@ -78,11 +74,20 @@ class LandingViewModel: LandingViewModelProtocol {
             }
             
         } else {
-            let newRecord = Record()
+            self.createNewRecord(image: image)
+        }
+    }
+    
+    private func createNewRecord(text: String? = nil, image: UIImage? = nil) {
+        let newRecord = Record()
+        if let image = image {
             newRecord.image = UIImagePNGRepresentation(image)
-            try! realm.write {
-                realm.add(newRecord)
-            }
+        }
+        if let text = text {
+            newRecord.text = text
+        }
+        try! realm.write {
+            realm.add(newRecord)
         }
     }
     

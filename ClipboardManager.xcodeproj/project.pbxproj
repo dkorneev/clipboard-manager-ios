@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8330DBDA1F51A9F500B81CCD /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */; };
+		8330DBDD1F51A9F500B81CCD /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8330DBDC1F51A9F500B81CCD /* TodayViewController.swift */; };
+		8330DBE01F51A9F500B81CCD /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8330DBDE1F51A9F500B81CCD /* MainInterface.storyboard */; };
+		8330DBE41F51A9F500B81CCD /* QuickButtons.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8330DBD81F51A9F500B81CCD /* QuickButtons.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8350D3771E97F7E000B20551 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350D3761E97F7E000B20551 /* Record.swift */; };
 		8378156D1EA696720030CD07 /* TextTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378156B1EA696720030CD07 /* TextTVCell.swift */; };
 		8378156E1EA696720030CD07 /* TextTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8378156C1EA696720030CD07 /* TextTVCell.xib */; };
@@ -23,9 +27,38 @@
 		9F9738708B7D5FE4906423B4 /* Pods_ClipboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1019FDA793565443E08240A0 /* Pods_ClipboardManager.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8330DBE21F51A9F500B81CCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 839589211E95506400CC7045 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8330DBD71F51A9F500B81CCD;
+			remoteInfo = QuickButtons;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8330DBE81F51A9F500B81CCD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8330DBE41F51A9F500B81CCD /* QuickButtons.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1019FDA793565443E08240A0 /* Pods_ClipboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47053F302B9296E81A8C7D75 /* Pods-ClipboardManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager.debug.xcconfig"; sourceTree = "<group>"; };
+		8330DBD81F51A9F500B81CCD /* QuickButtons.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickButtons.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		8330DBDC1F51A9F500B81CCD /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		8330DBDF1F51A9F500B81CCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		8330DBE11F51A9F500B81CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8350D3761E97F7E000B20551 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		8378156B1EA696720030CD07 /* TextTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTVCell.swift; sourceTree = "<group>"; };
 		8378156C1EA696720030CD07 /* TextTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTVCell.xib; sourceTree = "<group>"; };
@@ -45,6 +78,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8330DBD51F51A9F500B81CCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8330DBDA1F51A9F500B81CCD /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		839589261E95506400CC7045 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +104,16 @@
 				C804B090E71E606DC40DF3E3 /* Pods-ClipboardManager.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8330DBDB1F51A9F500B81CCD /* QuickButtons */ = {
+			isa = PBXGroup;
+			children = (
+				8330DBDC1F51A9F500B81CCD /* TodayViewController.swift */,
+				8330DBDE1F51A9F500B81CCD /* MainInterface.storyboard */,
+				8330DBE11F51A9F500B81CCD /* Info.plist */,
+			);
+			path = QuickButtons;
 			sourceTree = "<group>";
 		};
 		8378156A1EA6962F0030CD07 /* TVCells */ = {
@@ -98,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				8395892B1E95506400CC7045 /* ClipboardManager */,
+				8330DBDB1F51A9F500B81CCD /* QuickButtons */,
 				8395892A1E95506400CC7045 /* Products */,
 				67EF01C3B8771BD0EF013EFA /* Pods */,
 				A0570DE890F291A61D30338C /* Frameworks */,
@@ -108,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				839589291E95506400CC7045 /* ClipboardManager.app */,
+				8330DBD81F51A9F500B81CCD /* QuickButtons.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				1019FDA793565443E08240A0 /* Pods_ClipboardManager.framework */,
+				8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,6 +217,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8330DBD71F51A9F500B81CCD /* QuickButtons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8330DBE71F51A9F500B81CCD /* Build configuration list for PBXNativeTarget "QuickButtons" */;
+			buildPhases = (
+				8330DBD41F51A9F500B81CCD /* Sources */,
+				8330DBD51F51A9F500B81CCD /* Frameworks */,
+				8330DBD61F51A9F500B81CCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickButtons;
+			productName = QuickButtons;
+			productReference = 8330DBD81F51A9F500B81CCD /* QuickButtons.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		839589281E95506400CC7045 /* ClipboardManager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8395893B1E95506400CC7045 /* Build configuration list for PBXNativeTarget "ClipboardManager" */;
@@ -173,10 +244,12 @@
 				839589271E95506400CC7045 /* Resources */,
 				9471DF412ADBAE1A44B3EE63 /* [CP] Embed Pods Frameworks */,
 				4FC166AA3B872523F25D1EBA /* [CP] Copy Pods Resources */,
+				8330DBE81F51A9F500B81CCD /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8330DBE31F51A9F500B81CCD /* PBXTargetDependency */,
 			);
 			name = ClipboardManager;
 			productName = ClipboardManager;
@@ -190,11 +263,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				TargetAttributes = {
+					8330DBD71F51A9F500B81CCD = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = X3U3JAN2WV;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
 					839589281E95506400CC7045 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = X3U3JAN2WV;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -213,11 +293,20 @@
 			projectRoot = "";
 			targets = (
 				839589281E95506400CC7045 /* ClipboardManager */,
+				8330DBD71F51A9F500B81CCD /* QuickButtons */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8330DBD61F51A9F500B81CCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8330DBE01F51A9F500B81CCD /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		839589271E95506400CC7045 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,13 +328,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClipboardManager-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4FC166AA3B872523F25D1EBA /* [CP] Copy Pods Resources */ = {
@@ -269,9 +361,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -281,6 +380,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8330DBD41F51A9F500B81CCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8330DBDD1F51A9F500B81CCD /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		839589251E95506400CC7045 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,7 +405,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8330DBE31F51A9F500B81CCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8330DBD71F51A9F500B81CCD /* QuickButtons */;
+			targetProxy = 8330DBE21F51A9F500B81CCD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		8330DBDE1F51A9F500B81CCD /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8330DBDF1F51A9F500B81CCD /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		839589301E95506400CC7045 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -318,6 +441,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8330DBE51F51A9F500B81CCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = X3U3JAN2WV;
+				INFOPLIST_FILE = QuickButtons/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.denis.korneev.ClipboardManager.QuickButtons;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		8330DBE61F51A9F500B81CCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = X3U3JAN2WV;
+				INFOPLIST_FILE = QuickButtons/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.denis.korneev.ClipboardManager.QuickButtons;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		839589391E95506400CC7045 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -328,7 +479,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -336,7 +489,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -378,7 +535,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -386,7 +545,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -415,13 +578,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47053F302B9296E81A8C7D75 /* Pods-ClipboardManager.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X3U3JAN2WV;
 				INFOPLIST_FILE = ClipboardManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.denis.korneev.ClipboardManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -429,19 +594,30 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C804B090E71E606DC40DF3E3 /* Pods-ClipboardManager.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X3U3JAN2WV;
 				INFOPLIST_FILE = ClipboardManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.denis.korneev.ClipboardManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8330DBE71F51A9F500B81CCD /* Build configuration list for PBXNativeTarget "QuickButtons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8330DBE51F51A9F500B81CCD /* Debug */,
+				8330DBE61F51A9F500B81CCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		839589241E95506400CC7045 /* Build configuration list for PBXProject "ClipboardManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

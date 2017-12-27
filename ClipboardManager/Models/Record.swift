@@ -9,8 +9,8 @@
 import RealmSwift
 
 class Record: Object {
-    dynamic var text: String? = nil
-    dynamic var image: Data? = nil
-    dynamic var created: Date = Date()
-    dynamic var updated: Date = Date()
+    @objc dynamic var text: String? = nil
+    @objc dynamic var image: Data? = nil
+    @objc dynamic var created: Date = Date()
+    @objc dynamic var updated: Date = Date()
 }

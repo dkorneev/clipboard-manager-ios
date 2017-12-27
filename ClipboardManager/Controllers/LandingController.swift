@@ -53,6 +53,8 @@ class LandingController: UITableViewController {
         
         RunLoop.current.add(self.timer, forMode: .defaultRunLoopMode)
         
+        self.tableView.alwaysBounceVertical = false
+        self.tableView.tableFooterView = UIView()
         self.tableView.register(TextTVCell.nib(), forCellReuseIdentifier: TextTVCell.reuseId())
         self.tableView.register(ImageTVCell.nib(), forCellReuseIdentifier: ImageTVCell.reuseId())
     }
