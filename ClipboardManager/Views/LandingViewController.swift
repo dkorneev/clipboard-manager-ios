@@ -1,5 +1,5 @@
 //
-//  LandingController.swift
+//  LandingViewController.swift
 //  ClipboardManager
 //
 //  Created by Denis Korneev on 05/04/2017.
@@ -18,7 +18,7 @@ protocol LandingViewModelProtocol {
     var updateBlock: ((_ rowIndex: Int?) -> Void)? { get set }
 }
 
-class LandingController: UITableViewController {
+class LandingViewController: UITableViewController {
     private var viewModel: LandingViewModelProtocol
     private lazy var timer: Timer = { () -> Timer in
         return Timer.init(timeInterval: 0.2, repeats: true, block: { [weak self] _ in

@@ -23,7 +23,7 @@
 		839589341E95506400CC7045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839589331E95506400CC7045 /* Assets.xcassets */; };
 		839589371E95506400CC7045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839589351E95506400CC7045 /* LaunchScreen.storyboard */; };
 		83A0C3F31E956542007A6C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F21E956542007A6C39 /* AppDelegate.swift */; };
-		83A0C3F51E9565B0007A6C39 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F41E9565B0007A6C39 /* LandingController.swift */; };
+		83A0C3F51E9565B0007A6C39 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F41E9565B0007A6C39 /* LandingViewController.swift */; };
 		9F9738708B7D5FE4906423B4 /* Pods_ClipboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1019FDA793565443E08240A0 /* Pods_ClipboardManager.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +73,7 @@
 		839589361E95506400CC7045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		839589381E95506400CC7045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83A0C3F21E956542007A6C39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		83A0C3F41E9565B0007A6C39 /* LandingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
+		83A0C3F41E9565B0007A6C39 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		C804B090E71E606DC40DF3E3 /* Pods-ClipboardManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,13 +136,12 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
-		8392E6D91E9A48F200539037 /* Landing */ = {
+		83936D5B1FF7F7C200554E39 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				8392E6D71E9A360200539037 /* LandingViewModel.swift */,
-				83A0C3F41E9565B0007A6C39 /* LandingController.swift */,
 			);
-			name = Landing;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		839589201E95506400CC7045 = {
@@ -168,11 +167,11 @@
 		8395892B1E95506400CC7045 /* ClipboardManager */ = {
 			isa = PBXGroup;
 			children = (
+				83936D5B1FF7F7C200554E39 /* ViewModels */,
 				8378156F1EA69DE70030CD07 /* Misc */,
 				83A0C3F21E956542007A6C39 /* AppDelegate.swift */,
 				83A0C3F11E956503007A6C39 /* Models */,
 				83A0C3F01E9564EE007A6C39 /* Views */,
-				83A0C3EF1E9564D5007A6C39 /* Controllers */,
 				839589301E95506400CC7045 /* Main.storyboard */,
 				839589331E95506400CC7045 /* Assets.xcassets */,
 				839589351E95506400CC7045 /* LaunchScreen.storyboard */,
@@ -181,17 +180,10 @@
 			path = ClipboardManager;
 			sourceTree = "<group>";
 		};
-		83A0C3EF1E9564D5007A6C39 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				8392E6D91E9A48F200539037 /* Landing */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		83A0C3F01E9564EE007A6C39 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				83A0C3F41E9565B0007A6C39 /* LandingViewController.swift */,
 				8378156A1EA6962F0030CD07 /* TVCells */,
 			);
 			path = Views;
@@ -395,7 +387,7 @@
 				83A0C3F31E956542007A6C39 /* AppDelegate.swift in Sources */,
 				8378156D1EA696720030CD07 /* TextTVCell.swift in Sources */,
 				837815771EA6B7D60030CD07 /* PasteboardManager.swift in Sources */,
-				83A0C3F51E9565B0007A6C39 /* LandingController.swift in Sources */,
+				83A0C3F51E9565B0007A6C39 /* LandingViewController.swift in Sources */,
 				837815741EA6ACB50030CD07 /* ImageTVCell.swift in Sources */,
 				837815711EA69E180030CD07 /* Protocols.swift in Sources */,
 				8392E6D81E9A360200539037 /* LandingViewModel.swift in Sources */,

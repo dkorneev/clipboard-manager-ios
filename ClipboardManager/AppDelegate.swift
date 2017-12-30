@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
         let viewModel = LandingViewModel(pasteboardManager: PasteboardManager())
-        let controller = LandingController(viewModel: viewModel)
+        let controller = LandingViewController(viewModel: viewModel)
         self.window?.rootViewController = UINavigationController.init(rootViewController: controller)
         return true
     }
