@@ -1,0 +1,6 @@
+framework module Pods_ClipboardManagerTests {
+  umbrella header "Pods-ClipboardManagerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

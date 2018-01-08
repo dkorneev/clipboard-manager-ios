@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832524E82003D7D2005AF677 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* LandingViewModel.swift */; };
+		8325388D2003ED980090DF96 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
 		8330DBDA1F51A9F500B81CCD /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */; };
 		8330DBDD1F51A9F500B81CCD /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8330DBDC1F51A9F500B81CCD /* TodayViewController.swift */; };
 		8330DBE01F51A9F500B81CCD /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8330DBDE1F51A9F500B81CCD /* MainInterface.storyboard */; };
@@ -18,12 +20,15 @@
 		837815741EA6ACB50030CD07 /* ImageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815721EA6ACB50030CD07 /* ImageTVCell.swift */; };
 		837815751EA6ACB50030CD07 /* ImageTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 837815731EA6ACB50030CD07 /* ImageTVCell.xib */; };
 		837815771EA6B7D60030CD07 /* PasteboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815761EA6B7D60030CD07 /* PasteboardManager.swift */; };
+		8380FC6D1FF8068D00BD3C46 /* RecordsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8380FC6C1FF8068D00BD3C46 /* RecordsProvider.swift */; };
 		8392E6D81E9A360200539037 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* LandingViewModel.swift */; };
+		83936D631FF7F90300554E39 /* LandingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83936D621FF7F90300554E39 /* LandingViewModelTests.swift */; };
 		839589321E95506400CC7045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839589301E95506400CC7045 /* Main.storyboard */; };
 		839589341E95506400CC7045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839589331E95506400CC7045 /* Assets.xcassets */; };
 		839589371E95506400CC7045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839589351E95506400CC7045 /* LaunchScreen.storyboard */; };
 		83A0C3F31E956542007A6C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F21E956542007A6C39 /* AppDelegate.swift */; };
 		83A0C3F51E9565B0007A6C39 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F41E9565B0007A6C39 /* LandingViewController.swift */; };
+		9B72EEDDFCAE58F001102BBA /* Pods_ClipboardManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 297335A480D32C4086CDABE8 /* Pods_ClipboardManagerTests.framework */; };
 		9F9738708B7D5FE4906423B4 /* Pods_ClipboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1019FDA793565443E08240A0 /* Pods_ClipboardManager.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +39,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8330DBD71F51A9F500B81CCD;
 			remoteInfo = QuickButtons;
+		};
+		83936D651FF7F90300554E39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 839589211E95506400CC7045 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 839589281E95506400CC7045;
+			remoteInfo = ClipboardManager;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		1019FDA793565443E08240A0 /* Pods_ClipboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		297335A480D32C4086CDABE8 /* Pods_ClipboardManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47053F302B9296E81A8C7D75 /* Pods-ClipboardManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager.debug.xcconfig"; sourceTree = "<group>"; };
 		8330DBD81F51A9F500B81CCD /* QuickButtons.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickButtons.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -66,7 +79,11 @@
 		837815721EA6ACB50030CD07 /* ImageTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTVCell.swift; sourceTree = "<group>"; };
 		837815731EA6ACB50030CD07 /* ImageTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTVCell.xib; sourceTree = "<group>"; };
 		837815761EA6B7D60030CD07 /* PasteboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardManager.swift; sourceTree = "<group>"; };
+		8380FC6C1FF8068D00BD3C46 /* RecordsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsProvider.swift; sourceTree = "<group>"; };
 		8392E6D71E9A360200539037 /* LandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
+		83936D601FF7F90300554E39 /* ClipboardManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipboardManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83936D621FF7F90300554E39 /* LandingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelTests.swift; sourceTree = "<group>"; };
+		83936D641FF7F90300554E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		839589291E95506400CC7045 /* ClipboardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipboardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839589311E95506400CC7045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		839589331E95506400CC7045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +91,8 @@
 		839589381E95506400CC7045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83A0C3F21E956542007A6C39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A0C3F41E9565B0007A6C39 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		A308983FAE914043FC143C49 /* Pods-ClipboardManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B60F9A52BF77A0FFAE7DC55E /* Pods-ClipboardManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		C804B090E71E606DC40DF3E3 /* Pods-ClipboardManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +102,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8330DBDA1F51A9F500B81CCD /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83936D5D1FF7F90300554E39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B72EEDDFCAE58F001102BBA /* Pods_ClipboardManagerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +129,8 @@
 			children = (
 				47053F302B9296E81A8C7D75 /* Pods-ClipboardManager.debug.xcconfig */,
 				C804B090E71E606DC40DF3E3 /* Pods-ClipboardManager.release.xcconfig */,
+				A308983FAE914043FC143C49 /* Pods-ClipboardManagerTests.debug.xcconfig */,
+				B60F9A52BF77A0FFAE7DC55E /* Pods-ClipboardManagerTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -130,6 +159,7 @@
 		8378156F1EA69DE70030CD07 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				8380FC6C1FF8068D00BD3C46 /* RecordsProvider.swift */,
 				837815761EA6B7D60030CD07 /* PasteboardManager.swift */,
 				837815701EA69E180030CD07 /* Protocols.swift */,
 			);
@@ -144,11 +174,21 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		83936D611FF7F90300554E39 /* ClipboardManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				83936D621FF7F90300554E39 /* LandingViewModelTests.swift */,
+				83936D641FF7F90300554E39 /* Info.plist */,
+			);
+			path = ClipboardManagerTests;
+			sourceTree = "<group>";
+		};
 		839589201E95506400CC7045 = {
 			isa = PBXGroup;
 			children = (
 				8395892B1E95506400CC7045 /* ClipboardManager */,
 				8330DBDB1F51A9F500B81CCD /* QuickButtons */,
+				83936D611FF7F90300554E39 /* ClipboardManagerTests */,
 				8395892A1E95506400CC7045 /* Products */,
 				67EF01C3B8771BD0EF013EFA /* Pods */,
 				A0570DE890F291A61D30338C /* Frameworks */,
@@ -160,6 +200,7 @@
 			children = (
 				839589291E95506400CC7045 /* ClipboardManager.app */,
 				8330DBD81F51A9F500B81CCD /* QuickButtons.appex */,
+				83936D601FF7F90300554E39 /* ClipboardManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,15 +208,15 @@
 		8395892B1E95506400CC7045 /* ClipboardManager */ = {
 			isa = PBXGroup;
 			children = (
-				83936D5B1FF7F7C200554E39 /* ViewModels */,
-				8378156F1EA69DE70030CD07 /* Misc */,
+				839589381E95506400CC7045 /* Info.plist */,
 				83A0C3F21E956542007A6C39 /* AppDelegate.swift */,
-				83A0C3F11E956503007A6C39 /* Models */,
-				83A0C3F01E9564EE007A6C39 /* Views */,
-				839589301E95506400CC7045 /* Main.storyboard */,
 				839589331E95506400CC7045 /* Assets.xcassets */,
 				839589351E95506400CC7045 /* LaunchScreen.storyboard */,
-				839589381E95506400CC7045 /* Info.plist */,
+				839589301E95506400CC7045 /* Main.storyboard */,
+				8378156F1EA69DE70030CD07 /* Misc */,
+				83A0C3F11E956503007A6C39 /* Models */,
+				83936D5B1FF7F7C200554E39 /* ViewModels */,
+				83A0C3F01E9564EE007A6C39 /* Views */,
 			);
 			path = ClipboardManager;
 			sourceTree = "<group>";
@@ -202,6 +243,7 @@
 			children = (
 				1019FDA793565443E08240A0 /* Pods_ClipboardManager.framework */,
 				8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */,
+				297335A480D32C4086CDABE8 /* Pods_ClipboardManagerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -225,6 +267,27 @@
 			productName = QuickButtons;
 			productReference = 8330DBD81F51A9F500B81CCD /* QuickButtons.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		83936D5F1FF7F90300554E39 /* ClipboardManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83936D671FF7F90400554E39 /* Build configuration list for PBXNativeTarget "ClipboardManagerTests" */;
+			buildPhases = (
+				D7831383A065DC9B622DF960 /* [CP] Check Pods Manifest.lock */,
+				83936D5C1FF7F90300554E39 /* Sources */,
+				83936D5D1FF7F90300554E39 /* Frameworks */,
+				83936D5E1FF7F90300554E39 /* Resources */,
+				205D501C12967011AE8BA143 /* [CP] Embed Pods Frameworks */,
+				AD95F6BDB0540C09C9BAED36 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83936D661FF7F90300554E39 /* PBXTargetDependency */,
+			);
+			name = ClipboardManagerTests;
+			productName = ClipboardManagerTests;
+			productReference = 83936D601FF7F90300554E39 /* ClipboardManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		839589281E95506400CC7045 /* ClipboardManager */ = {
 			isa = PBXNativeTarget;
@@ -254,7 +317,7 @@
 		839589211E95506400CC7045 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				TargetAttributes = {
 					8330DBD71F51A9F500B81CCD = {
@@ -262,6 +325,12 @@
 						DevelopmentTeam = X3U3JAN2WV;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+					};
+					83936D5F1FF7F90300554E39 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = X3U3JAN2WV;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 839589281E95506400CC7045;
 					};
 					839589281E95506400CC7045 = {
 						CreatedOnToolsVersion = 8.3;
@@ -286,6 +355,7 @@
 			targets = (
 				839589281E95506400CC7045 /* ClipboardManager */,
 				8330DBD71F51A9F500B81CCD /* QuickButtons */,
+				83936D5F1FF7F90300554E39 /* ClipboardManagerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,6 +366,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8330DBE01F51A9F500B81CCD /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83936D5E1FF7F90300554E39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +391,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		205D501C12967011AE8BA143 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2F05F1C3CC907DE91344D5B1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,6 +461,39 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AD95F6BDB0540C09C9BAED36 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7831383A065DC9B622DF960 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClipboardManagerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -380,10 +505,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83936D5C1FF7F90300554E39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8325388D2003ED980090DF96 /* Protocols.swift in Sources */,
+				832524E82003D7D2005AF677 /* LandingViewModel.swift in Sources */,
+				83936D631FF7F90300554E39 /* LandingViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		839589251E95506400CC7045 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8380FC6D1FF8068D00BD3C46 /* RecordsProvider.swift in Sources */,
 				83A0C3F31E956542007A6C39 /* AppDelegate.swift in Sources */,
 				8378156D1EA696720030CD07 /* TextTVCell.swift in Sources */,
 				837815771EA6B7D60030CD07 /* PasteboardManager.swift in Sources */,
@@ -402,6 +538,11 @@
 			isa = PBXTargetDependency;
 			target = 8330DBD71F51A9F500B81CCD /* QuickButtons */;
 			targetProxy = 8330DBE21F51A9F500B81CCD /* PBXContainerItemProxy */;
+		};
+		83936D661FF7F90300554E39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 839589281E95506400CC7045 /* ClipboardManager */;
+			targetProxy = 83936D651FF7F90300554E39 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -461,6 +602,50 @@
 			};
 			name = Release;
 		};
+		83936D681FF7F90400554E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A308983FAE914043FC143C49 /* Pods-ClipboardManagerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X3U3JAN2WV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ClipboardManagerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.deniskorneev.ClipboardManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClipboardManager.app/ClipboardManager";
+			};
+			name = Debug;
+		};
+		83936D691FF7F90400554E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B60F9A52BF77A0FFAE7DC55E /* Pods-ClipboardManagerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X3U3JAN2WV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ClipboardManagerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.deniskorneev.ClipboardManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClipboardManager.app/ClipboardManager";
+			};
+			name = Release;
+		};
 		839589391E95506400CC7045 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -508,7 +693,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -558,7 +743,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -570,7 +755,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47053F302B9296E81A8C7D75 /* Pods-ClipboardManager.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X3U3JAN2WV;
 				INFOPLIST_FILE = ClipboardManager/Info.plist;
@@ -586,7 +770,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C804B090E71E606DC40DF3E3 /* Pods-ClipboardManager.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X3U3JAN2WV;
 				INFOPLIST_FILE = ClipboardManager/Info.plist;
@@ -606,6 +789,15 @@
 			buildConfigurations = (
 				8330DBE51F51A9F500B81CCD /* Debug */,
 				8330DBE61F51A9F500B81CCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83936D671FF7F90400554E39 /* Build configuration list for PBXNativeTarget "ClipboardManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83936D681FF7F90400554E39 /* Debug */,
+				83936D691FF7F90400554E39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

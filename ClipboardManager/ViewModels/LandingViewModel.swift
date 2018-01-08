@@ -6,7 +6,6 @@
 //
 //
 
-import RealmSwift
 import DateToolsSwift
 
 protocol PasteboardManagerProtocol {
@@ -14,80 +13,75 @@ protocol PasteboardManagerProtocol {
     func setData(data: Any)
 }
 
+protocol RecordModel {
+    var text: String? { get set }
+    var image: Data? { get set }
+    var created: Date { get set }
+    var updated: Date { get set }
+}
+
+protocol RecordsProviderProtocol {
+    func getAllRecords() -> Array<RecordModel>
+    func updateRecord(_ record: RecordModel, updatedDate: Date)
+    func createRecord(withText: String)
+    func createRecord(withImageData: Data)
+    func deleteRecord(_ record: RecordModel)
+    func observeChanges(_ block: @escaping () -> Void)
+}
+
 class LandingViewModel: LandingViewModelProtocol {
-    private let realm = try! Realm()
-    private var notificationToken: NotificationToken? = nil
-    private var objects: Results<Record>? = nil
+    private var objects: Array<RecordModel> = []
     private let pasteboard: PasteboardManagerProtocol
+    private let recordsProvider: RecordsProviderProtocol
     
-    init(pasteboardManager: PasteboardManagerProtocol) {
+    init(pasteboardManager: PasteboardManagerProtocol,
+         recordsProvider: RecordsProviderProtocol)
+    {
         self.pasteboard = pasteboardManager
-        self.notificationToken = realm.objects(Record.self)
-            .observe { [weak self] changes in
-                self?.resetObjects()
-                self?.updateBlock?(nil)
+        self.recordsProvider = recordsProvider
+        self.recordsProvider.observeChanges { [weak self] in
+            self?.resetObjects()
+            self?.updateBlock?(nil)
         }
         self.resetObjects()
     }
     
-    deinit {
-        self.notificationToken?.invalidate()
-    }
-    
     private func resetObjects() {
-        self.objects = self.realm.objects(Record.self).sorted(byKeyPath: "updated", ascending: false)
+        self.objects = self.recordsProvider.getAllRecords()
     }
     
     private func addNewRecord(_ newRecord: Any) {
-        switch newRecord {
-        case is String:
-            self.addNewRecord(text: newRecord as! String)
-        case is UIImage:
-            self.addNewRecord(image: newRecord as! UIImage)
-        default:
-            return
+        if let newRecord = newRecord as? String {
+            self.addNewRecord(text: newRecord)
+            
+        } else if let newRecord = newRecord as? UIImage {
+            self.addNewRecord(image: newRecord)
         }
     }
     
     private func addNewRecord(text newText: String) {
-        if let record = objects?.first(where: { $0.text == newText }) {
-            try! realm.write {
-                record.updated = Date()
-            }
-            
+        if let record = objects.first(where: { $0.text == newText }) {
+            self.recordsProvider.updateRecord(record, updatedDate: Date())
+
         } else {
-            self.createNewRecord(text: newText)
+            self.recordsProvider.createRecord(withText: newText)
         }
     }
     
     private func addNewRecord(image: UIImage) {
-        if let record = objects?.first(where: { record in
+        let existingRecord = objects.first(where: { record in
             guard let existingImage = record.image,
                 let newImage = UIImagePNGRepresentation(image) else
             {
                 return false
             }
             return existingImage == newImage
-        }) {
-            try! realm.write {
-                record.updated = Date()
-            }
-            
-        } else {
-            self.createNewRecord(image: image)
-        }
-    }
-    
-    private func createNewRecord(text: String? = nil, image: UIImage? = nil) {
-        let newRecord = Record()
-        if let image = image {
-            newRecord.image = UIImagePNGRepresentation(image)
-        }
-        if let text = text {
-            newRecord.text = text
-        }
-        try! realm.write {
-            realm.add(newRecord)
+        })
+        if let existingRecord = existingRecord {
+            self.recordsProvider.updateRecord(existingRecord, updatedDate: Date())
+        
+        } else if let imageData = UIImagePNGRepresentation(image) {
+            self.recordsProvider.createRecord(withImageData: imageData)
         }
     }
     
@@ -96,14 +90,12 @@ class LandingViewModel: LandingViewModelProtocol {
     var updateBlock: ((_ rowIndex: Int?) -> Void)?
     
     func numberOfRecords() -> Int {
-        return realm.objects(Record.self).count
+        return self.objects.count
     }
     
     func recordDataAtIndex(index: Int) -> (data: Any, date: Date)? {
-        guard let record = self.objects?[index] else {
-            return nil
-        }
-        
+        guard index < self.objects.count else { return nil }
+        let record = self.objects[index]
         if let imageData = record.image {
             return (data: UIImage(data: imageData) as Any, date: record.updated)
         
@@ -122,9 +114,8 @@ class LandingViewModel: LandingViewModelProtocol {
     }
     
     func selectRecord(atIndex index: Int) {
-        guard let record = objects?[index] else {
-            return
-        }
+        guard index < self.objects.count else { return }
+        let record = self.objects[index]
         
         if let imageData = record.image,
             let image = UIImage(data: imageData)
@@ -134,16 +125,12 @@ class LandingViewModel: LandingViewModelProtocol {
         } else if let text = record.text {
             self.pasteboard.setData(data: text)
         }
-        try! realm.write {
-            record.updated = Date()
-        }
+        self.recordsProvider.updateRecord(record, updatedDate: Date())
     }
     
     func removeRecord(atIndex index: Int) {
-        if let record = objects?[index] {
-            try! realm.write {
-                realm.delete(record)
-            }
-        }
+        guard index < self.objects.count else { return }
+        let record = self.objects[index]
+        self.recordsProvider.deleteRecord(record)
     }
 }

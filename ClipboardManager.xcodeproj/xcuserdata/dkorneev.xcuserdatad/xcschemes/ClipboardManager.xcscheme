@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "83936D5F1FF7F90300554E39"
+               BuildableName = "ClipboardManagerTests.xctest"
+               BlueprintName = "ClipboardManagerTests"
+               ReferencedContainer = "container:ClipboardManager.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

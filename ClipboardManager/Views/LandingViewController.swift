@@ -7,16 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
-
-protocol LandingViewModelProtocol {
-    func numberOfRecords() -> Int
-    func recordDataAtIndex(index: Int) -> (data: Any, date: Date)?
-    func addNewRecord()
-    func selectRecord(atIndex index: Int)
-    func removeRecord(atIndex index: Int)
-    var updateBlock: ((_ rowIndex: Int?) -> Void)? { get set }
-}
 
 class LandingViewController: UITableViewController {
     private var viewModel: LandingViewModelProtocol
