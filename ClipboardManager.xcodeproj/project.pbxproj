@@ -21,6 +21,9 @@
 		837815751EA6ACB50030CD07 /* ImageTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 837815731EA6ACB50030CD07 /* ImageTVCell.xib */; };
 		837815771EA6B7D60030CD07 /* PasteboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815761EA6B7D60030CD07 /* PasteboardManager.swift */; };
 		8380FC6D1FF8068D00BD3C46 /* RecordsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8380FC6C1FF8068D00BD3C46 /* RecordsProvider.swift */; };
+		838196972004D40800DBA6F6 /* TestRecordsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838196962004D40800DBA6F6 /* TestRecordsProvider.swift */; };
+		838196992004D43300DBA6F6 /* TestRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838196982004D43300DBA6F6 /* TestRecord.swift */; };
+		8381969B2004D44C00DBA6F6 /* TestPasteboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381969A2004D44C00DBA6F6 /* TestPasteboardManager.swift */; };
 		8392E6D81E9A360200539037 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* LandingViewModel.swift */; };
 		83936D631FF7F90300554E39 /* LandingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83936D621FF7F90300554E39 /* LandingViewModelTests.swift */; };
 		839589321E95506400CC7045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839589301E95506400CC7045 /* Main.storyboard */; };
@@ -80,6 +83,9 @@
 		837815731EA6ACB50030CD07 /* ImageTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTVCell.xib; sourceTree = "<group>"; };
 		837815761EA6B7D60030CD07 /* PasteboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardManager.swift; sourceTree = "<group>"; };
 		8380FC6C1FF8068D00BD3C46 /* RecordsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsProvider.swift; sourceTree = "<group>"; };
+		838196962004D40800DBA6F6 /* TestRecordsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRecordsProvider.swift; sourceTree = "<group>"; };
+		838196982004D43300DBA6F6 /* TestRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRecord.swift; sourceTree = "<group>"; };
+		8381969A2004D44C00DBA6F6 /* TestPasteboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPasteboardManager.swift; sourceTree = "<group>"; };
 		8392E6D71E9A360200539037 /* LandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
 		83936D601FF7F90300554E39 /* ClipboardManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipboardManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83936D621FF7F90300554E39 /* LandingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelTests.swift; sourceTree = "<group>"; };
@@ -166,6 +172,16 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
+		838196952004D3E800DBA6F6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				838196962004D40800DBA6F6 /* TestRecordsProvider.swift */,
+				838196982004D43300DBA6F6 /* TestRecord.swift */,
+				8381969A2004D44C00DBA6F6 /* TestPasteboardManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		83936D5B1FF7F7C200554E39 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +193,7 @@
 		83936D611FF7F90300554E39 /* ClipboardManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				838196952004D3E800DBA6F6 /* Helpers */,
 				83936D621FF7F90300554E39 /* LandingViewModelTests.swift */,
 				83936D641FF7F90300554E39 /* Info.plist */,
 			);
@@ -510,6 +527,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8325388D2003ED980090DF96 /* Protocols.swift in Sources */,
+				838196992004D43300DBA6F6 /* TestRecord.swift in Sources */,
+				8381969B2004D44C00DBA6F6 /* TestPasteboardManager.swift in Sources */,
+				838196972004D40800DBA6F6 /* TestRecordsProvider.swift in Sources */,
 				832524E82003D7D2005AF677 /* LandingViewModel.swift in Sources */,
 				83936D631FF7F90300554E39 /* LandingViewModelTests.swift in Sources */,
 			);

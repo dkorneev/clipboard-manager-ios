@@ -48,6 +48,7 @@ class LandingViewModel: LandingViewModelProtocol {
     
     private func resetObjects() {
         self.objects = self.recordsProvider.getAllRecords()
+            .sorted(by: { $0.updated > $1.updated })
     }
     
     private func addNewRecord(_ newRecord: Any) {
