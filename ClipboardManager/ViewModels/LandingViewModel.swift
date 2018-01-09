@@ -83,6 +83,7 @@ class LandingViewModel: LandingViewModelProtocol {
         
         } else if let imageData = UIImagePNGRepresentation(image) {
             self.recordsProvider.createRecord(withImageData: imageData)
+        
         }
     }
     

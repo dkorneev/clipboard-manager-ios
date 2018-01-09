@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class RecordsProvider: RecordsProviderProtocol {
+    private let writeQueue = DispatchQueue(label: "realm-write-queue")
     private let realm = try! Realm()
     private var notificationToken: NotificationToken? = nil
     private var observeBlock: (() -> Void)?
@@ -27,6 +28,15 @@ class RecordsProvider: RecordsProviderProtocol {
         self.notificationToken?.invalidate()
     }
     
+    private func performAsyncRealmOperation(_ performBlock: @escaping (_ realm: Realm) -> Void) {
+        self.writeQueue.async {
+            autoreleasepool {
+                let localRealm = try! Realm()
+                performBlock(localRealm)
+            }
+        }
+    }
+    
     // MARK: RecordsProviderProtocol
     
     func getAllRecords() -> Array<RecordModel> {
@@ -35,31 +45,47 @@ class RecordsProvider: RecordsProviderProtocol {
     
     func updateRecord(_ record: RecordModel, updatedDate: Date) {
         guard let record = record as? Record else { return }
-        try! realm.write {
-            record.updated = updatedDate
+        let recordRef = ThreadSafeReference(to: record)
+        self.performAsyncRealmOperation { realm in
+            guard let record = realm.resolve(recordRef) else {
+                return
+            }
+            try! realm.write {
+                record.updated = updatedDate
+            }
         }
     }
     
     func createRecord(withText text: String) {
-        let record = Record()
-        record.text = text
-        try! realm.write {
-            realm.add(record)
+        self.performAsyncRealmOperation { realm in
+            let record = Record()
+            record.text = text
+            try! realm.write {
+                realm.add(record)
+            }
         }
     }
     
     func createRecord(withImageData imageData: Data) {
-        let record = Record()
-        record.image = imageData
-        try! realm.write {
-            realm.add(record)
+        self.performAsyncRealmOperation { realm in
+            let record = Record()
+            record.image = imageData
+            try! realm.write {
+                realm.add(record)
+            }
         }
     }
     
     func deleteRecord(_ record: RecordModel) {
         guard let record = record as? Record else { return }
-        try! realm.write {
-            realm.delete(record)
+        let recordRef = ThreadSafeReference(to: record)
+        self.performAsyncRealmOperation { realm in
+            guard let record = realm.resolve(recordRef) else {
+                return
+            }
+            try! realm.write {
+                realm.delete(record)
+            }
         }
     }
     
