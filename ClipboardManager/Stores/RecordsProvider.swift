@@ -8,9 +8,20 @@
 import Foundation
 import RealmSwift
 
+extension Realm {
+    static func sharedRealm() -> Realm {
+        let directory: URL = FileManager.default.containerURL(
+            forSecurityApplicationGroupIdentifier: K_GROUP_ID)!
+        let fileURL = directory.appendingPathComponent(K_DB_NAME)
+        let realm = try! Realm(fileURL: fileURL)
+        print(">>> file url \(realm.configuration.fileURL?.absoluteString ?? "")")
+        return realm
+    }
+}
+
 class RecordsProvider: RecordsProviderProtocol {
     private let writeQueue = DispatchQueue(label: "realm-write-queue")
-    private let realm = try! Realm()
+    private let realm = Realm.sharedRealm()
     private var notificationToken: NotificationToken? = nil
     private var observeBlock: (() -> Void)?
     private var allRecords: Results<Record>
@@ -31,7 +42,7 @@ class RecordsProvider: RecordsProviderProtocol {
     private func performAsyncRealmOperation(_ performBlock: @escaping (_ realm: Realm) -> Void) {
         self.writeQueue.async {
             autoreleasepool {
-                let localRealm = try! Realm()
+                let localRealm = Realm.sharedRealm()
                 performBlock(localRealm)
             }
         }

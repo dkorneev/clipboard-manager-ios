@@ -1,0 +1,6 @@
+framework module Pods_QuickButtons {
+  umbrella header "Pods-QuickButtons-umbrella.h"
+
+  export *
+  module * { export * }
+}

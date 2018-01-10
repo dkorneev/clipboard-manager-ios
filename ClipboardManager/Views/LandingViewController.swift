@@ -32,12 +32,16 @@ class LandingViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UserDefaults.standard.set("test test test", forKey: "testKey")
+        let value = UserDefaults.standard.value(forKey: "testKey") as! String
+        print(">>> value for key: \(value)")
+        
         self.navigationItem.title = "Clipboard manager"
         let addButton = UIBarButtonItem(barButtonSystemItem: .add,
                                         target: self,
                                         action: #selector(didTapAddButton))
         self.navigationItem.rightBarButtonItem = addButton
-        self.viewModel.updateBlock = { [weak self] rowIndex in
+        self.viewModel.updateBlock = { [weak self] _ in
             self?.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
         }
         

@@ -14,6 +14,8 @@
 		8330DBE01F51A9F500B81CCD /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8330DBDE1F51A9F500B81CCD /* MainInterface.storyboard */; };
 		8330DBE41F51A9F500B81CCD /* QuickButtons.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8330DBD81F51A9F500B81CCD /* QuickButtons.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8350D3771E97F7E000B20551 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350D3761E97F7E000B20551 /* Record.swift */; };
+		836834BE2006623700C69A42 /* WidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836834BD2006623700C69A42 /* WidgetView.xib */; };
+		836834C0200662DF00C69A42 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836834BF200662DF00C69A42 /* WidgetView.swift */; };
 		8378156D1EA696720030CD07 /* TextTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378156B1EA696720030CD07 /* TextTVCell.swift */; };
 		8378156E1EA696720030CD07 /* TextTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8378156C1EA696720030CD07 /* TextTVCell.xib */; };
 		837815711EA69E180030CD07 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
@@ -24,6 +26,8 @@
 		838196972004D40800DBA6F6 /* TestRecordsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838196962004D40800DBA6F6 /* TestRecordsProvider.swift */; };
 		838196992004D43300DBA6F6 /* TestRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838196982004D43300DBA6F6 /* TestRecord.swift */; };
 		8381969B2004D44C00DBA6F6 /* TestPasteboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381969A2004D44C00DBA6F6 /* TestPasteboardManager.swift */; };
+		83827F312006B1300097C548 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83827F302006B1300097C548 /* Constants.swift */; };
+		83827F322006B1300097C548 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83827F302006B1300097C548 /* Constants.swift */; };
 		8392E6D81E9A360200539037 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* LandingViewModel.swift */; };
 		83936D631FF7F90300554E39 /* LandingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83936D621FF7F90300554E39 /* LandingViewModelTests.swift */; };
 		839589321E95506400CC7045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839589301E95506400CC7045 /* Main.storyboard */; };
@@ -31,8 +35,14 @@
 		839589371E95506400CC7045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839589351E95506400CC7045 /* LaunchScreen.storyboard */; };
 		83A0C3F31E956542007A6C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F21E956542007A6C39 /* AppDelegate.swift */; };
 		83A0C3F51E9565B0007A6C39 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F41E9565B0007A6C39 /* LandingViewController.swift */; };
+		83B72D3920066A030006CA9E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
+		83C5C5DA2006952400490DB0 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* LandingViewModel.swift */; };
+		83C5C5DB2006952D00490DB0 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350D3761E97F7E000B20551 /* Record.swift */; };
+		83C5C5DC2006953000490DB0 /* RecordsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8380FC6C1FF8068D00BD3C46 /* RecordsProvider.swift */; };
+		83C5C5DD2006953200490DB0 /* PasteboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815761EA6B7D60030CD07 /* PasteboardManager.swift */; };
 		9B72EEDDFCAE58F001102BBA /* Pods_ClipboardManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 297335A480D32C4086CDABE8 /* Pods_ClipboardManagerTests.framework */; };
 		9F9738708B7D5FE4906423B4 /* Pods_ClipboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1019FDA793565443E08240A0 /* Pods_ClipboardManager.framework */; };
+		AA89A5A20179F99291084C9E /* Pods_QuickButtons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46D2978D1E015F74B84D057 /* Pods_QuickButtons.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +78,7 @@
 
 /* Begin PBXFileReference section */
 		1019FDA793565443E08240A0 /* Pods_ClipboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1853FCA8D9590A62C1C91763 /* Pods-QuickButtons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickButtons.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickButtons/Pods-QuickButtons.release.xcconfig"; sourceTree = "<group>"; };
 		297335A480D32C4086CDABE8 /* Pods_ClipboardManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47053F302B9296E81A8C7D75 /* Pods-ClipboardManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager.debug.xcconfig"; sourceTree = "<group>"; };
 		8330DBD81F51A9F500B81CCD /* QuickButtons.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickButtons.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +87,8 @@
 		8330DBDF1F51A9F500B81CCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8330DBE11F51A9F500B81CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8350D3761E97F7E000B20551 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		836834BD2006623700C69A42 /* WidgetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetView.xib; sourceTree = "<group>"; };
+		836834BF200662DF00C69A42 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		8378156B1EA696720030CD07 /* TextTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTVCell.swift; sourceTree = "<group>"; };
 		8378156C1EA696720030CD07 /* TextTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTVCell.xib; sourceTree = "<group>"; };
 		837815701EA69E180030CD07 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -86,6 +99,9 @@
 		838196962004D40800DBA6F6 /* TestRecordsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRecordsProvider.swift; sourceTree = "<group>"; };
 		838196982004D43300DBA6F6 /* TestRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRecord.swift; sourceTree = "<group>"; };
 		8381969A2004D44C00DBA6F6 /* TestPasteboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPasteboardManager.swift; sourceTree = "<group>"; };
+		83827F2E2006B04E0097C548 /* ClipboardManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipboardManager.entitlements; sourceTree = "<group>"; };
+		83827F2F2006B0700097C548 /* QuickButtons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickButtons.entitlements; sourceTree = "<group>"; };
+		83827F302006B1300097C548 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8392E6D71E9A360200539037 /* LandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
 		83936D601FF7F90300554E39 /* ClipboardManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipboardManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83936D621FF7F90300554E39 /* LandingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelTests.swift; sourceTree = "<group>"; };
@@ -100,6 +116,8 @@
 		A308983FAE914043FC143C49 /* Pods-ClipboardManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B60F9A52BF77A0FFAE7DC55E /* Pods-ClipboardManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		C804B090E71E606DC40DF3E3 /* Pods-ClipboardManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager.release.xcconfig"; sourceTree = "<group>"; };
+		D46D2978D1E015F74B84D057 /* Pods_QuickButtons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickButtons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7F98F4400848879F5268FA5 /* Pods-QuickButtons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickButtons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickButtons/Pods-QuickButtons.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8330DBDA1F51A9F500B81CCD /* NotificationCenter.framework in Frameworks */,
+				AA89A5A20179F99291084C9E /* Pods_QuickButtons.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +156,8 @@
 				C804B090E71E606DC40DF3E3 /* Pods-ClipboardManager.release.xcconfig */,
 				A308983FAE914043FC143C49 /* Pods-ClipboardManagerTests.debug.xcconfig */,
 				B60F9A52BF77A0FFAE7DC55E /* Pods-ClipboardManagerTests.release.xcconfig */,
+				E7F98F4400848879F5268FA5 /* Pods-QuickButtons.debug.xcconfig */,
+				1853FCA8D9590A62C1C91763 /* Pods-QuickButtons.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -144,7 +165,10 @@
 		8330DBDB1F51A9F500B81CCD /* QuickButtons */ = {
 			isa = PBXGroup;
 			children = (
+				83827F2F2006B0700097C548 /* QuickButtons.entitlements */,
 				8330DBDC1F51A9F500B81CCD /* TodayViewController.swift */,
+				836834BD2006623700C69A42 /* WidgetView.xib */,
+				836834BF200662DF00C69A42 /* WidgetView.swift */,
 				8330DBDE1F51A9F500B81CCD /* MainInterface.storyboard */,
 				8330DBE11F51A9F500B81CCD /* Info.plist */,
 			);
@@ -165,6 +189,7 @@
 		8378156F1EA69DE70030CD07 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				83827F302006B1300097C548 /* Constants.swift */,
 				837815701EA69E180030CD07 /* Protocols.swift */,
 			);
 			path = Misc;
@@ -232,6 +257,7 @@
 		8395892B1E95506400CC7045 /* ClipboardManager */ = {
 			isa = PBXGroup;
 			children = (
+				83827F2E2006B04E0097C548 /* ClipboardManager.entitlements */,
 				839589381E95506400CC7045 /* Info.plist */,
 				83A0C3F21E956542007A6C39 /* AppDelegate.swift */,
 				839589331E95506400CC7045 /* Assets.xcassets */,
@@ -269,6 +295,7 @@
 				1019FDA793565443E08240A0 /* Pods_ClipboardManager.framework */,
 				8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */,
 				297335A480D32C4086CDABE8 /* Pods_ClipboardManagerTests.framework */,
+				D46D2978D1E015F74B84D057 /* Pods_QuickButtons.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -280,9 +307,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8330DBE71F51A9F500B81CCD /* Build configuration list for PBXNativeTarget "QuickButtons" */;
 			buildPhases = (
+				F1D528B0C26DCFC0158DCB07 /* [CP] Check Pods Manifest.lock */,
 				8330DBD41F51A9F500B81CCD /* Sources */,
 				8330DBD51F51A9F500B81CCD /* Frameworks */,
 				8330DBD61F51A9F500B81CCD /* Resources */,
+				B7DB81B32C3BBD7BCBF07297 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -350,6 +379,11 @@
 						DevelopmentTeam = X3U3JAN2WV;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					83936D5F1FF7F90300554E39 = {
 						CreatedOnToolsVersion = 9.2;
@@ -362,6 +396,11 @@
 						DevelopmentTeam = X3U3JAN2WV;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -390,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836834BE2006623700C69A42 /* WidgetView.xib in Resources */,
 				8330DBE01F51A9F500B81CCD /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +541,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B7DB81B32C3BBD7BCBF07297 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickButtons/Pods-QuickButtons-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D7831383A065DC9B622DF960 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -519,6 +574,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F1D528B0C26DCFC0158DCB07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickButtons-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -526,7 +599,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B72D3920066A030006CA9E /* Protocols.swift in Sources */,
+				836834C0200662DF00C69A42 /* WidgetView.swift in Sources */,
+				83C5C5DB2006952D00490DB0 /* Record.swift in Sources */,
+				83C5C5DC2006953000490DB0 /* RecordsProvider.swift in Sources */,
+				83C5C5DD2006953200490DB0 /* PasteboardManager.swift in Sources */,
+				83C5C5DA2006952400490DB0 /* LandingViewModel.swift in Sources */,
 				8330DBDD1F51A9F500B81CCD /* TodayViewController.swift in Sources */,
+				83827F322006B1300097C548 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +632,7 @@
 				8378156D1EA696720030CD07 /* TextTVCell.swift in Sources */,
 				837815771EA6B7D60030CD07 /* PasteboardManager.swift in Sources */,
 				83A0C3F51E9565B0007A6C39 /* LandingViewController.swift in Sources */,
+				83827F312006B1300097C548 /* Constants.swift in Sources */,
 				837815741EA6ACB50030CD07 /* ImageTVCell.swift in Sources */,
 				837815711EA69E180030CD07 /* Protocols.swift in Sources */,
 				8392E6D81E9A360200539037 /* LandingViewModel.swift in Sources */,
@@ -604,7 +685,9 @@
 /* Begin XCBuildConfiguration section */
 		8330DBE51F51A9F500B81CCD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7F98F4400848879F5268FA5 /* Pods-QuickButtons.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = QuickButtons/QuickButtons.entitlements;
 				DEVELOPMENT_TEAM = X3U3JAN2WV;
 				INFOPLIST_FILE = QuickButtons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -618,7 +701,9 @@
 		};
 		8330DBE61F51A9F500B81CCD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1853FCA8D9590A62C1C91763 /* Pods-QuickButtons.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = QuickButtons/QuickButtons.entitlements;
 				DEVELOPMENT_TEAM = X3U3JAN2WV;
 				INFOPLIST_FILE = QuickButtons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -784,6 +869,7 @@
 			baseConfigurationReference = 47053F302B9296E81A8C7D75 /* Pods-ClipboardManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ClipboardManager/ClipboardManager.entitlements;
 				DEVELOPMENT_TEAM = X3U3JAN2WV;
 				INFOPLIST_FILE = ClipboardManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -799,6 +885,7 @@
 			baseConfigurationReference = C804B090E71E606DC40DF3E3 /* Pods-ClipboardManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ClipboardManager/ClipboardManager.entitlements;
 				DEVELOPMENT_TEAM = X3U3JAN2WV;
 				INFOPLIST_FILE = ClipboardManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
