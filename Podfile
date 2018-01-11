@@ -1,15 +1,19 @@
 use_frameworks!
 platform :ios, '10.0'
 
-target 'ClipboardManager' do
+def application_pods
     pod 'RealmSwift'
     pod 'DateToolsSwift'
+end
 
-    target 'QuickButtons' do
-        inherit! :search_paths
-    end
-    
-    target 'ClipboardManagerTests' do
-        inherit! :search_paths
-    end
+target 'ClipboardManager' do
+    application_pods
+end
+
+target 'QuickButtons' do
+    application_pods
+end
+
+target 'ClipboardManagerTests' do
+    application_pods
 end

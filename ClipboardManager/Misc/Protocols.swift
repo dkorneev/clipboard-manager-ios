@@ -13,10 +13,11 @@ protocol RefreshableTVCell {
 }
 
 protocol LandingViewModelProtocol {
+    typealias CompletionBlock = (() -> Void)
     func numberOfRecords() -> Int
     func recordDataAtIndex(index: Int) -> (data: Any, date: Date)?
-    func addNewRecord()
-    func selectRecord(atIndex index: Int)
-    func removeRecord(atIndex index: Int)
+    func addNewRecord(withCompletion: CompletionBlock?)
+    func selectRecord(atIndex index: Int, withCompletion: CompletionBlock?)
+    func removeRecord(atIndex index: Int, withCompletion: CompletionBlock?)
     var updateBlock: ((_ rowIndex: Int?) -> Void)? { get set }
 }

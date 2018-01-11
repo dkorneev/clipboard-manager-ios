@@ -53,7 +53,10 @@ class RecordsProvider: RecordsProviderProtocol {
         return Array(allRecords)
     }
     
-    func updateRecord(_ record: RecordModel, updatedDate: Date) {
+    func updateRecord(_ record: RecordModel,
+                      updatedDate: Date,
+                      withCompletion completion: CompletionBlock? = nil)
+    {
         guard let record = record as? Record else { return }
         let recordRef = ThreadSafeReference(to: record)
         self.performAsyncRealmOperation { realm in
@@ -63,30 +66,43 @@ class RecordsProvider: RecordsProviderProtocol {
             try! realm.write {
                 record.updated = updatedDate
             }
+            DispatchQueue.main.async {
+                completion?()
+            }
         }
     }
     
-    func createRecord(withText text: String) {
+    func createRecord(withText text: String,
+                      withCompletion completion: CompletionBlock? = nil)
+    {
         self.performAsyncRealmOperation { realm in
             let record = Record()
             record.text = text
             try! realm.write {
                 realm.add(record)
             }
+            DispatchQueue.main.async {
+                completion?()
+            }
         }
     }
     
-    func createRecord(withImageData imageData: Data) {
+    func createRecord(withImageData imageData: Data,
+                      withCompletion completion: CompletionBlock? = nil) {
         self.performAsyncRealmOperation { realm in
             let record = Record()
             record.image = imageData
             try! realm.write {
                 realm.add(record)
             }
+            DispatchQueue.main.async {
+                completion?()
+            }
         }
     }
     
-    func deleteRecord(_ record: RecordModel) {
+    func deleteRecord(_ record: RecordModel,
+                      withCompletion completion: CompletionBlock? = nil) {
         guard let record = record as? Record else { return }
         let recordRef = ThreadSafeReference(to: record)
         self.performAsyncRealmOperation { realm in
@@ -95,6 +111,9 @@ class RecordsProvider: RecordsProviderProtocol {
             }
             try! realm.write {
                 realm.delete(record)
+            }
+            DispatchQueue.main.async {
+                completion?()
             }
         }
     }

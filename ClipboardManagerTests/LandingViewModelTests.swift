@@ -9,6 +9,7 @@ import XCTest
 
 class LandingViewModelTests: XCTestCase {
     private var pbManager = TestPasteboardManager()
+    private let expectationTimeout: TimeInterval = 5
     
     override func setUp() {
         super.setUp()
@@ -58,14 +59,19 @@ class LandingViewModelTests: XCTestCase {
     }
     
     func testAddRecord() {
+        let expect = expectation(description: "Add record")
         let viewModel = self.createLandingViewModel(withRecords: [])
         let recordText = "new record"
         self.pbManager.setData(data: recordText)
-        viewModel.addNewRecord()
-        assertViewModel(viewModel, hasRecords: [recordText])
+        viewModel.addNewRecord { [unowned self] in
+            self.assertViewModel(viewModel, hasRecords: [recordText])
+            expect.fulfill()
+        }
+        waitForExpectations(timeout: expectationTimeout, handler: nil)
     }
     
     func testAddExistingRecord() {
+        let expect = expectation(description: "Add existing record")
         let records = [
             "first",
             "second",
@@ -73,30 +79,41 @@ class LandingViewModelTests: XCTestCase {
         ]
         let viewModel = self.createLandingViewModel(withRecords: records)
         self.pbManager.setData(data: records[1])
-        viewModel.addNewRecord()
-        self.assertViewModel(viewModel, hasRecords: ["second", "first", "third"])
+        viewModel.addNewRecord { [unowned self] in
+            self.assertViewModel(viewModel, hasRecords: ["second", "first", "third"])
+            expect.fulfill()
+        }
+        waitForExpectations(timeout: expectationTimeout, handler: nil)
     }
     
     func testRemoveRecord() {
+        let expect = expectation(description: "Remove record")
         let records = [
             "first",
             "second",
             "third"
         ]
         let viewModel = self.createLandingViewModel(withRecords: records)
-        viewModel.removeRecord(atIndex: 1)
-        assertViewModel(viewModel, hasRecords: ["first", "third"])
+        viewModel.removeRecord(atIndex: 1) { [unowned self] in
+            self.assertViewModel(viewModel, hasRecords: ["first", "third"])
+            expect.fulfill()
+        }
+        waitForExpectations(timeout: expectationTimeout, handler: nil)
     }
     
     func testSelectRecord() {
+        let expect = expectation(description: "Select record")
         let recordText = "test record"
         let viewModel = self.createLandingViewModel(withRecords: [recordText])
-        viewModel.selectRecord(atIndex: 0)
-        if let pasteboardData = self.pbManager.currentData() as? String {
-            XCTAssertEqual(pasteboardData, recordText)
-            
-        } else {
-            XCTFail()
+        viewModel.selectRecord(atIndex: 0) {
+            if let pasteboardData = self.pbManager.currentData() as? String {
+                XCTAssertEqual(pasteboardData, recordText)
+                
+            } else {
+                XCTFail()
+            }
+            expect.fulfill()
         }
+        waitForExpectations(timeout: expectationTimeout, handler: nil)
     }
 }

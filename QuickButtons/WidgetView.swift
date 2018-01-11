@@ -38,7 +38,7 @@ class WidgetView: UIView, UITableViewDelegate, UITableViewDataSource {
     // MARK: user interactions
     
     @IBAction func addButtonTap(_ sender: Any) {
-        self.viewModel?.addNewRecord()
+        self.viewModel?.addNewRecord(withCompletion: nil)
     }
     
     // MARK: UITableViewDataSource
@@ -94,6 +94,6 @@ class WidgetView: UIView, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath)
     {
-        self.viewModel?.selectRecord(atIndex: indexPath.row)
+        self.viewModel?.selectRecord(atIndex: indexPath.row, withCompletion: nil)
     }
 }

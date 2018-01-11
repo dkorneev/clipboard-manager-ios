@@ -67,29 +67,38 @@ class LandingViewController: UITableViewController {
     // MARK: - user interactions
     
     @objc private func didTapAddButton() {
-        self.viewModel.addNewRecord()
+        self.viewModel.addNewRecord(withCompletion: nil)
     }
 
     // MARK: - UITableViewDelegate
     
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView,
+                            canEditRowAt indexPath: IndexPath) -> Bool
+    {
         return true
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView,
+                            commit editingStyle: UITableViewCellEditingStyle,
+                            forRowAt indexPath: IndexPath)
+    {
         if (editingStyle == .delete) {
-            self.viewModel.removeRecord(atIndex: indexPath.row)
+            self.viewModel.removeRecord(atIndex: indexPath.row, withCompletion: nil)
         }
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView,
+                            didSelectRowAt indexPath: IndexPath)
+    {
         if let selectedRowIndexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRow(at: selectedRowIndexPath, animated: true)
         }
-        self.viewModel.selectRecord(atIndex: indexPath.row)
+        self.viewModel.selectRecord(atIndex: indexPath.row, withCompletion: nil)
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView,
+                            heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
         guard let recordData = self.viewModel.recordDataAtIndex(index: indexPath.row) else {
             return 0
         }
@@ -105,25 +114,31 @@ class LandingViewController: UITableViewController {
     
     // MARK: - UITableViewDataSource
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView,
+                            numberOfRowsInSection section: Int) -> Int
+    {
         return self.viewModel.numberOfRecords()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         guard let recordData = self.viewModel.recordDataAtIndex(index: indexPath.row) else {
             return UITableViewCell()
         }
         
         switch recordData.data {
         case is String:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextTVCell.reuseId()) as? TextTVCell else {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: TextTVCell.reuseId()) as? TextTVCell else {
                 break
             }
             cell.setText(recordData.data as? String, date: recordData.date)
             return cell
             
         case is UIImage:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: ImageTVCell.reuseId()) as? ImageTVCell else {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: ImageTVCell.reuseId()) as? ImageTVCell else {
                 break
             }
             cell.setImage(recordData.data as? UIImage, date: recordData.date)

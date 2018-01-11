@@ -13,9 +13,10 @@
 		05E2290248B3C780C38D95765CCFB847 /* Pods-ClipboardManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 128E2209FF8595BC62CDF5CA812F845C /* Pods-ClipboardManager-dummy.m */; };
 		0633248AC4EC2FE69F5222AAEBE1D2B3 /* object_store.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE716AC12EA7F7FBF07281202686EDBA /* object_store.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		0717F37C5FAC05FF1509E9A67634B70F /* RLMRealm.mm in Sources */ = {isa = PBXBuildFile; fileRef = BEAEEE84940D7835F7D6FA0273A53393 /* RLMRealm.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
+		080E740DC17DF724E8A06786F684D2FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9AD32BDFB65031FDF5F08AA631A6861 /* Foundation.framework */; };
+		080FD288B3401128429C9720BD1BF553 /* Pods-ClipboardManagerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 428D89F88D463466EB357EBD9FC119C7 /* Pods-ClipboardManagerTests-dummy.m */; };
 		09F88E790FC2447C4E365DE46F4660D0 /* object_notifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61DB64CF370BCAFE125FEE9740DA9945 /* object_notifier.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		0A0443BB58CFB85E13360560798B2A46 /* keychain_helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2228CF9279036EE1DA9DB1417DC996E9 /* keychain_helper.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
-		0A0F8DA2324025289D7479FEA2E47505 /* Pods-ClipboardManagerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 428D89F88D463466EB357EBD9FC119C7 /* Pods-ClipboardManagerTests-dummy.m */; };
 		0ADABFC0F6F9674958B362A352E58AD8 /* RLMRealm.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8F0F6D27670340203D54FCEEC63120 /* RLMRealm.h */; };
 		0DDB1E371B00C87B0D956F953F82639F /* RLMMigration_Private.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = A8423191868C0AB72717628794386E13 /* RLMMigration_Private.h */; };
 		0FDD7BA7E07DA230E18D89D34BD1AF83 /* SortDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2378CE91825CEA802CD1C3671FAF348E /* SortDescriptor.swift */; };
@@ -23,7 +24,6 @@
 		1070A25289C352ED23C1E20D1CC070E2 /* RLMRealm_Private.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = 31F5D5CB44B35CD072468E613AB01881 /* RLMRealm_Private.h */; };
 		113D16B7FA9DF904A56D394E0564C448 /* collection_notifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6F3210CABA1E69EE6FB37E164B7418F /* collection_notifier.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		11640BDDC252C3D58084D6DC7D547A7F /* RLMMigration.h in Headers */ = {isa = PBXBuildFile; fileRef = 625019991EBEEACAD8E88D631B52CEC2 /* RLMMigration.h */; };
-		11C9CF92752B0ABBC122D98802748DAD /* Pods-QuickButtons-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2206D0F6F3323BA28027E3795DD71B /* Pods-QuickButtons-dummy.m */; };
 		1258ADEF482EA4F9F9C973A7ACE8E894 /* RLMObjectBase_Private.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = C01BFAA4415624764F66DF650D3A7E13 /* RLMObjectBase_Private.h */; };
 		1326C73451D21D1229611D363D570EF3 /* RLMOptionalBase.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = 24816C140CFDCA825FBB49BE640684B1 /* RLMOptionalBase.h */; };
 		13BD01061109F811D3AE4B72A2FF1EBE /* placeholder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D52C58AA5AEEE13ACD8D2F7B4B870273 /* placeholder.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
@@ -61,7 +61,6 @@
 		31AEC92DAF995CC2A0CDCD473EE565C7 /* NSError+RLMSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 144B5002DDF7DEB3F58FE6A9500DFA8D /* NSError+RLMSync.m */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		32001A945BB893E4113B28495609696B /* RLMResults.mm in Sources */ = {isa = PBXBuildFile; fileRef = DF6C53009C107655910EDA1AA19559B2 /* RLMResults.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		34135EFFD716BA24318495B0D5FEB899 /* RLMMigration.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 625019991EBEEACAD8E88D631B52CEC2 /* RLMMigration.h */; };
-		341CEDA4DF97105AD8C82783279425AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9AD32BDFB65031FDF5F08AA631A6861 /* Foundation.framework */; };
 		3425D0695C037B9B01324A8577373E3A /* Realm-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B089414146AC98073EE8C6C5BB71EB6 /* Realm-dummy.m */; };
 		36EF32CD1864D48210C1FB1878B11E3C /* RLMListBase.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 25FFED6C0A71CBB701558480F8792E56 /* RLMListBase.h */; };
 		38CBAB10ED102AA491F0C3B241563234 /* SwiftVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F201D624841DD88229E091BAF50378A9 /* SwiftVersion.swift */; };
@@ -131,19 +130,18 @@
 		7FEC20C72257093DC0359F2CDA43252B /* RLMObjectBase.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 1CC42FC8C4EDD1878398F7B959826CB9 /* RLMObjectBase.h */; };
 		804E68A9C26930AE5B7EC78255994DEF /* Pods-ClipboardManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD64A9B7CD23B429731C55582ED10445 /* Pods-ClipboardManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		81343A5F3D4766B9790E3B6FB1A85521 /* external_commit_helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5EAFAECE63C307A8ECC7D30F0B6607E /* external_commit_helper.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
-		8282147D5E35B89D458F8DC2179F9B81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9AD32BDFB65031FDF5F08AA631A6861 /* Foundation.framework */; };
 		841CDC0CD0055FE8BF80FDAE1A3CDAB0 /* RLMSyncUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 9327C0C03221655BF6FCBCB1B47B9ADE /* RLMSyncUtil.h */; };
 		846428E32BEA9CBE3CE1A6A08F9C2327 /* RLMCollection_Private.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = A1C7F0C5A28607CEDA07E3B17A862C1D /* RLMCollection_Private.h */; };
 		8762D552655F6EDACB4022FEE6C5619D /* RLMPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D6D93CBA074A206292938D0E893EBAD /* RLMPlatform.h */; };
 		8862F950825AFC3C2218DD063DDE5A7A /* RLMSyncCredentials.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 51F50A884C7938E3DC8C7AF9C3D860A7 /* RLMSyncCredentials.h */; };
 		8936DC06BFFFAB650D15136DFCF80C4D /* RLMRealm_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 31F5D5CB44B35CD072468E613AB01881 /* RLMRealm_Private.h */; };
+		8966DFD2357107D593D2BF1F65D25681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9AD32BDFB65031FDF5F08AA631A6861 /* Foundation.framework */; };
 		8CD9758FE51869E7D2C791351BEC7EC0 /* RLMAccessor.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = 58653309ED3EE051E0490EC9CE79B0FC /* RLMAccessor.h */; };
 		8D78CC16DB2FAA4A77DAB19FA71878ED /* RLMOptionalBase.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 24816C140CFDCA825FBB49BE640684B1 /* RLMOptionalBase.h */; };
 		8DA2C5E426E9DC1B6D4FEB1D69F671E7 /* RLMRealm+Sync.h in Headers */ = {isa = PBXBuildFile; fileRef = CEF074004A92DB4F98A7E2EC6564AAB5 /* RLMRealm+Sync.h */; };
 		9167D2E32D8F525C9734F98832FDA74D /* RLMObject.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 82A49CDEE5C65E188332FC82104F6891 /* RLMObject.h */; };
 		926213C36F1DD4ACEAA6C87393C2B734 /* sync_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30198C1007EA770265006277664ED4DE /* sync_manager.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		9278773EB9E4E897590F6ED63DBACABE /* RLMObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 82A49CDEE5C65E188332FC82104F6891 /* RLMObject.h */; };
-		957469FC84F9879BCA44363057297429 /* Pods-ClipboardManagerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB81A67D17741DD78EA38EEBF82DFD88 /* Pods-ClipboardManagerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96D726E40E68D1B0CDDB870928C83094 /* RLMSyncManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C992768097B08C391C797EA47F46C844 /* RLMSyncManager.h */; };
 		972170C76CB31F3151CEFF085FB20ADA /* RLMArray.h in Headers */ = {isa = PBXBuildFile; fileRef = B97E941FEC791512B649934955D14775 /* RLMArray.h */; };
 		98E5529EEB30445B58E5BB6464FF04F0 /* results_notifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C98FEBE306BE79F3F5C2F0A28D0CF04 /* results_notifier.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
@@ -175,6 +173,7 @@
 		B11869DC098E906D488A19E6F042E581 /* RLMSyncConfiguration_Private.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = 278580800306200AAA4A1F925D49B2D6 /* RLMSyncConfiguration_Private.h */; };
 		B1B5594CCCEB8C0EC165B88435A96865 /* RLMManagedArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2495AFEB1BD8BB1E071B5D31AC72BCAC /* RLMManagedArray.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		B276A4D5149EE3FF1A99634C1AD71A7E /* RLMRealm_Dynamic.h in Headers */ = {isa = PBXBuildFile; fileRef = E6CA1DFB07D3A834C261132229B34512 /* RLMRealm_Dynamic.h */; };
+		B3286189DA3DF375F5996D02BE259D00 /* Pods-ClipboardManagerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB81A67D17741DD78EA38EEBF82DFD88 /* Pods-ClipboardManagerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3CA00D5E98B96948F8B3AABDD79BD9F /* NSError+RLMSync.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD13218750AA36FF1702A5A7C8B2007 /* NSError+RLMSync.h */; };
 		B3E20979200F65F8A704B72B74EDDD64 /* RLMSchema_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1278DB9B2370908A446D19E239923AAD /* RLMSchema_Private.h */; };
 		B53B4EF7EBA22D84C1261282DEB562EF /* RLMQueryUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = DFDD2ACB010331A8B0769FF612189755 /* RLMQueryUtil.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
@@ -190,7 +189,6 @@
 		C0A6CCAABDD64805FC3F18430C97CB05 /* RLMObjectStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 892568F0A874AFEAA8772E22FC4DF1DD /* RLMObjectStore.h */; };
 		C0BA12E6FF13BCD3D8129522B3BC6ACF /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 171CC9BFD9BBE8C3354A01D58F73BE90 /* DateTools.bundle */; };
 		C2865062D774B14DCAFA9674BC11DC10 /* RLMArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42B26FB550626ADF9C3BDFB98C1D495C /* RLMArray.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
-		C405F30CA3DDEBE2C7AC8CD9EE8200E8 /* Pods-QuickButtons-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B669719552B226A1E468EA0821E8D5 /* Pods-QuickButtons-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C74BA175CC8C7431DB39FE88B388C7AC /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA6DD701A4971850FEE66AE2D945F2 /* List.swift */; };
 		C8BE05A4C12EA80DAFCBAF7BC017945C /* collection_notifications.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA8724C193F45564D3C91C420B98EE4E /* collection_notifications.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		CA5C76C8892017A9774F97EF4C9F9122 /* RLMSyncUser.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = BBB507C2D53BD9DAD494F5D78C105190 /* RLMSyncUser.h */; };
@@ -217,8 +215,10 @@
 		E51AFCF2FD6E720812FCC18838AC7953 /* RLMListBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FFED6C0A71CBB701558480F8792E56 /* RLMListBase.h */; };
 		E60A3177CAB8BA822DB1E614139471C1 /* RLMOptionalBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 24816C140CFDCA825FBB49BE640684B1 /* RLMOptionalBase.h */; };
 		E681A7449A4D2490104D50175AB7D895 /* RLMRealm+Sync.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = CEF074004A92DB4F98A7E2EC6564AAB5 /* RLMRealm+Sync.h */; };
+		E732163AAE52293C2D8253E0FAEF84BD /* Pods-QuickButtons-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2206D0F6F3323BA28027E3795DD71B /* Pods-QuickButtons-dummy.m */; };
 		E761393C2BD0CFD455AB8567C17492DF /* RLMObjectSchema.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = DF43D29D6024AE1C3E6CDBDDD78772D2 /* RLMObjectSchema.h */; };
 		E8E8111F2A0CCBD763652F8BFEEA526E /* thread_safe_reference.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C57F3BD0F0571A98E001FB987E7CE20B /* thread_safe_reference.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"3.0.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
+		EE20923845C8AE482E88B2B9813E317F /* Pods-QuickButtons-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B669719552B226A1E468EA0821E8D5 /* Pods-QuickButtons-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EED12DA3B3BD6B6598A327DEF7D28817 /* Integer+DateTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D253BF59B660DEB73AAB76A89D868C /* Integer+DateTools.swift */; };
 		EF13349E9C1D704FB5216C92B0D8D81A /* RealmCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C019202122A6172A649674BCAC90A8 /* RealmCollection.swift */; };
 		EF8A83F94EDB6C7C42F36FFF618D0526 /* Date+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521EBDE7531FF87446370FADC02575B /* Date+Components.swift */; };
@@ -239,12 +239,54 @@
 			remoteGlobalIDString = DB689EE7822D2781CE0DCABBCB2DA93A;
 			remoteInfo = RealmSwift;
 		};
+		3AD8DEEB8590408C797ABBBA7EB3E9B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E89CFD99B895BCC6E8EDC2F95A03500C;
+			remoteInfo = DateToolsSwift;
+		};
+		3E87A165BF2129FF12C3EFE94D731913 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3AD10730FB9AE21F7DDBDD159D8522E;
+			remoteInfo = Realm;
+		};
+		42194C1C8D28E97A7DEB5A330F012F11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB689EE7822D2781CE0DCABBCB2DA93A;
+			remoteInfo = RealmSwift;
+		};
+		6038E57F7509D442BE7E5E368E8F9AFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3AD10730FB9AE21F7DDBDD159D8522E;
+			remoteInfo = Realm;
+		};
+		7E2EBF6BBAA6E3CEAC93EACDBE941F6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB689EE7822D2781CE0DCABBCB2DA93A;
+			remoteInfo = RealmSwift;
+		};
 		90F5C87A4CADF4E4E571E88A4F4444D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F3AD10730FB9AE21F7DDBDD159D8522E;
 			remoteInfo = Realm;
+		};
+		A90A1FEF2F0015304ACE2E75E231D024 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E89CFD99B895BCC6E8EDC2F95A03500C;
+			remoteInfo = DateToolsSwift;
 		};
 		D14E2B278C4411EED0E3F8F4F6057740 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -549,11 +591,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		13C67D793B9DA8085C25748EE411A83B /* Frameworks */ = {
+		2C33E63AF8D91F5D5DCEBFE7BE7F6514 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8282147D5E35B89D458F8DC2179F9B81 /* Foundation.framework in Frameworks */,
+				080E740DC17DF724E8A06786F684D2FE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,11 +632,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E081B325DF9DCC993DBD24A575A66C10 /* Frameworks */ = {
+		F6301D143DC36D542C589F27F47B823F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				341CEDA4DF97105AD8C82783279425AF /* Foundation.framework in Frameworks */,
+				8966DFD2357107D593D2BF1F65D25681 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -968,6 +1010,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		021D1B01B42DAEAAED0C831E76733BBE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3286189DA3DF375F5996D02BE259D00 /* Pods-ClipboardManagerTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		054FE0A41D22A9A76DD4D15F61ACE8D6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1036,14 +1086,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B124D9B44884687200C97121DEA5253 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				957469FC84F9879BCA44363057297429 /* Pods-ClipboardManagerTests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9D8BFEDD2673D632D271CD2773ED5DE1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1052,45 +1094,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F74B952A617C085A29F67CB4BE507C31 /* Headers */ = {
+		F4B45AA7E3D14207051AF37392A2662D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C405F30CA3DDEBE2C7AC8CD9EE8200E8 /* Pods-QuickButtons-umbrella.h in Headers */,
+				EE20923845C8AE482E88B2B9813E317F /* Pods-QuickButtons-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1CEF4E3CF8A3DF003B70F06C24F8725A /* Pods-ClipboardManagerTests */ = {
+		826028B46C6CEA4BD20272B28529F4F4 /* Pods-QuickButtons */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27C526DC37D5A4C4D9B279AC95536355 /* Build configuration list for PBXNativeTarget "Pods-ClipboardManagerTests" */;
+			buildConfigurationList = B1C0BE0B839494F8E5EB03A4BD3DEE7C /* Build configuration list for PBXNativeTarget "Pods-QuickButtons" */;
 			buildPhases = (
-				DDB448D0D1AAB4EA0ED805B0EC4C44FE /* Sources */,
-				13C67D793B9DA8085C25748EE411A83B /* Frameworks */,
-				6B124D9B44884687200C97121DEA5253 /* Headers */,
+				2D488895346619A0F075BFB4406B8C03 /* Sources */,
+				F6301D143DC36D542C589F27F47B823F /* Frameworks */,
+				F4B45AA7E3D14207051AF37392A2662D /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = "Pods-ClipboardManagerTests";
-			productName = "Pods-ClipboardManagerTests";
-			productReference = 694070EBB2EFC3B34C9741E5E182005B /* Pods_ClipboardManagerTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7051EC2A19D5D35CB72A6ACCC33EB745 /* Pods-QuickButtons */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5141B067E9A0682AAD11C6E167F88946 /* Build configuration list for PBXNativeTarget "Pods-QuickButtons" */;
-			buildPhases = (
-				9ACF85B6959C17ECE2D8ECDDE2BD12E5 /* Sources */,
-				E081B325DF9DCC993DBD24A575A66C10 /* Frameworks */,
-				F74B952A617C085A29F67CB4BE507C31 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
+				40B7F69064A958A526EC50CC348698C6 /* PBXTargetDependency */,
+				9FD93DCFD4FA75EFEAFB906E759AA6CF /* PBXTargetDependency */,
+				85F19210C96E4E9DFBDBCEC1961CFCEE /* PBXTargetDependency */,
 			);
 			name = "Pods-QuickButtons";
 			productName = "Pods-QuickButtons";
@@ -1133,6 +1161,26 @@
 			name = RealmSwift;
 			productName = RealmSwift;
 			productReference = 755B5EA1003C98115AF9242119D12489 /* RealmSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E75C65FA8B4E4850449ED765A17D8B59 /* Pods-ClipboardManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4FBF5E9D7C2690BB3C81A5804E47081 /* Build configuration list for PBXNativeTarget "Pods-ClipboardManagerTests" */;
+			buildPhases = (
+				4F741C83A7F72A56A7A1427936F23EF8 /* Sources */,
+				2C33E63AF8D91F5D5DCEBFE7BE7F6514 /* Frameworks */,
+				021D1B01B42DAEAAED0C831E76733BBE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E05EB325C2946900DCAF50E4F9A9C016 /* PBXTargetDependency */,
+				5BBBED8F5E698C6F0993CF1F990F3024 /* PBXTargetDependency */,
+				840AE44AAB75CD905C1A8265E2817EF3 /* PBXTargetDependency */,
+			);
+			name = "Pods-ClipboardManagerTests";
+			productName = "Pods-ClipboardManagerTests";
+			productReference = 694070EBB2EFC3B34C9741E5E182005B /* Pods_ClipboardManagerTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E89CFD99B895BCC6E8EDC2F95A03500C /* DateToolsSwift */ = {
@@ -1195,8 +1243,8 @@
 			targets = (
 				E89CFD99B895BCC6E8EDC2F95A03500C /* DateToolsSwift */,
 				D1A38EC077EADE88E085130C817AA1F4 /* Pods-ClipboardManager */,
-				1CEF4E3CF8A3DF003B70F06C24F8725A /* Pods-ClipboardManagerTests */,
-				7051EC2A19D5D35CB72A6ACCC33EB745 /* Pods-QuickButtons */,
+				E75C65FA8B4E4850449ED765A17D8B59 /* Pods-ClipboardManagerTests */,
+				826028B46C6CEA4BD20272B28529F4F4 /* Pods-QuickButtons */,
 				F3AD10730FB9AE21F7DDBDD159D8522E /* Realm */,
 				DB689EE7822D2781CE0DCABBCB2DA93A /* RealmSwift */,
 			);
@@ -1215,6 +1263,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2D488895346619A0F075BFB4406B8C03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E732163AAE52293C2D8253E0FAEF84BD /* Pods-QuickButtons-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		368091E5E47CCD44442E080422FD3B7E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1243,19 +1299,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4F741C83A7F72A56A7A1427936F23EF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				080FD288B3401128429C9720BD1BF553 /* Pods-ClipboardManagerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94175E821AB6198EE193307383B258BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				05E2290248B3C780C38D95765CCFB847 /* Pods-ClipboardManager-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9ACF85B6959C17ECE2D8ECDDE2BD12E5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				11C9CF92752B0ABBC122D98802748DAD /* Pods-QuickButtons-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1366,14 +1422,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDB448D0D1AAB4EA0ED805B0EC4C44FE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A0F8DA2324025289D7479FEA2E47505 /* Pods-ClipboardManagerTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1389,6 +1437,36 @@
 			target = F3AD10730FB9AE21F7DDBDD159D8522E /* Realm */;
 			targetProxy = 90F5C87A4CADF4E4E571E88A4F4444D3 /* PBXContainerItemProxy */;
 		};
+		40B7F69064A958A526EC50CC348698C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DateToolsSwift;
+			target = E89CFD99B895BCC6E8EDC2F95A03500C /* DateToolsSwift */;
+			targetProxy = A90A1FEF2F0015304ACE2E75E231D024 /* PBXContainerItemProxy */;
+		};
+		5BBBED8F5E698C6F0993CF1F990F3024 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Realm;
+			target = F3AD10730FB9AE21F7DDBDD159D8522E /* Realm */;
+			targetProxy = 6038E57F7509D442BE7E5E368E8F9AFB /* PBXContainerItemProxy */;
+		};
+		840AE44AAB75CD905C1A8265E2817EF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RealmSwift;
+			target = DB689EE7822D2781CE0DCABBCB2DA93A /* RealmSwift */;
+			targetProxy = 7E2EBF6BBAA6E3CEAC93EACDBE941F6C /* PBXContainerItemProxy */;
+		};
+		85F19210C96E4E9DFBDBCEC1961CFCEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RealmSwift;
+			target = DB689EE7822D2781CE0DCABBCB2DA93A /* RealmSwift */;
+			targetProxy = 42194C1C8D28E97A7DEB5A330F012F11 /* PBXContainerItemProxy */;
+		};
+		9FD93DCFD4FA75EFEAFB906E759AA6CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Realm;
+			target = F3AD10730FB9AE21F7DDBDD159D8522E /* Realm */;
+			targetProxy = 3E87A165BF2129FF12C3EFE94D731913 /* PBXContainerItemProxy */;
+		};
 		CE1DBCB121522D1FCE2F7F61668A6B47 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RealmSwift;
@@ -1401,43 +1479,18 @@
 			target = E89CFD99B895BCC6E8EDC2F95A03500C /* DateToolsSwift */;
 			targetProxy = D14E2B278C4411EED0E3F8F4F6057740 /* PBXContainerItemProxy */;
 		};
+		E05EB325C2946900DCAF50E4F9A9C016 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DateToolsSwift;
+			target = E89CFD99B895BCC6E8EDC2F95A03500C /* DateToolsSwift */;
+			targetProxy = 3AD8DEEB8590408C797ABBBA7EB3E9B8 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A4A73C265EA0678C1F8E5BBE5166539 /* Debug */ = {
+		0CE3BEDB1306A4C9F818CD3E2577B9EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41795BF84B93DD9F66BD4F9ED6EC998B /* DateToolsSwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DateToolsSwift/DateToolsSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DateToolsSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DateToolsSwift/DateToolsSwift.modulemap";
-				PRODUCT_NAME = DateToolsSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		0AC36A488AC794C51336D77D274ADE62 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E89A223DF0AB631B36D625873917ADD /* Pods-ClipboardManagerTests.debug.xcconfig */;
+			baseConfigurationReference = 9C4BE17CC3E7C11579BF9870F1EC6FC2 /* Pods-ClipboardManagerTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1461,37 +1514,7 @@
 				PRODUCT_NAME = Pods_ClipboardManagerTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		1AE86D39926B3D6D74BE54740BE037E2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41795BF84B93DD9F66BD4F9ED6EC998B /* DateToolsSwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DateToolsSwift/DateToolsSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DateToolsSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DateToolsSwift/DateToolsSwift.modulemap";
-				PRODUCT_NAME = DateToolsSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1499,10 +1522,11 @@
 			};
 			name = Release;
 		};
-		3A5CFC8E6C72F691BBD553F456B667A9 /* Release */ = {
+		2C3E9893D35657DB9EE4A45A4564E12D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B174918E9115369A97DADCB38CF23427 /* RealmSwift.xcconfig */;
+			baseConfigurationReference = 6E0C13CBE9F4DA8E995ED3E2488B9CBD /* Pods-QuickButtons.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1512,50 +1536,21 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RealmSwift/RealmSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RealmSwift/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-QuickButtons/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RealmSwift/RealmSwift.modulemap";
-				PRODUCT_NAME = RealmSwift;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-QuickButtons/Pods-QuickButtons.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_QuickButtons;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		58FDBCF2F91ED2B260FB50063744F158 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B174918E9115369A97DADCB38CF23427 /* RealmSwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RealmSwift/RealmSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RealmSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RealmSwift/RealmSwift.modulemap";
-				PRODUCT_NAME = RealmSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1586,6 +1581,41 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_ClipboardManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5F091ADA5EE002A48925C846A892AF9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA332EAD50BFD5361508A2524F43802F /* Pods-QuickButtons.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-QuickButtons/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-QuickButtons/Pods-QuickButtons.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_QuickButtons;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1656,6 +1686,39 @@
 			};
 			name = Debug;
 		};
+		8A8BE443E0E50E7D98B81BF87C70067B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41795BF84B93DD9F66BD4F9ED6EC998B /* DateToolsSwift.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DateToolsSwift/DateToolsSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DateToolsSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DateToolsSwift/DateToolsSwift.modulemap";
+				PRODUCT_NAME = DateToolsSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		98F29E7567052F62660DDD7069ADF73C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1711,10 +1774,76 @@
 			};
 			name = Release;
 		};
-		A196B72AA1C23ABD7ACDE1C36A8A0314 /* Debug */ = {
+		9F7C064EC45BDAF2DDB9D8D1B9E28692 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B174918E9115369A97DADCB38CF23427 /* RealmSwift.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RealmSwift/RealmSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RealmSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RealmSwift/RealmSwift.modulemap";
+				PRODUCT_NAME = RealmSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C19E2BBFD6F8AF9ACC1338AA2A545206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B174918E9115369A97DADCB38CF23427 /* RealmSwift.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RealmSwift/RealmSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RealmSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RealmSwift/RealmSwift.modulemap";
+				PRODUCT_NAME = RealmSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C516E0506D53CB1486759B0966D9CB56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E73A45049BA390551443824321DC4C5 /* Realm.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1736,75 +1865,11 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A4A15C91003F57F3398265CE24523474 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C4BE17CC3E7C11579BF9870F1EC6FC2 /* Pods-ClipboardManagerTests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ClipboardManagerTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ClipboardManagerTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		ACE2E32D874F9D184E15004BB4D78530 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E0C13CBE9F4DA8E995ED3E2488B9CBD /* Pods-QuickButtons.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-QuickButtons/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-QuickButtons/Pods-QuickButtons.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_QuickButtons;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		C827819EE09BBD450B6D46F40E17ECCD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1840,43 +1905,11 @@
 			};
 			name = Debug;
 		};
-		E951A63A4938BFF5C805FE969483F839 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA332EAD50BFD5361508A2524F43802F /* Pods-QuickButtons.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-QuickButtons/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-QuickButtons/Pods-QuickButtons.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_QuickButtons;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F4A318C1A7B2822E3CDB4D85CEF49194 /* Release */ = {
+		EB4ADFF977D2F70348DD6ECAD96682D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E73A45049BA390551443824321DC4C5 /* Realm.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1898,24 +1931,80 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		EDF55799C1C01B540612B0419D9FECE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41795BF84B93DD9F66BD4F9ED6EC998B /* DateToolsSwift.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DateToolsSwift/DateToolsSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DateToolsSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DateToolsSwift/DateToolsSwift.modulemap";
+				PRODUCT_NAME = DateToolsSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F748123DB446BC022D4F73FEB669368F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E89A223DF0AB631B36D625873917ADD /* Pods-ClipboardManagerTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ClipboardManagerTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ClipboardManagerTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		27C526DC37D5A4C4D9B279AC95536355 /* Build configuration list for PBXNativeTarget "Pods-ClipboardManagerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0AC36A488AC794C51336D77D274ADE62 /* Debug */,
-				A4A15C91003F57F3398265CE24523474 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1925,20 +2014,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5141B067E9A0682AAD11C6E167F88946 /* Build configuration list for PBXNativeTarget "Pods-QuickButtons" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ACE2E32D874F9D184E15004BB4D78530 /* Debug */,
-				E951A63A4938BFF5C805FE969483F839 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		6C0D3ED9967F4159A4A0AA8FAAE9A32A /* Build configuration list for PBXNativeTarget "RealmSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				58FDBCF2F91ED2B260FB50063744F158 /* Debug */,
-				3A5CFC8E6C72F691BBD553F456B667A9 /* Release */,
+				9F7C064EC45BDAF2DDB9D8D1B9E28692 /* Debug */,
+				C19E2BBFD6F8AF9ACC1338AA2A545206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1946,8 +2026,26 @@
 		B0673E74982353354A6F0527C6BAA05C /* Build configuration list for PBXNativeTarget "Realm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A196B72AA1C23ABD7ACDE1C36A8A0314 /* Debug */,
-				F4A318C1A7B2822E3CDB4D85CEF49194 /* Release */,
+				EB4ADFF977D2F70348DD6ECAD96682D3 /* Debug */,
+				C516E0506D53CB1486759B0966D9CB56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1C0BE0B839494F8E5EB03A4BD3DEE7C /* Build configuration list for PBXNativeTarget "Pods-QuickButtons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C3E9893D35657DB9EE4A45A4564E12D /* Debug */,
+				5F091ADA5EE002A48925C846A892AF9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4FBF5E9D7C2690BB3C81A5804E47081 /* Build configuration list for PBXNativeTarget "Pods-ClipboardManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F748123DB446BC022D4F73FEB669368F /* Debug */,
+				0CE3BEDB1306A4C9F818CD3E2577B9EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1964,8 +2062,8 @@
 		E895CDDD9BD03948FD60B879EF8E23F5 /* Build configuration list for PBXNativeTarget "DateToolsSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0A4A73C265EA0678C1F8E5BBE5166539 /* Debug */,
-				1AE86D39926B3D6D74BE54740BE037E2 /* Release */,
+				EDF55799C1C01B540612B0419D9FECE1 /* Debug */,
+				8A8BE443E0E50E7D98B81BF87C70067B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

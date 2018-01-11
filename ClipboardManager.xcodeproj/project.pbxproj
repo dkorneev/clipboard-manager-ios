@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D961B0A745AF5A0C415F062 /* Pods_ClipboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D720678880D20132E64F68F /* Pods_ClipboardManager.framework */; };
+		762E943B851E5C07A5BCC344 /* Pods_QuickButtons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233896EA0AA307B74509B6CE /* Pods_QuickButtons.framework */; };
 		832524E82003D7D2005AF677 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* LandingViewModel.swift */; };
 		8325388D2003ED980090DF96 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
 		8330DBDA1F51A9F500B81CCD /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */; };
@@ -40,9 +42,7 @@
 		83C5C5DB2006952D00490DB0 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350D3761E97F7E000B20551 /* Record.swift */; };
 		83C5C5DC2006953000490DB0 /* RecordsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8380FC6C1FF8068D00BD3C46 /* RecordsProvider.swift */; };
 		83C5C5DD2006953200490DB0 /* PasteboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815761EA6B7D60030CD07 /* PasteboardManager.swift */; };
-		9B72EEDDFCAE58F001102BBA /* Pods_ClipboardManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 297335A480D32C4086CDABE8 /* Pods_ClipboardManagerTests.framework */; };
-		9F9738708B7D5FE4906423B4 /* Pods_ClipboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1019FDA793565443E08240A0 /* Pods_ClipboardManager.framework */; };
-		AA89A5A20179F99291084C9E /* Pods_QuickButtons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46D2978D1E015F74B84D057 /* Pods_QuickButtons.framework */; };
+		B6738E15E7FE261BC5943D9A /* Pods_ClipboardManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E450BCF3DEDFDB032098AB4C /* Pods_ClipboardManagerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,10 +77,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1019FDA793565443E08240A0 /* Pods_ClipboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1853FCA8D9590A62C1C91763 /* Pods-QuickButtons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickButtons.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickButtons/Pods-QuickButtons.release.xcconfig"; sourceTree = "<group>"; };
-		297335A480D32C4086CDABE8 /* Pods_ClipboardManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47053F302B9296E81A8C7D75 /* Pods-ClipboardManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager.debug.xcconfig"; sourceTree = "<group>"; };
+		233896EA0AA307B74509B6CE /* Pods_QuickButtons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickButtons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FEE4988EE16BD8BEB5F112C /* Pods-QuickButtons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickButtons.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickButtons/Pods-QuickButtons.release.xcconfig"; sourceTree = "<group>"; };
+		73742AF3CA282DA265840156 /* Pods-QuickButtons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickButtons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickButtons/Pods-QuickButtons.debug.xcconfig"; sourceTree = "<group>"; };
 		8330DBD81F51A9F500B81CCD /* QuickButtons.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickButtons.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		8330DBDC1F51A9F500B81CCD /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -113,11 +112,12 @@
 		839589381E95506400CC7045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83A0C3F21E956542007A6C39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A0C3F41E9565B0007A6C39 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
-		A308983FAE914043FC143C49 /* Pods-ClipboardManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B60F9A52BF77A0FFAE7DC55E /* Pods-ClipboardManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests.release.xcconfig"; sourceTree = "<group>"; };
-		C804B090E71E606DC40DF3E3 /* Pods-ClipboardManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager.release.xcconfig"; sourceTree = "<group>"; };
-		D46D2978D1E015F74B84D057 /* Pods_QuickButtons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickButtons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7F98F4400848879F5268FA5 /* Pods-QuickButtons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickButtons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickButtons/Pods-QuickButtons.debug.xcconfig"; sourceTree = "<group>"; };
+		8D720678880D20132E64F68F /* Pods_ClipboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FF0C0247FD82BBE77CFD496 /* Pods-ClipboardManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D85C437EAE85F42A7DD00350 /* Pods-ClipboardManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager.release.xcconfig"; sourceTree = "<group>"; };
+		E450BCF3DEDFDB032098AB4C /* Pods_ClipboardManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2B76200A77875DFA6EDB87 /* Pods-ClipboardManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		FE84A3620B1B8B957C5ACF6A /* Pods-ClipboardManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8330DBDA1F51A9F500B81CCD /* NotificationCenter.framework in Frameworks */,
-				AA89A5A20179F99291084C9E /* Pods_QuickButtons.framework in Frameworks */,
+				762E943B851E5C07A5BCC344 /* Pods_QuickButtons.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B72EEDDFCAE58F001102BBA /* Pods_ClipboardManagerTests.framework in Frameworks */,
+				B6738E15E7FE261BC5943D9A /* Pods_ClipboardManagerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,22 +142,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F9738708B7D5FE4906423B4 /* Pods_ClipboardManager.framework in Frameworks */,
+				0D961B0A745AF5A0C415F062 /* Pods_ClipboardManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		67EF01C3B8771BD0EF013EFA /* Pods */ = {
+		50CE3231BF1543B99BFBD308 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				47053F302B9296E81A8C7D75 /* Pods-ClipboardManager.debug.xcconfig */,
-				C804B090E71E606DC40DF3E3 /* Pods-ClipboardManager.release.xcconfig */,
-				A308983FAE914043FC143C49 /* Pods-ClipboardManagerTests.debug.xcconfig */,
-				B60F9A52BF77A0FFAE7DC55E /* Pods-ClipboardManagerTests.release.xcconfig */,
-				E7F98F4400848879F5268FA5 /* Pods-QuickButtons.debug.xcconfig */,
-				1853FCA8D9590A62C1C91763 /* Pods-QuickButtons.release.xcconfig */,
+				FE84A3620B1B8B957C5ACF6A /* Pods-ClipboardManager.debug.xcconfig */,
+				D85C437EAE85F42A7DD00350 /* Pods-ClipboardManager.release.xcconfig */,
+				8FF0C0247FD82BBE77CFD496 /* Pods-ClipboardManagerTests.debug.xcconfig */,
+				FB2B76200A77875DFA6EDB87 /* Pods-ClipboardManagerTests.release.xcconfig */,
+				73742AF3CA282DA265840156 /* Pods-QuickButtons.debug.xcconfig */,
+				6FEE4988EE16BD8BEB5F112C /* Pods-QuickButtons.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -239,8 +239,8 @@
 				8330DBDB1F51A9F500B81CCD /* QuickButtons */,
 				83936D611FF7F90300554E39 /* ClipboardManagerTests */,
 				8395892A1E95506400CC7045 /* Products */,
-				67EF01C3B8771BD0EF013EFA /* Pods */,
 				A0570DE890F291A61D30338C /* Frameworks */,
+				50CE3231BF1543B99BFBD308 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -292,10 +292,10 @@
 		A0570DE890F291A61D30338C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1019FDA793565443E08240A0 /* Pods_ClipboardManager.framework */,
 				8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */,
-				297335A480D32C4086CDABE8 /* Pods_ClipboardManagerTests.framework */,
-				D46D2978D1E015F74B84D057 /* Pods_QuickButtons.framework */,
+				8D720678880D20132E64F68F /* Pods_ClipboardManager.framework */,
+				E450BCF3DEDFDB032098AB4C /* Pods_ClipboardManagerTests.framework */,
+				233896EA0AA307B74509B6CE /* Pods_QuickButtons.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -307,11 +307,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8330DBE71F51A9F500B81CCD /* Build configuration list for PBXNativeTarget "QuickButtons" */;
 			buildPhases = (
-				F1D528B0C26DCFC0158DCB07 /* [CP] Check Pods Manifest.lock */,
+				5808AFF1FD2C6A5E31BA9F22 /* [CP] Check Pods Manifest.lock */,
 				8330DBD41F51A9F500B81CCD /* Sources */,
 				8330DBD51F51A9F500B81CCD /* Frameworks */,
 				8330DBD61F51A9F500B81CCD /* Resources */,
-				B7DB81B32C3BBD7BCBF07297 /* [CP] Copy Pods Resources */,
+				FC7F3EA81C8F1CE6C89BADDC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -326,12 +326,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83936D671FF7F90400554E39 /* Build configuration list for PBXNativeTarget "ClipboardManagerTests" */;
 			buildPhases = (
-				D7831383A065DC9B622DF960 /* [CP] Check Pods Manifest.lock */,
+				CC0050E86CA7BEC5F8CB2DA5 /* [CP] Check Pods Manifest.lock */,
 				83936D5C1FF7F90300554E39 /* Sources */,
 				83936D5D1FF7F90300554E39 /* Frameworks */,
 				83936D5E1FF7F90300554E39 /* Resources */,
-				205D501C12967011AE8BA143 /* [CP] Embed Pods Frameworks */,
-				AD95F6BDB0540C09C9BAED36 /* [CP] Copy Pods Resources */,
+				DF4F0E09B10A0222BA878228 /* [CP] Embed Pods Frameworks */,
+				FB0BB13FD454A55A77779A46 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -347,13 +347,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8395893B1E95506400CC7045 /* Build configuration list for PBXNativeTarget "ClipboardManager" */;
 			buildPhases = (
-				2F05F1C3CC907DE91344D5B1 /* [CP] Check Pods Manifest.lock */,
+				BB252BE3481A89C57882A51B /* [CP] Check Pods Manifest.lock */,
 				839589251E95506400CC7045 /* Sources */,
 				839589261E95506400CC7045 /* Frameworks */,
 				839589271E95506400CC7045 /* Resources */,
-				9471DF412ADBAE1A44B3EE63 /* [CP] Embed Pods Frameworks */,
-				4FC166AA3B872523F25D1EBA /* [CP] Copy Pods Resources */,
 				8330DBE81F51A9F500B81CCD /* Embed App Extensions */,
+				298BCFE98487DBB721A2E8DD /* [CP] Embed Pods Frameworks */,
+				E1B63A32E428EF2854A4EEEA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -456,55 +456,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		205D501C12967011AE8BA143 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2F05F1C3CC907DE91344D5B1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ClipboardManager-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4FC166AA3B872523F25D1EBA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9471DF412ADBAE1A44B3EE63 /* [CP] Embed Pods Frameworks */ = {
+		298BCFE98487DBB721A2E8DD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -526,37 +478,43 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AD95F6BDB0540C09C9BAED36 /* [CP] Copy Pods Resources */ = {
+		5808AFF1FD2C6A5E31BA9F22 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickButtons-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B7DB81B32C3BBD7BCBF07297 /* [CP] Copy Pods Resources */ = {
+		BB252BE3481A89C57882A51B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClipboardManager-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickButtons/Pods-QuickButtons-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D7831383A065DC9B622DF960 /* [CP] Check Pods Manifest.lock */ = {
+		CC0050E86CA7BEC5F8CB2DA5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -574,22 +532,71 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F1D528B0C26DCFC0158DCB07 /* [CP] Check Pods Manifest.lock */ = {
+		DF4F0E09B10A0222BA878228 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-QuickButtons-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1B63A32E428EF2854A4EEEA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB0BB13FD454A55A77779A46 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC7F3EA81C8F1CE6C89BADDC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickButtons/Pods-QuickButtons-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -685,7 +692,7 @@
 /* Begin XCBuildConfiguration section */
 		8330DBE51F51A9F500B81CCD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7F98F4400848879F5268FA5 /* Pods-QuickButtons.debug.xcconfig */;
+			baseConfigurationReference = 73742AF3CA282DA265840156 /* Pods-QuickButtons.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = QuickButtons/QuickButtons.entitlements;
 				DEVELOPMENT_TEAM = X3U3JAN2WV;
@@ -701,7 +708,7 @@
 		};
 		8330DBE61F51A9F500B81CCD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1853FCA8D9590A62C1C91763 /* Pods-QuickButtons.release.xcconfig */;
+			baseConfigurationReference = 6FEE4988EE16BD8BEB5F112C /* Pods-QuickButtons.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = QuickButtons/QuickButtons.entitlements;
 				DEVELOPMENT_TEAM = X3U3JAN2WV;
@@ -717,7 +724,7 @@
 		};
 		83936D681FF7F90400554E39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A308983FAE914043FC143C49 /* Pods-ClipboardManagerTests.debug.xcconfig */;
+			baseConfigurationReference = 8FF0C0247FD82BBE77CFD496 /* Pods-ClipboardManagerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -739,7 +746,7 @@
 		};
 		83936D691FF7F90400554E39 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B60F9A52BF77A0FFAE7DC55E /* Pods-ClipboardManagerTests.release.xcconfig */;
+			baseConfigurationReference = FB2B76200A77875DFA6EDB87 /* Pods-ClipboardManagerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -866,7 +873,7 @@
 		};
 		8395893C1E95506400CC7045 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47053F302B9296E81A8C7D75 /* Pods-ClipboardManager.debug.xcconfig */;
+			baseConfigurationReference = FE84A3620B1B8B957C5ACF6A /* Pods-ClipboardManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ClipboardManager/ClipboardManager.entitlements;
@@ -882,7 +889,7 @@
 		};
 		8395893D1E95506400CC7045 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C804B090E71E606DC40DF3E3 /* Pods-ClipboardManager.release.xcconfig */;
+			baseConfigurationReference = D85C437EAE85F42A7DD00350 /* Pods-ClipboardManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ClipboardManager/ClipboardManager.entitlements;
