@@ -30,12 +30,7 @@ class LandingViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        UserDefaults.standard.set("test test test", forKey: "testKey")
-        let value = UserDefaults.standard.value(forKey: "testKey") as! String
-        print(">>> value for key: \(value)")
-        
+        super.viewDidLoad()        
         self.navigationItem.title = "Clipboard manager"
         let addButton = UIBarButtonItem(barButtonSystemItem: .add,
                                         target: self,

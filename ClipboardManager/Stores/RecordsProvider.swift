@@ -14,7 +14,6 @@ extension Realm {
             forSecurityApplicationGroupIdentifier: K_GROUP_ID)!
         let fileURL = directory.appendingPathComponent(K_DB_NAME)
         let realm = try! Realm(fileURL: fileURL)
-        print(">>> file url \(realm.configuration.fileURL?.absoluteString ?? "")")
         return realm
     }
 }

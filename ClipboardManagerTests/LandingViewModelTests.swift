@@ -6,7 +6,6 @@
 //
 
 import XCTest
-import RealmSwift
 
 class LandingViewModelTests: XCTestCase {
     private var pbManager = TestPasteboardManager()

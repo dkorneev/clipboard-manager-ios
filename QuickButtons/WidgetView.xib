@@ -13,13 +13,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WidgetView" customModule="QuickButtons" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="185"/>
+            <rect key="frame" x="0.0" y="0.0" width="315" height="185"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oc-zH-Gpe">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <rect key="frame" x="255" y="0.0" width="60" height="185"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="nBT-OS-v4E"/>
+                        <constraint firstAttribute="width" constant="60" id="KKo-8u-9BJ"/>
                     </constraints>
                     <state key="normal" title="ADD"/>
                     <connections>
@@ -27,19 +27,19 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bhd-Ne-1IL">
-                    <rect key="frame" x="0.0" y="44" width="375" height="141"/>
+                    <rect key="frame" x="0.0" y="0.0" width="255" height="185"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Bhd-Ne-1IL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1Tj-FO-LFx"/>
-                <constraint firstItem="Bhd-Ne-1IL" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="3Hj-Wt-cIv"/>
-                <constraint firstItem="Bhd-Ne-1IL" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Bz6-71-igu"/>
-                <constraint firstItem="Bhd-Ne-1IL" firstAttribute="top" secondItem="2oc-zH-Gpe" secondAttribute="bottom" id="IAJ-NF-ply"/>
-                <constraint firstItem="2oc-zH-Gpe" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="rOp-HQ-GFZ"/>
-                <constraint firstItem="2oc-zH-Gpe" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="uyt-PK-k8Q"/>
-                <constraint firstItem="2oc-zH-Gpe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vkY-i6-Mlh"/>
+                <constraint firstItem="2oc-zH-Gpe" firstAttribute="leading" secondItem="Bhd-Ne-1IL" secondAttribute="trailing" id="8t9-He-iyy"/>
+                <constraint firstItem="Bhd-Ne-1IL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="J7U-ZE-NPX"/>
+                <constraint firstItem="Bhd-Ne-1IL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="W64-E8-dbh"/>
+                <constraint firstItem="2oc-zH-Gpe" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="XCS-bK-p2x"/>
+                <constraint firstItem="2oc-zH-Gpe" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ki5-Ra-cWt"/>
+                <constraint firstItem="2oc-zH-Gpe" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="mrx-Ra-PnN"/>
+                <constraint firstItem="Bhd-Ne-1IL" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="ptu-Kd-wwI"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -47,7 +47,7 @@
                 <outlet property="addButton" destination="2oc-zH-Gpe" id="RPZ-N2-3RU"/>
                 <outlet property="tableView" destination="Bhd-Ne-1IL" id="xxZ-Jk-2UC"/>
             </connections>
-            <point key="canvasLocation" x="24.5" y="-189.5"/>
+            <point key="canvasLocation" x="54.5" y="-189.5"/>
         </view>
     </objects>
 </document>

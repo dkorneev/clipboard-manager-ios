@@ -166,11 +166,11 @@
 			isa = PBXGroup;
 			children = (
 				83827F2F2006B0700097C548 /* QuickButtons.entitlements */,
-				8330DBDC1F51A9F500B81CCD /* TodayViewController.swift */,
-				836834BD2006623700C69A42 /* WidgetView.xib */,
-				836834BF200662DF00C69A42 /* WidgetView.swift */,
-				8330DBDE1F51A9F500B81CCD /* MainInterface.storyboard */,
 				8330DBE11F51A9F500B81CCD /* Info.plist */,
+				8330DBDC1F51A9F500B81CCD /* TodayViewController.swift */,
+				836834BF200662DF00C69A42 /* WidgetView.swift */,
+				836834BD2006623700C69A42 /* WidgetView.xib */,
+				8330DBDE1F51A9F500B81CCD /* MainInterface.storyboard */,
 			);
 			path = QuickButtons;
 			sourceTree = "<group>";

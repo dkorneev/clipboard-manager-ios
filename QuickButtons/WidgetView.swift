@@ -11,7 +11,7 @@ class WidgetView: UIView, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
-    private let maxDisplayedRecords = 3;
+    private let maxDisplayedRecords = 2;
     private var viewModel: LandingViewModelProtocol? {
         didSet {
             viewModel?.updateBlock = { [weak self] _ in
@@ -31,9 +31,8 @@ class WidgetView: UIView, UITableViewDelegate, UITableViewDataSource {
         super.awakeFromNib()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
-        let value = UserDefaults.standard.value(forKey: "testKey") as? String ?? "nil"
-        print(">>> value for key: \(value)")
+        let color = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.2)
+        self.addButton.backgroundColor = color
     }
     
     // MARK: user interactions
@@ -50,7 +49,6 @@ class WidgetView: UIView, UITableViewDelegate, UITableViewDataSource {
         guard let viewModel = self.viewModel else {
             return 0
         }
-        print(">>> number of records: \(viewModel.numberOfRecords())")
         return min(viewModel.numberOfRecords(), self.maxDisplayedRecords)
     }
     
@@ -65,15 +63,22 @@ class WidgetView: UIView, UITableViewDelegate, UITableViewDataSource {
         var cell = tableView.dequeueReusableCell(withIdentifier: reuseId)
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: reuseId)
+            cell?.textLabel?.numberOfLines = 2
         }
         if let text = recordData.data as? String {
+            cell?.textLabel?.textColor = UIColor.darkText
             cell?.textLabel?.text = text
+            cell?.imageView?.image = nil
         
-        } else if let _ = recordData.data as? UIImage {
-            cell?.textLabel?.text = "image"
+        } else if let image = recordData.data as? UIImage {
+            cell?.textLabel?.text = "(image)"
+            cell?.textLabel?.textColor = UIColor.gray
+            cell?.imageView?.image = image
         
         } else {
+            cell?.textLabel?.textColor = UIColor.darkText
             cell?.textLabel?.text = "unknown"
+            cell?.imageView?.image = nil
         }
         return cell!
     }
@@ -83,7 +88,7 @@ class WidgetView: UIView, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return 24
+        return 55
     }
     
     func tableView(_ tableView: UITableView,
