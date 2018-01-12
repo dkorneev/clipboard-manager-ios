@@ -15,6 +15,8 @@
 		8330DBDD1F51A9F500B81CCD /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8330DBDC1F51A9F500B81CCD /* TodayViewController.swift */; };
 		8330DBE01F51A9F500B81CCD /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8330DBDE1F51A9F500B81CCD /* MainInterface.storyboard */; };
 		8330DBE41F51A9F500B81CCD /* QuickButtons.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8330DBD81F51A9F500B81CCD /* QuickButtons.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		833EF1772008C038001CD7D1 /* test-image-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 833EF1752008C037001CD7D1 /* test-image-1.jpeg */; };
+		833EF1782008C038001CD7D1 /* test-image-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 833EF1762008C038001CD7D1 /* test-image-2.jpeg */; };
 		8350D3771E97F7E000B20551 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350D3761E97F7E000B20551 /* Record.swift */; };
 		836834BE2006623700C69A42 /* WidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836834BD2006623700C69A42 /* WidgetView.xib */; };
 		836834C0200662DF00C69A42 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836834BF200662DF00C69A42 /* WidgetView.swift */; };
@@ -85,6 +87,8 @@
 		8330DBDC1F51A9F500B81CCD /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		8330DBDF1F51A9F500B81CCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8330DBE11F51A9F500B81CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		833EF1752008C037001CD7D1 /* test-image-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test-image-1.jpeg"; sourceTree = "<group>"; };
+		833EF1762008C038001CD7D1 /* test-image-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test-image-2.jpeg"; sourceTree = "<group>"; };
 		8350D3761E97F7E000B20551 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		836834BD2006623700C69A42 /* WidgetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetView.xib; sourceTree = "<group>"; };
 		836834BF200662DF00C69A42 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
@@ -175,6 +179,15 @@
 			path = QuickButtons;
 			sourceTree = "<group>";
 		};
+		833EF1742008C023001CD7D1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				833EF1752008C037001CD7D1 /* test-image-1.jpeg */,
+				833EF1762008C038001CD7D1 /* test-image-2.jpeg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		8378156A1EA6962F0030CD07 /* TVCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +238,7 @@
 		83936D611FF7F90300554E39 /* ClipboardManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				833EF1742008C023001CD7D1 /* Images */,
 				838196952004D3E800DBA6F6 /* Helpers */,
 				83936D621FF7F90300554E39 /* ClipboardViewModelTests.swift */,
 				83936D641FF7F90300554E39 /* Info.plist */,
@@ -438,6 +452,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833EF1782008C038001CD7D1 /* test-image-2.jpeg in Resources */,
+				833EF1772008C038001CD7D1 /* test-image-1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,54 +53,6 @@ class ClipboardViewModel: ClipboardViewModelProtocol {
             .sorted(by: { $0.updated > $1.updated })
     }
     
-    private func addNewRecord(_ newRecord: Any, withCompletion completion: CompletionBlock?) {
-        if let newRecord = newRecord as? String {
-            self.addNewRecord(text: newRecord) {
-                completion?()
-            }
-            
-        } else if let newRecord = newRecord as? UIImage {
-            self.addNewRecord(image: newRecord) {
-                completion?()
-            }
-        }
-    }
-    
-    private func addNewRecord(text newText: String,
-                              withCompletion completion: CompletionBlock?)
-    {
-        self.findExistingRecord(byData: newText) { existingRecord in
-            if let existingRecord = existingRecord {
-                self.recordsProvider.updateRecord(existingRecord,
-                                                  updatedDate: Date(),
-                                                  withCompletion: completion)
-                
-            } else {
-                self.recordsProvider.createRecord(withText: newText,
-                                                  withCompletion: completion)
-            }
-        }
-    }
-    
-    private func addNewRecord(image: UIImage,
-                              withCompletion completion: CompletionBlock?)
-    {
-        guard let newImageData = UIImagePNGRepresentation(image) else {
-            return
-        }
-        self.findExistingRecord(byData: newImageData) { existingRecord in
-            if let existingRecord = existingRecord {
-                self.recordsProvider.updateRecord(existingRecord,
-                                                  updatedDate: Date(),
-                                                  withCompletion: completion)
-                
-            } else {
-                self.recordsProvider.createRecord(withImageData: newImageData,
-                                                  withCompletion: completion)
-            }
-        }
-    }
-    
     private func findExistingRecord(byData data: Any,
                                     completion:@escaping ((_ existingRecord: RecordModel?) -> Void))
     {
@@ -141,6 +93,40 @@ class ClipboardViewModel: ClipboardViewModelProtocol {
         }
     }
     
+    // MARK: add record methods
+    
+    private func addNewRecord(text newText: String,
+                              withCompletion completion: CompletionBlock?)
+    {
+        self.findExistingRecord(byData: newText) { existingRecord in
+            if let existingRecord = existingRecord {
+                self.recordsProvider.updateRecord(existingRecord,
+                                                  updatedDate: Date(),
+                                                  withCompletion: completion)
+                
+            } else {
+                self.recordsProvider.createRecord(withText: newText,
+                                                  withCompletion: completion)
+            }
+        }
+    }
+    
+    private func addNewRecord(imageData: Data,
+                              withCompletion completion: CompletionBlock?)
+    {
+        self.findExistingRecord(byData: imageData) { existingRecord in
+            if let existingRecord = existingRecord {
+                self.recordsProvider.updateRecord(existingRecord,
+                                                  updatedDate: Date(),
+                                                  withCompletion: completion)
+                
+            } else {
+                self.recordsProvider.createRecord(withImageData: imageData,
+                                                  withCompletion: completion)
+            }
+        }
+    }
+ 
     // MARK: - ClipboardViewModelProtocol
     
     var updateBlock: ((_ rowIndex: Int?) -> Void)?
@@ -152,8 +138,10 @@ class ClipboardViewModel: ClipboardViewModelProtocol {
     func recordDataAtIndex(index: Int) -> (data: Any, date: Date)? {
         guard index < self.objects.count else { return nil }
         let record = self.objects[index]
-        if let imageData = record.imageData {
-            return (data: UIImage(data: imageData) as Any, date: record.updated)
+        if let imageData = record.imageData,
+            let image = UIImage(data: imageData)
+        {
+            return (data: image as Any, date: record.updated)
         
         } else if let text = record.text {
             return (data: text as Any, date: record.updated)
@@ -164,10 +152,28 @@ class ClipboardViewModel: ClipboardViewModelProtocol {
     }
     
     func addNewRecord(withCompletion completion: CompletionBlock?) {
-        if let data = self.pasteboard.currentData() {
-            self.addNewRecord(data) {
+        guard let data = self.pasteboard.currentData() else {
+            completion?()
+            return
+        }
+        if let text = data as? String {
+            self.addNewRecord(text: text) {
                 completion?()
             }
+            
+        } else if let image = data as? UIImage {
+            guard let newImageData = UIImagePNGRepresentation(image) else {
+                print("ClipboardViewModel - can't get image data")
+                completion?()
+                return
+            }
+            self.addNewRecord(imageData: newImageData) {
+                completion?()
+            }
+            
+        } else {
+            print("ClipboardViewModel - not supported record type")
+            completion?()
         }
     }
     
