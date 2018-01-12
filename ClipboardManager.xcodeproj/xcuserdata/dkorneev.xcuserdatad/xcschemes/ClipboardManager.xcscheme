@@ -86,7 +86,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "IMAGE_DIFF_DIR"
-            value = "$(SOURCE_ROOT)/$(PROJECT_NAME)UITests/FailureDiffs"
+            value = "$(SOURCE_ROOT)/Tests/$(PROJECT_NAME)UITests/FailureDiffs"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
@@ -96,7 +96,7 @@
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "FB_REFERENCE_IMAGE_DIR"
-            value = "$(SOURCE_ROOT)/$(PROJECT_NAME)UITests/ReferenceImages"
+            value = "$(SOURCE_ROOT)/Tests/$(PROJECT_NAME)UITests/ReferenceImages"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
