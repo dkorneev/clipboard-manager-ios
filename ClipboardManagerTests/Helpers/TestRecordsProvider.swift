@@ -47,7 +47,7 @@ class TestRecordsProvider: RecordsProviderProtocol {
                       withCompletion completion: CompletionBlock?)
     {
         let newRecord = TestRecord()
-        newRecord.image = imageData
+        newRecord.imageData = imageData
         records.append(newRecord)
         self.recordsDidChangeBlock?()
         completion?()

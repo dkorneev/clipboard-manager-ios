@@ -15,10 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
-        let viewModel = LandingViewModel(
+        let viewModel = ClipboardViewModel(
             pasteboardManager: PasteboardManager(),
             recordsProvider: RecordsProvider())
-        let controller = LandingViewController(viewModel: viewModel)
+        let controller = ClipboardViewController(viewModel: viewModel)
         self.window?.rootViewController = UINavigationController.init(rootViewController: controller)
         return true
     }

@@ -91,7 +91,7 @@ class RecordsProvider: RecordsProviderProtocol {
                       withCompletion completion: CompletionBlock? = nil) {
         self.performAsyncRealmOperation { realm in
             let record = Record()
-            record.image = imageData
+            record.imageData = imageData
             try! realm.write {
                 realm.add(record)
             }

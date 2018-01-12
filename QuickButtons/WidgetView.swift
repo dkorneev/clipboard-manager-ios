@@ -12,7 +12,7 @@ class WidgetView: UIView, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     private let maxDisplayedRecords = 2;
-    private var viewModel: LandingViewModelProtocol? {
+    private var viewModel: ClipboardViewModelProtocol? {
         didSet {
             viewModel?.updateBlock = { [weak self] _ in
                 self?.tableView.reloadData()
@@ -20,7 +20,7 @@ class WidgetView: UIView, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    static func create(withViewModel viewModel: LandingViewModelProtocol) -> WidgetView {
+    static func create(withViewModel viewModel: ClipboardViewModelProtocol) -> WidgetView {
         let nib = UINib(nibName: "WidgetView", bundle: nil)
         let view = nib.instantiate(withOwner: nil, options: nil)[0] as! WidgetView
         view.viewModel = viewModel

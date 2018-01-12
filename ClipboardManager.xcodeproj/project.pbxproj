@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D961B0A745AF5A0C415F062 /* Pods_ClipboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D720678880D20132E64F68F /* Pods_ClipboardManager.framework */; };
 		762E943B851E5C07A5BCC344 /* Pods_QuickButtons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233896EA0AA307B74509B6CE /* Pods_QuickButtons.framework */; };
-		832524E82003D7D2005AF677 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* LandingViewModel.swift */; };
+		832524E82003D7D2005AF677 /* ClipboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* ClipboardViewModel.swift */; };
 		8325388D2003ED980090DF96 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
 		8330DBDA1F51A9F500B81CCD /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */; };
 		8330DBDD1F51A9F500B81CCD /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8330DBDC1F51A9F500B81CCD /* TodayViewController.swift */; };
@@ -30,15 +30,15 @@
 		8381969B2004D44C00DBA6F6 /* TestPasteboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381969A2004D44C00DBA6F6 /* TestPasteboardManager.swift */; };
 		83827F312006B1300097C548 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83827F302006B1300097C548 /* Constants.swift */; };
 		83827F322006B1300097C548 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83827F302006B1300097C548 /* Constants.swift */; };
-		8392E6D81E9A360200539037 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* LandingViewModel.swift */; };
-		83936D631FF7F90300554E39 /* LandingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83936D621FF7F90300554E39 /* LandingViewModelTests.swift */; };
+		8392E6D81E9A360200539037 /* ClipboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* ClipboardViewModel.swift */; };
+		83936D631FF7F90300554E39 /* ClipboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83936D621FF7F90300554E39 /* ClipboardViewModelTests.swift */; };
 		839589321E95506400CC7045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839589301E95506400CC7045 /* Main.storyboard */; };
 		839589341E95506400CC7045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839589331E95506400CC7045 /* Assets.xcassets */; };
 		839589371E95506400CC7045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839589351E95506400CC7045 /* LaunchScreen.storyboard */; };
 		83A0C3F31E956542007A6C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F21E956542007A6C39 /* AppDelegate.swift */; };
-		83A0C3F51E9565B0007A6C39 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F41E9565B0007A6C39 /* LandingViewController.swift */; };
+		83A0C3F51E9565B0007A6C39 /* ClipboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F41E9565B0007A6C39 /* ClipboardViewController.swift */; };
 		83B72D3920066A030006CA9E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
-		83C5C5DA2006952400490DB0 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* LandingViewModel.swift */; };
+		83C5C5DA2006952400490DB0 /* ClipboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* ClipboardViewModel.swift */; };
 		83C5C5DB2006952D00490DB0 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350D3761E97F7E000B20551 /* Record.swift */; };
 		83C5C5DC2006953000490DB0 /* RecordsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8380FC6C1FF8068D00BD3C46 /* RecordsProvider.swift */; };
 		83C5C5DD2006953200490DB0 /* PasteboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815761EA6B7D60030CD07 /* PasteboardManager.swift */; };
@@ -101,9 +101,9 @@
 		83827F2E2006B04E0097C548 /* ClipboardManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipboardManager.entitlements; sourceTree = "<group>"; };
 		83827F2F2006B0700097C548 /* QuickButtons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickButtons.entitlements; sourceTree = "<group>"; };
 		83827F302006B1300097C548 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		8392E6D71E9A360200539037 /* LandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
+		8392E6D71E9A360200539037 /* ClipboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardViewModel.swift; sourceTree = "<group>"; };
 		83936D601FF7F90300554E39 /* ClipboardManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipboardManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		83936D621FF7F90300554E39 /* LandingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelTests.swift; sourceTree = "<group>"; };
+		83936D621FF7F90300554E39 /* ClipboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardViewModelTests.swift; sourceTree = "<group>"; };
 		83936D641FF7F90300554E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		839589291E95506400CC7045 /* ClipboardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipboardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839589311E95506400CC7045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		839589361E95506400CC7045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		839589381E95506400CC7045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83A0C3F21E956542007A6C39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		83A0C3F41E9565B0007A6C39 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		83A0C3F41E9565B0007A6C39 /* ClipboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardViewController.swift; sourceTree = "<group>"; };
 		8D720678880D20132E64F68F /* Pods_ClipboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF0C0247FD82BBE77CFD496 /* Pods-ClipboardManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D85C437EAE85F42A7DD00350 /* Pods-ClipboardManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager.release.xcconfig"; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 		83936D5B1FF7F7C200554E39 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				8392E6D71E9A360200539037 /* LandingViewModel.swift */,
+				8392E6D71E9A360200539037 /* ClipboardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -226,7 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				838196952004D3E800DBA6F6 /* Helpers */,
-				83936D621FF7F90300554E39 /* LandingViewModelTests.swift */,
+				83936D621FF7F90300554E39 /* ClipboardViewModelTests.swift */,
 				83936D641FF7F90300554E39 /* Info.plist */,
 			);
 			path = ClipboardManagerTests;
@@ -275,7 +275,7 @@
 		83A0C3F01E9564EE007A6C39 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				83A0C3F41E9565B0007A6C39 /* LandingViewController.swift */,
+				83A0C3F41E9565B0007A6C39 /* ClipboardViewController.swift */,
 				8378156A1EA6962F0030CD07 /* TVCells */,
 			);
 			path = Views;
@@ -611,7 +611,7 @@
 				83C5C5DB2006952D00490DB0 /* Record.swift in Sources */,
 				83C5C5DC2006953000490DB0 /* RecordsProvider.swift in Sources */,
 				83C5C5DD2006953200490DB0 /* PasteboardManager.swift in Sources */,
-				83C5C5DA2006952400490DB0 /* LandingViewModel.swift in Sources */,
+				83C5C5DA2006952400490DB0 /* ClipboardViewModel.swift in Sources */,
 				8330DBDD1F51A9F500B81CCD /* TodayViewController.swift in Sources */,
 				83827F322006B1300097C548 /* Constants.swift in Sources */,
 			);
@@ -625,8 +625,8 @@
 				838196992004D43300DBA6F6 /* TestRecord.swift in Sources */,
 				8381969B2004D44C00DBA6F6 /* TestPasteboardManager.swift in Sources */,
 				838196972004D40800DBA6F6 /* TestRecordsProvider.swift in Sources */,
-				832524E82003D7D2005AF677 /* LandingViewModel.swift in Sources */,
-				83936D631FF7F90300554E39 /* LandingViewModelTests.swift in Sources */,
+				832524E82003D7D2005AF677 /* ClipboardViewModel.swift in Sources */,
+				83936D631FF7F90300554E39 /* ClipboardViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,11 +638,11 @@
 				83A0C3F31E956542007A6C39 /* AppDelegate.swift in Sources */,
 				8378156D1EA696720030CD07 /* TextTVCell.swift in Sources */,
 				837815771EA6B7D60030CD07 /* PasteboardManager.swift in Sources */,
-				83A0C3F51E9565B0007A6C39 /* LandingViewController.swift in Sources */,
+				83A0C3F51E9565B0007A6C39 /* ClipboardViewController.swift in Sources */,
 				83827F312006B1300097C548 /* Constants.swift in Sources */,
 				837815741EA6ACB50030CD07 /* ImageTVCell.swift in Sources */,
 				837815711EA69E180030CD07 /* Protocols.swift in Sources */,
-				8392E6D81E9A360200539037 /* LandingViewModel.swift in Sources */,
+				8392E6D81E9A360200539037 /* ClipboardViewModel.swift in Sources */,
 				8350D3771E97F7E000B20551 /* Record.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

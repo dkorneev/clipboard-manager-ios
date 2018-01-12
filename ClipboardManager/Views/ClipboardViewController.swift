@@ -1,5 +1,5 @@
 //
-//  LandingViewController.swift
+//  ClipboardViewController.swift
 //  ClipboardManager
 //
 //  Created by Denis Korneev on 05/04/2017.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-class LandingViewController: UITableViewController {
-    private var viewModel: LandingViewModelProtocol
+class ClipboardViewController: UITableViewController {
+    private var viewModel: ClipboardViewModelProtocol
     private lazy var timer: Timer = { () -> Timer in
         return Timer.init(timeInterval: 0.2, repeats: true, block: { [weak self] _ in
             self?.refreshCells()
         })
     }()
     
-    init(viewModel: LandingViewModelProtocol) {
+    init(viewModel: ClipboardViewModelProtocol) {
         self.viewModel = viewModel
         super.init(style: .plain)
     }

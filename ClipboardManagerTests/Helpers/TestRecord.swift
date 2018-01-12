@@ -13,7 +13,7 @@ class TestRecord: RecordModel, CustomStringConvertible {
     
     var recordId: Int
     var text: String?
-    var image: Data?
+    var imageData: Data?
     var created: Date = Date()
     var updated: Date = Date()
     
@@ -29,7 +29,7 @@ class TestRecord: RecordModel, CustomStringConvertible {
             TestRecord.date = Date(timeInterval: -5, since: TestRecord.date)
         }
         self.text = text
-        self.image = imageData
+        self.imageData = imageData
         self.created = createdDate
         self.updated = updatedDate
     }

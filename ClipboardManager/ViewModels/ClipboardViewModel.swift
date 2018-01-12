@@ -1,5 +1,5 @@
 //
-//  LandingViewModel.swift
+//  ClipboardViewModel.swift
 //  ClipboardManager
 //
 //  Created by Denis Korneev on 09/04/2017.
@@ -15,7 +15,7 @@ protocol PasteboardManagerProtocol {
 
 protocol RecordModel {
     var text: String? { get set }
-    var image: Data? { get set }
+    var imageData: Data? { get set }
     var created: Date { get set }
     var updated: Date { get set }
 }
@@ -30,7 +30,7 @@ protocol RecordsProviderProtocol {
     func observeChanges(_ block: @escaping () -> Void)
 }
 
-class LandingViewModel: LandingViewModelProtocol {
+class ClipboardViewModel: ClipboardViewModelProtocol {
     private let searchRecordQueue = DispatchQueue(label: "add-record-queue")
     private var objects: Array<RecordModel> = []
     private let pasteboard: PasteboardManagerProtocol
@@ -109,7 +109,7 @@ class LandingViewModel: LandingViewModelProtocol {
                 return record.text
                 
             } else if data is Data {
-                return record.image
+                return record.imageData
                 
             } else {
                 return nil
@@ -141,7 +141,7 @@ class LandingViewModel: LandingViewModelProtocol {
         }
     }
     
-    // MARK: - LandingViewModelProtocol
+    // MARK: - ClipboardViewModelProtocol
     
     var updateBlock: ((_ rowIndex: Int?) -> Void)?
     
@@ -152,7 +152,7 @@ class LandingViewModel: LandingViewModelProtocol {
     func recordDataAtIndex(index: Int) -> (data: Any, date: Date)? {
         guard index < self.objects.count else { return nil }
         let record = self.objects[index]
-        if let imageData = record.image {
+        if let imageData = record.imageData {
             return (data: UIImage(data: imageData) as Any, date: record.updated)
         
         } else if let text = record.text {
@@ -177,7 +177,7 @@ class LandingViewModel: LandingViewModelProtocol {
         guard index < self.objects.count else { return }
         let record = self.objects[index]
         
-        if let imageData = record.image,
+        if let imageData = record.imageData,
             let image = UIImage(data: imageData)
         {
             self.pasteboard.setData(data: image)

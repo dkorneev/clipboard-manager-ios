@@ -12,7 +12,7 @@ protocol RefreshableTVCell {
     func refresh()
 }
 
-protocol LandingViewModelProtocol {
+protocol ClipboardViewModelProtocol {
     typealias CompletionBlock = (() -> Void)
     func numberOfRecords() -> Int
     func recordDataAtIndex(index: Int) -> (data: Any, date: Date)?
