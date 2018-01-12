@@ -10,7 +10,7 @@
 		0D961B0A745AF5A0C415F062 /* Pods_ClipboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D720678880D20132E64F68F /* Pods_ClipboardManager.framework */; };
 		559CC41E4FC72E24DA34E5C4 /* Pods_ClipboardManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9BDB5C378D4EAA40A5EAAC /* Pods_ClipboardManagerUITests.framework */; };
 		762E943B851E5C07A5BCC344 /* Pods_QuickButtons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233896EA0AA307B74509B6CE /* Pods_QuickButtons.framework */; };
-		831427132008F72B00C5F094 /* ClipboardManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831427122008F72B00C5F094 /* ClipboardManagerUITests.swift */; };
+		831427132008F72B00C5F094 /* ClipboardViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831427122008F72B00C5F094 /* ClipboardViewControllerUITests.swift */; };
 		832524E82003D7D2005AF677 /* ClipboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* ClipboardViewModel.swift */; };
 		8325388D2003ED980090DF96 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
 		8330DBDA1F51A9F500B81CCD /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */; };
@@ -44,6 +44,9 @@
 		83827F322006B1300097C548 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83827F302006B1300097C548 /* Constants.swift */; };
 		8384E32420090A1A00FF34E9 /* test-image-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 833EF1752008C037001CD7D1 /* test-image-1.jpeg */; };
 		8384E32520090A1C00FF34E9 /* test-image-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 833EF1762008C038001CD7D1 /* test-image-2.jpeg */; };
+		8384E32620090F6700FF34E9 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836834BF200662DF00C69A42 /* WidgetView.swift */; };
+		8384E32720090F6F00FF34E9 /* WidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836834BD2006623700C69A42 /* WidgetView.xib */; };
+		8384E32920090FA800FF34E9 /* WidgetViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8384E32820090FA800FF34E9 /* WidgetViewUITests.swift */; };
 		8392E6D81E9A360200539037 /* ClipboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* ClipboardViewModel.swift */; };
 		83936D631FF7F90300554E39 /* ClipboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83936D621FF7F90300554E39 /* ClipboardViewModelTests.swift */; };
 		839589321E95506400CC7045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839589301E95506400CC7045 /* Main.storyboard */; };
@@ -104,7 +107,7 @@
 		6FEE4988EE16BD8BEB5F112C /* Pods-QuickButtons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickButtons.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickButtons/Pods-QuickButtons.release.xcconfig"; sourceTree = "<group>"; };
 		73742AF3CA282DA265840156 /* Pods-QuickButtons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickButtons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickButtons/Pods-QuickButtons.debug.xcconfig"; sourceTree = "<group>"; };
 		831427102008F72B00C5F094 /* ClipboardManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipboardManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		831427122008F72B00C5F094 /* ClipboardManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardManagerUITests.swift; sourceTree = "<group>"; };
+		831427122008F72B00C5F094 /* ClipboardViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardViewControllerUITests.swift; sourceTree = "<group>"; };
 		831427142008F72B00C5F094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8330DBD81F51A9F500B81CCD /* QuickButtons.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickButtons.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -131,6 +134,7 @@
 		83827F2E2006B04E0097C548 /* ClipboardManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipboardManager.entitlements; sourceTree = "<group>"; };
 		83827F2F2006B0700097C548 /* QuickButtons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickButtons.entitlements; sourceTree = "<group>"; };
 		83827F302006B1300097C548 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8384E32820090FA800FF34E9 /* WidgetViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetViewUITests.swift; sourceTree = "<group>"; };
 		8392E6D71E9A360200539037 /* ClipboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardViewModel.swift; sourceTree = "<group>"; };
 		83936D601FF7F90300554E39 /* ClipboardManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipboardManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83936D621FF7F90300554E39 /* ClipboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardViewModelTests.swift; sourceTree = "<group>"; };
@@ -209,7 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				8384E323200909E000FF34E9 /* Helpers */,
-				831427122008F72B00C5F094 /* ClipboardManagerUITests.swift */,
+				831427122008F72B00C5F094 /* ClipboardViewControllerUITests.swift */,
+				8384E32820090FA800FF34E9 /* WidgetViewUITests.swift */,
 				831427142008F72B00C5F094 /* Info.plist */,
 			);
 			path = ClipboardManagerUITests;
@@ -541,6 +546,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8384E32720090F6F00FF34E9 /* WidgetView.xib in Resources */,
 				8384E32520090A1C00FF34E9 /* test-image-2.jpeg in Resources */,
 				8384E32420090A1A00FF34E9 /* test-image-1.jpeg in Resources */,
 				8347B9D92008FEFE00824602 /* TextTVCell.xib in Resources */,
@@ -790,10 +796,12 @@
 			files = (
 				8347B9D12008F99200824602 /* ClipboardViewController.swift in Sources */,
 				8347B9D82008FEFB00824602 /* TextTVCell.swift in Sources */,
-				831427132008F72B00C5F094 /* ClipboardManagerUITests.swift in Sources */,
+				831427132008F72B00C5F094 /* ClipboardViewControllerUITests.swift in Sources */,
 				8347B9D02008F98B00824602 /* Protocols.swift in Sources */,
 				8347B9D52008FE1F00824602 /* Resolution.swift in Sources */,
 				83EA7718200901C7006DC03F /* FBSnapshotTestCase+Extensions.swift in Sources */,
+				8384E32920090FA800FF34E9 /* WidgetViewUITests.swift in Sources */,
+				8384E32620090F6700FF34E9 /* WidgetView.swift in Sources */,
 				8347B9D32008FE0800824602 /* TestClipboardViewModel.swift in Sources */,
 				8347B9D62008FEF000824602 /* ImageTVCell.swift in Sources */,
 			);

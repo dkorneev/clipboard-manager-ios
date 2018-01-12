@@ -21,7 +21,7 @@ class WidgetView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     static func create(withViewModel viewModel: ClipboardViewModelProtocol) -> WidgetView {
-        let nib = UINib(nibName: "WidgetView", bundle: nil)
+        let nib = UINib(nibName: "WidgetView", bundle: Bundle(for: WidgetView.self))
         let view = nib.instantiate(withOwner: nil, options: nil)[0] as! WidgetView
         view.viewModel = viewModel
         return view

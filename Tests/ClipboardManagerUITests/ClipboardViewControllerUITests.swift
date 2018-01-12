@@ -1,5 +1,5 @@
 //
-//  ClipboardManagerUITests.swift
+//  ClipboardViewControllerUITests.swift
 //  ClipboardManagerUITests
 //
 //  Created by Denis Korneev on 12/01/2018.
@@ -8,8 +8,7 @@
 import XCTest
 import FBSnapshotTestCase
 
-class ClipboardManagerUITests: FBSnapshotTestCase {
-    
+class ClipboardViewControllerUITests: FBSnapshotTestCase {
     private var keyWindow: UIWindow?
     
     override func setUp() {
@@ -26,14 +25,15 @@ class ClipboardManagerUITests: FBSnapshotTestCase {
         withData data: [(data: Any, date: Date)],
         andResolution resolution: CGRect) -> UIView
     {
-        self.keyWindow = UIWindow(frame: resolution)
-        self.keyWindow?.makeKeyAndVisible()
         let viewModel = TestClipboardViewModel(withRecords: data)
         let controller = ClipboardViewController(viewModel: viewModel)
         controller.edgesForExtendedLayout = UIRectEdge(rawValue: 0)
         let navController = UINavigationController(rootViewController: controller)
-        navController.view.frame = resolution
+        
+        self.keyWindow = UIWindow(frame: resolution)
+        self.keyWindow?.makeKeyAndVisible()
         self.keyWindow?.rootViewController = navController
+        
         self.usesDrawViewHierarchyInRect = true
         return navController.view
     }

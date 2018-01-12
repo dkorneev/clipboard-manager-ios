@@ -20,4 +20,10 @@ class Resolution {
             return CGRect(x: 0, y: 0, width: 375, height: 667)
         }
     }
+    
+    static var widgetFrame: CGRect {
+        get {
+            return CGRect(x: 0, y: 0, width: 360, height: 110)
+        }
+    }
 }
