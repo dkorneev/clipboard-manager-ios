@@ -17,3 +17,9 @@ end
 target 'ClipboardManagerTests' do
     application_pods
 end
+
+target 'ClipboardManagerUITests' do
+    application_pods
+    pod 'FBSnapshotTestCase'
+end
+

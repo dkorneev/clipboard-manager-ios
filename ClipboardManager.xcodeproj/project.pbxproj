@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0D961B0A745AF5A0C415F062 /* Pods_ClipboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D720678880D20132E64F68F /* Pods_ClipboardManager.framework */; };
+		559CC41E4FC72E24DA34E5C4 /* Pods_ClipboardManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9BDB5C378D4EAA40A5EAAC /* Pods_ClipboardManagerUITests.framework */; };
 		762E943B851E5C07A5BCC344 /* Pods_QuickButtons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233896EA0AA307B74509B6CE /* Pods_QuickButtons.framework */; };
+		831427132008F72B00C5F094 /* ClipboardManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831427122008F72B00C5F094 /* ClipboardManagerUITests.swift */; };
 		832524E82003D7D2005AF677 /* ClipboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* ClipboardViewModel.swift */; };
 		8325388D2003ED980090DF96 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
 		8330DBDA1F51A9F500B81CCD /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */; };
@@ -17,6 +19,14 @@
 		8330DBE41F51A9F500B81CCD /* QuickButtons.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8330DBD81F51A9F500B81CCD /* QuickButtons.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		833EF1772008C038001CD7D1 /* test-image-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 833EF1752008C037001CD7D1 /* test-image-1.jpeg */; };
 		833EF1782008C038001CD7D1 /* test-image-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 833EF1762008C038001CD7D1 /* test-image-2.jpeg */; };
+		8347B9D02008F98B00824602 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
+		8347B9D12008F99200824602 /* ClipboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F41E9565B0007A6C39 /* ClipboardViewController.swift */; };
+		8347B9D32008FE0800824602 /* TestClipboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347B9D22008FE0800824602 /* TestClipboardViewModel.swift */; };
+		8347B9D52008FE1F00824602 /* Resolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347B9D42008FE1F00824602 /* Resolution.swift */; };
+		8347B9D62008FEF000824602 /* ImageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815721EA6ACB50030CD07 /* ImageTVCell.swift */; };
+		8347B9D72008FEF700824602 /* ImageTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 837815731EA6ACB50030CD07 /* ImageTVCell.xib */; };
+		8347B9D82008FEFB00824602 /* TextTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378156B1EA696720030CD07 /* TextTVCell.swift */; };
+		8347B9D92008FEFE00824602 /* TextTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8378156C1EA696720030CD07 /* TextTVCell.xib */; };
 		8350D3771E97F7E000B20551 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350D3761E97F7E000B20551 /* Record.swift */; };
 		836834BE2006623700C69A42 /* WidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836834BD2006623700C69A42 /* WidgetView.xib */; };
 		836834C0200662DF00C69A42 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836834BF200662DF00C69A42 /* WidgetView.swift */; };
@@ -32,6 +42,8 @@
 		8381969B2004D44C00DBA6F6 /* TestPasteboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381969A2004D44C00DBA6F6 /* TestPasteboardManager.swift */; };
 		83827F312006B1300097C548 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83827F302006B1300097C548 /* Constants.swift */; };
 		83827F322006B1300097C548 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83827F302006B1300097C548 /* Constants.swift */; };
+		8384E32420090A1A00FF34E9 /* test-image-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 833EF1752008C037001CD7D1 /* test-image-1.jpeg */; };
+		8384E32520090A1C00FF34E9 /* test-image-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 833EF1762008C038001CD7D1 /* test-image-2.jpeg */; };
 		8392E6D81E9A360200539037 /* ClipboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* ClipboardViewModel.swift */; };
 		83936D631FF7F90300554E39 /* ClipboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83936D621FF7F90300554E39 /* ClipboardViewModelTests.swift */; };
 		839589321E95506400CC7045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839589301E95506400CC7045 /* Main.storyboard */; };
@@ -44,10 +56,18 @@
 		83C5C5DB2006952D00490DB0 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350D3761E97F7E000B20551 /* Record.swift */; };
 		83C5C5DC2006953000490DB0 /* RecordsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8380FC6C1FF8068D00BD3C46 /* RecordsProvider.swift */; };
 		83C5C5DD2006953200490DB0 /* PasteboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815761EA6B7D60030CD07 /* PasteboardManager.swift */; };
+		83EA7718200901C7006DC03F /* FBSnapshotTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA7717200901C7006DC03F /* FBSnapshotTestCase+Extensions.swift */; };
 		B6738E15E7FE261BC5943D9A /* Pods_ClipboardManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E450BCF3DEDFDB032098AB4C /* Pods_ClipboardManagerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		831427152008F72B00C5F094 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 839589211E95506400CC7045 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 839589281E95506400CC7045;
+			remoteInfo = ClipboardManager;
+		};
 		8330DBE21F51A9F500B81CCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 839589211E95506400CC7045 /* Project object */;
@@ -80,8 +100,12 @@
 
 /* Begin PBXFileReference section */
 		233896EA0AA307B74509B6CE /* Pods_QuickButtons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickButtons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E9BDB5C378D4EAA40A5EAAC /* Pods_ClipboardManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FEE4988EE16BD8BEB5F112C /* Pods-QuickButtons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickButtons.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickButtons/Pods-QuickButtons.release.xcconfig"; sourceTree = "<group>"; };
 		73742AF3CA282DA265840156 /* Pods-QuickButtons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickButtons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickButtons/Pods-QuickButtons.debug.xcconfig"; sourceTree = "<group>"; };
+		831427102008F72B00C5F094 /* ClipboardManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipboardManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		831427122008F72B00C5F094 /* ClipboardManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardManagerUITests.swift; sourceTree = "<group>"; };
+		831427142008F72B00C5F094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8330DBD81F51A9F500B81CCD /* QuickButtons.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickButtons.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		8330DBDC1F51A9F500B81CCD /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +113,8 @@
 		8330DBE11F51A9F500B81CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		833EF1752008C037001CD7D1 /* test-image-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test-image-1.jpeg"; sourceTree = "<group>"; };
 		833EF1762008C038001CD7D1 /* test-image-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test-image-2.jpeg"; sourceTree = "<group>"; };
+		8347B9D22008FE0800824602 /* TestClipboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClipboardViewModel.swift; sourceTree = "<group>"; };
+		8347B9D42008FE1F00824602 /* Resolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolution.swift; sourceTree = "<group>"; };
 		8350D3761E97F7E000B20551 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		836834BD2006623700C69A42 /* WidgetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetView.xib; sourceTree = "<group>"; };
 		836834BF200662DF00C69A42 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
@@ -116,8 +142,11 @@
 		839589381E95506400CC7045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83A0C3F21E956542007A6C39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A0C3F41E9565B0007A6C39 /* ClipboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardViewController.swift; sourceTree = "<group>"; };
+		83EA7717200901C7006DC03F /* FBSnapshotTestCase+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FBSnapshotTestCase+Extensions.swift"; sourceTree = "<group>"; };
 		8D720678880D20132E64F68F /* Pods_ClipboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF0C0247FD82BBE77CFD496 /* Pods-ClipboardManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1B386B46032019539798EBC /* Pods-ClipboardManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManagerUITests/Pods-ClipboardManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACA30E4B1887DBF144E437E3 /* Pods-ClipboardManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManagerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManagerUITests/Pods-ClipboardManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D85C437EAE85F42A7DD00350 /* Pods-ClipboardManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManager/Pods-ClipboardManager.release.xcconfig"; sourceTree = "<group>"; };
 		E450BCF3DEDFDB032098AB4C /* Pods_ClipboardManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2B76200A77875DFA6EDB87 /* Pods-ClipboardManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +154,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8314270D2008F72B00C5F094 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				559CC41E4FC72E24DA34E5C4 /* Pods_ClipboardManagerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8330DBD51F51A9F500B81CCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,8 +199,20 @@
 				FB2B76200A77875DFA6EDB87 /* Pods-ClipboardManagerTests.release.xcconfig */,
 				73742AF3CA282DA265840156 /* Pods-QuickButtons.debug.xcconfig */,
 				6FEE4988EE16BD8BEB5F112C /* Pods-QuickButtons.release.xcconfig */,
+				A1B386B46032019539798EBC /* Pods-ClipboardManagerUITests.debug.xcconfig */,
+				ACA30E4B1887DBF144E437E3 /* Pods-ClipboardManagerUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		831427112008F72B00C5F094 /* ClipboardManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8384E323200909E000FF34E9 /* Helpers */,
+				831427122008F72B00C5F094 /* ClipboardManagerUITests.swift */,
+				831427142008F72B00C5F094 /* Info.plist */,
+			);
+			path = ClipboardManagerUITests;
 			sourceTree = "<group>";
 		};
 		8330DBDB1F51A9F500B81CCD /* QuickButtons */ = {
@@ -227,6 +276,16 @@
 			path = Stores;
 			sourceTree = "<group>";
 		};
+		8384E323200909E000FF34E9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				83EA7717200901C7006DC03F /* FBSnapshotTestCase+Extensions.swift */,
+				8347B9D22008FE0800824602 /* TestClipboardViewModel.swift */,
+				8347B9D42008FE1F00824602 /* Resolution.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		83936D5B1FF7F7C200554E39 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,7 +297,6 @@
 		83936D611FF7F90300554E39 /* ClipboardManagerTests */ = {
 			isa = PBXGroup;
 			children = (
-				833EF1742008C023001CD7D1 /* Images */,
 				838196952004D3E800DBA6F6 /* Helpers */,
 				83936D621FF7F90300554E39 /* ClipboardViewModelTests.swift */,
 				83936D641FF7F90300554E39 /* Info.plist */,
@@ -251,10 +309,10 @@
 			children = (
 				8395892B1E95506400CC7045 /* ClipboardManager */,
 				8330DBDB1F51A9F500B81CCD /* QuickButtons */,
-				83936D611FF7F90300554E39 /* ClipboardManagerTests */,
-				8395892A1E95506400CC7045 /* Products */,
+				83EA771A20090592006DC03F /* Tests */,
 				A0570DE890F291A61D30338C /* Frameworks */,
 				50CE3231BF1543B99BFBD308 /* Pods */,
+				8395892A1E95506400CC7045 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,6 +322,7 @@
 				839589291E95506400CC7045 /* ClipboardManager.app */,
 				8330DBD81F51A9F500B81CCD /* QuickButtons.appex */,
 				83936D601FF7F90300554E39 /* ClipboardManagerTests.xctest */,
+				831427102008F72B00C5F094 /* ClipboardManagerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -303,6 +362,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		83EA771A20090592006DC03F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				833EF1742008C023001CD7D1 /* Images */,
+				83936D611FF7F90300554E39 /* ClipboardManagerTests */,
+				831427112008F72B00C5F094 /* ClipboardManagerUITests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		A0570DE890F291A61D30338C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +379,7 @@
 				8D720678880D20132E64F68F /* Pods_ClipboardManager.framework */,
 				E450BCF3DEDFDB032098AB4C /* Pods_ClipboardManagerTests.framework */,
 				233896EA0AA307B74509B6CE /* Pods_QuickButtons.framework */,
+				3E9BDB5C378D4EAA40A5EAAC /* Pods_ClipboardManagerUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -317,6 +387,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8314270F2008F72B00C5F094 /* ClipboardManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 831427192008F72B00C5F094 /* Build configuration list for PBXNativeTarget "ClipboardManagerUITests" */;
+			buildPhases = (
+				A36CBA85A1A30A8356F9F6F1 /* [CP] Check Pods Manifest.lock */,
+				8314270C2008F72B00C5F094 /* Sources */,
+				8314270D2008F72B00C5F094 /* Frameworks */,
+				8314270E2008F72B00C5F094 /* Resources */,
+				8EB78821A5D8E9A361C63A33 /* [CP] Embed Pods Frameworks */,
+				8C348A8F7773C2BBD43190AC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				831427162008F72B00C5F094 /* PBXTargetDependency */,
+			);
+			name = ClipboardManagerUITests;
+			productName = ClipboardManagerUITests;
+			productReference = 831427102008F72B00C5F094 /* ClipboardManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		8330DBD71F51A9F500B81CCD /* QuickButtons */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8330DBE71F51A9F500B81CCD /* Build configuration list for PBXNativeTarget "QuickButtons" */;
@@ -388,6 +479,12 @@
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				TargetAttributes = {
+					8314270F2008F72B00C5F094 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = X3U3JAN2WV;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 839589281E95506400CC7045;
+					};
 					8330DBD71F51A9F500B81CCD = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = X3U3JAN2WV;
@@ -434,11 +531,23 @@
 				839589281E95506400CC7045 /* ClipboardManager */,
 				8330DBD71F51A9F500B81CCD /* QuickButtons */,
 				83936D5F1FF7F90300554E39 /* ClipboardManagerTests */,
+				8314270F2008F72B00C5F094 /* ClipboardManagerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8314270E2008F72B00C5F094 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8384E32520090A1C00FF34E9 /* test-image-2.jpeg in Resources */,
+				8384E32420090A1A00FF34E9 /* test-image-1.jpeg in Resources */,
+				8347B9D92008FEFE00824602 /* TextTVCell.xib in Resources */,
+				8347B9D72008FEF700824602 /* ImageTVCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8330DBD61F51A9F500B81CCD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -506,6 +615,63 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-QuickButtons-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C348A8F7773C2BBD43190AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManagerUITests/Pods-ClipboardManagerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EB78821A5D8E9A361C63A33 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManagerUITests/Pods-ClipboardManagerUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipboardManagerUITests/Pods-ClipboardManagerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A36CBA85A1A30A8356F9F6F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClipboardManagerUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -618,6 +784,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8314270C2008F72B00C5F094 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8347B9D12008F99200824602 /* ClipboardViewController.swift in Sources */,
+				8347B9D82008FEFB00824602 /* TextTVCell.swift in Sources */,
+				831427132008F72B00C5F094 /* ClipboardManagerUITests.swift in Sources */,
+				8347B9D02008F98B00824602 /* Protocols.swift in Sources */,
+				8347B9D52008FE1F00824602 /* Resolution.swift in Sources */,
+				83EA7718200901C7006DC03F /* FBSnapshotTestCase+Extensions.swift in Sources */,
+				8347B9D32008FE0800824602 /* TestClipboardViewModel.swift in Sources */,
+				8347B9D62008FEF000824602 /* ImageTVCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8330DBD41F51A9F500B81CCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -666,6 +847,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		831427162008F72B00C5F094 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 839589281E95506400CC7045 /* ClipboardManager */;
+			targetProxy = 831427152008F72B00C5F094 /* PBXContainerItemProxy */;
+		};
 		8330DBE31F51A9F500B81CCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8330DBD71F51A9F500B81CCD /* QuickButtons */;
@@ -706,6 +892,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		831427172008F72B00C5F094 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1B386B46032019539798EBC /* Pods-ClipboardManagerUITests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X3U3JAN2WV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Tests/ClipboardManagerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.deniskorneev.ClipboardManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClipboardManager;
+			};
+			name = Debug;
+		};
+		831427182008F72B00C5F094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACA30E4B1887DBF144E437E3 /* Pods-ClipboardManagerUITests.release.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X3U3JAN2WV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Tests/ClipboardManagerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.deniskorneev.ClipboardManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClipboardManager;
+			};
+			name = Release;
+		};
 		8330DBE51F51A9F500B81CCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 73742AF3CA282DA265840156 /* Pods-QuickButtons.debug.xcconfig */;
@@ -749,7 +977,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X3U3JAN2WV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = ClipboardManagerTests/Info.plist;
+				INFOPLIST_FILE = Tests/ClipboardManagerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.deniskorneev.ClipboardManagerTests;
@@ -771,7 +999,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X3U3JAN2WV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = ClipboardManagerTests/Info.plist;
+				INFOPLIST_FILE = Tests/ClipboardManagerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.deniskorneev.ClipboardManagerTests;
@@ -922,6 +1150,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		831427192008F72B00C5F094 /* Build configuration list for PBXNativeTarget "ClipboardManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				831427172008F72B00C5F094 /* Debug */,
+				831427182008F72B00C5F094 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8330DBE71F51A9F500B81CCD /* Build configuration list for PBXNativeTarget "QuickButtons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
