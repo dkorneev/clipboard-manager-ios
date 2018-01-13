@@ -12,9 +12,9 @@ PODS:
     - Realm (= 3.0.2)
 
 DEPENDENCIES:
-  - DateToolsSwift
-  - FBSnapshotTestCase
-  - RealmSwift
+  - DateToolsSwift (~> 2.0.3)
+  - FBSnapshotTestCase (~> 2.1.4)
+  - RealmSwift (~> 3.0.2)
 
 SPEC CHECKSUMS:
   DateToolsSwift: bf69bf9056d9e53c5c03f06e51f219b9b8b02f9e
@@ -22,6 +22,6 @@ SPEC CHECKSUMS:
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
 
-PODFILE CHECKSUM: eaa9c36fb08dcb98d4207a176d96c61ee0689aca
+PODFILE CHECKSUM: 665c7ff8851f5e0cc90f374b03cf9502e98d0439
 
 COCOAPODS: 1.3.1
