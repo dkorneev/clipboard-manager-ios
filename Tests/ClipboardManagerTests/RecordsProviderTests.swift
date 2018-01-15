@@ -23,6 +23,11 @@ class RecordsProviderTests: XCTestCase {
     private let expectationTimeout: TimeInterval = 5
     private let realm = Realm.sharedRealm()
 
+    override func setUp() {
+        super.setUp()
+        realm.refresh()
+    }
+    
     override func tearDown() {
         super.tearDown()
         try! realm.write {
