@@ -18,6 +18,17 @@ extension Realm {
     }
 }
 
+extension RecordModel {
+    convenience init(withRealmRecord record: Record) {
+        self.init(
+            id: record.id,
+            text: record.text,
+            imageData: record.imageData,
+            created: record.created,
+            updated: record.updated)
+    }
+}
+
 class RecordsProvider: RecordsProviderProtocol {
     private let writeQueue = DispatchQueue(label: "realm-write-queue")
     private let realm = Realm.sharedRealm()
@@ -47,18 +58,32 @@ class RecordsProvider: RecordsProviderProtocol {
         }
     }
     
-    // MARK: RecordsProviderProtocol
-    
-    func getAllRecords() -> Array<RecordModel> {
-        return Array(allRecords)
+    private func getRealmRecord(fromRecordModel record: RecordModelProtocol) -> Record? {
+        if let recordModel = record as? RecordModel,
+            let realmRecord = self.realm.objects(Record.self)
+                .first(where: { $0.id == recordModel.id }) {
+            return realmRecord
+            
+        } else {
+            return nil
+        }
     }
     
-    func updateRecord(_ record: RecordModel,
+    // MARK: RecordsProviderProtocol
+    
+    func getAllRecords() -> Array<RecordModelProtocol> {
+        return allRecords.map { RecordModel(withRealmRecord: $0) }
+    }
+    
+    func updateRecord(_ record: RecordModelProtocol,
                       updatedDate: Date,
                       withCompletion completion: CompletionBlock? = nil)
     {
-        guard let record = record as? Record else { return }
-        let recordRef = ThreadSafeReference(to: record)
+        guard let realmRecord = self.getRealmRecord(fromRecordModel: record) else {
+            completion?()
+            return
+        }
+        let recordRef = ThreadSafeReference(to: realmRecord)
         self.performAsyncRealmOperation { realm in
             guard let record = realm.resolve(recordRef) else {
                 return
@@ -76,7 +101,7 @@ class RecordsProvider: RecordsProviderProtocol {
                       withCompletion completion: CompletionBlock? = nil)
     {
         self.performAsyncRealmOperation { realm in
-            let record = Record()
+            let record = Record.create(inRealm: realm)
             record.text = text
             try! realm.write {
                 realm.add(record)
@@ -88,9 +113,10 @@ class RecordsProvider: RecordsProviderProtocol {
     }
     
     func createRecord(withImageData imageData: Data,
-                      withCompletion completion: CompletionBlock? = nil) {
+                      withCompletion completion: CompletionBlock? = nil)
+    {
         self.performAsyncRealmOperation { realm in
-            let record = Record()
+            let record = Record.create(inRealm: realm)
             record.imageData = imageData
             try! realm.write {
                 realm.add(record)
@@ -101,10 +127,14 @@ class RecordsProvider: RecordsProviderProtocol {
         }
     }
     
-    func deleteRecord(_ record: RecordModel,
-                      withCompletion completion: CompletionBlock? = nil) {
-        guard let record = record as? Record else { return }
-        let recordRef = ThreadSafeReference(to: record)
+    func deleteRecord(_ record: RecordModelProtocol,
+                      withCompletion completion: CompletionBlock? = nil)
+    {
+        guard let realmRecord = self.getRealmRecord(fromRecordModel: record) else {
+            completion?()
+            return
+        }
+        let recordRef = ThreadSafeReference(to: realmRecord)
         self.performAsyncRealmOperation { realm in
             guard let record = realm.resolve(recordRef) else {
                 return

@@ -13,26 +13,28 @@ protocol PasteboardManagerProtocol {
     func setData(data: Any)
 }
 
-protocol RecordModel {
+protocol RecordModelProtocol {
     var text: String? { get set }
     var imageData: Data? { get set }
     var created: Date { get set }
     var updated: Date { get set }
+    
+    func hasTheSameData(_ data: Any) -> Bool
 }
 
 protocol RecordsProviderProtocol {
     typealias CompletionBlock = (() -> Void)
-    func getAllRecords() -> Array<RecordModel>
-    func updateRecord(_ record: RecordModel, updatedDate: Date, withCompletion: CompletionBlock?)
+    func getAllRecords() -> Array<RecordModelProtocol>
+    func updateRecord(_ record: RecordModelProtocol, updatedDate: Date, withCompletion: CompletionBlock?)
     func createRecord(withText: String, withCompletion: CompletionBlock?)
     func createRecord(withImageData: Data, withCompletion: CompletionBlock?)
-    func deleteRecord(_ record: RecordModel, withCompletion: CompletionBlock?)
+    func deleteRecord(_ record: RecordModelProtocol, withCompletion: CompletionBlock?)
     func observeChanges(_ block: @escaping () -> Void)
 }
 
 class ClipboardViewModel: ClipboardViewModelProtocol {
     private let searchRecordQueue = DispatchQueue(label: "add-record-queue")
-    private var objects: Array<RecordModel> = []
+    private var objects: Array<RecordModelProtocol> = []
     private let pasteboard: PasteboardManagerProtocol
     private let recordsProvider: RecordsProviderProtocol
     
@@ -53,80 +55,41 @@ class ClipboardViewModel: ClipboardViewModelProtocol {
             .sorted(by: { $0.updated > $1.updated })
     }
     
-    private func findExistingRecord(byData data: Any,
-                                    completion:@escaping ((_ existingRecord: RecordModel?) -> Void))
+    private func addNewRecord(withText newText: String? = nil,
+                              withImageData imageData: Data? = nil,
+                              withCompletion completion: CompletionBlock?)
     {
-        let values: [Any?] = self.objects.map { record in
-            if data is String {
-                return record.text
-                
-            } else if data is Data {
-                return record.imageData
-                
-            } else {
-                return nil
-            }
+        let newValue: Any? = newText == nil ? imageData : newText
+        guard let data = newValue else {
+            completion?()
+            return
         }
         self.searchRecordQueue.async {
-            let index = values.index { currentValue in
-                if let newValue = data as? String,
-                    let currentValue = currentValue as? String
-                {
-                    return newValue == currentValue
+            let existingRecord = self.objects.first(where: { $0.hasTheSameData(data) })
+            DispatchQueue.main.async {
+                if let existingRecord = existingRecord {
+                    self.recordsProvider.updateRecord(
+                        existingRecord,
+                        updatedDate: Date(),
+                        withCompletion: completion)
                     
-                } else if let newValue = data as? Data,
-                    let currentValue = currentValue as? Data
-                {
-                    return newValue == currentValue
+                } else if let newText = newText {
+                    self.recordsProvider.createRecord(
+                        withText: newText,
+                        withCompletion: completion)
+                    
+                } else if let imageData = imageData {
+                    self.recordsProvider.createRecord(
+                        withImageData: imageData,
+                        withCompletion: completion)
                     
                 } else {
-                    return false
+                    completion?()
                 }
             }
-            DispatchQueue.main.async { [weak self] in
-                var currentRecord: RecordModel?
-                if let index = index {
-                    currentRecord = self?.objects[index]
-                }
-                completion(currentRecord)
-            }
         }
     }
     
-    // MARK: add record methods
-    
-    private func addNewRecord(text newText: String,
-                              withCompletion completion: CompletionBlock?)
-    {
-        self.findExistingRecord(byData: newText) { existingRecord in
-            if let existingRecord = existingRecord {
-                self.recordsProvider.updateRecord(existingRecord,
-                                                  updatedDate: Date(),
-                                                  withCompletion: completion)
-                
-            } else {
-                self.recordsProvider.createRecord(withText: newText,
-                                                  withCompletion: completion)
-            }
-        }
-    }
-    
-    private func addNewRecord(imageData: Data,
-                              withCompletion completion: CompletionBlock?)
-    {
-        self.findExistingRecord(byData: imageData) { existingRecord in
-            if let existingRecord = existingRecord {
-                self.recordsProvider.updateRecord(existingRecord,
-                                                  updatedDate: Date(),
-                                                  withCompletion: completion)
-                
-            } else {
-                self.recordsProvider.createRecord(withImageData: imageData,
-                                                  withCompletion: completion)
-            }
-        }
-    }
- 
     // MARK: - ClipboardViewModelProtocol
     
     var updateBlock: ((_ rowIndex: Int?) -> Void)?
@@ -157,7 +120,7 @@ class ClipboardViewModel: ClipboardViewModelProtocol {
             return
         }
         if let text = data as? String {
-            self.addNewRecord(text: text) {
+            self.addNewRecord(withText: text) {
                 completion?()
             }
             
@@ -167,7 +130,7 @@ class ClipboardViewModel: ClipboardViewModelProtocol {
                 completion?()
                 return
             }
-            self.addNewRecord(imageData: newImageData) {
+            self.addNewRecord(withImageData: newImageData) {
                 completion?()
             }
             

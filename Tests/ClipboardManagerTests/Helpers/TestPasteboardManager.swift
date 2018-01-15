@@ -6,6 +6,7 @@
 //
 
 import Foundation
+@testable import ClipboardManager
 
 class TestPasteboardManager: PasteboardManagerProtocol {
     private var pasteboardData: Any? = nil

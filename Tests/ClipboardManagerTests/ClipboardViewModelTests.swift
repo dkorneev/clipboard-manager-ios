@@ -7,6 +7,7 @@
 
 import XCTest
 import UIKit
+@testable import ClipboardManager
 
 class ClipboardViewModelTests: XCTestCase {
     private var pbManager = TestPasteboardManager()

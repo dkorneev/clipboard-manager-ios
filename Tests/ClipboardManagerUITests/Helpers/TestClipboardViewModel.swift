@@ -15,7 +15,7 @@ class TestClipboardViewModel: ClipboardViewModelProtocol {
     }
     
     // MARK: ClipboardViewModelProtocol
-    
+
     var updateBlock: ((_ rowIndex: Int?) -> Void)?
     
     func numberOfRecords() -> Int {
@@ -26,9 +26,7 @@ class TestClipboardViewModel: ClipboardViewModelProtocol {
         return self.records[index]
     }
     
-    func addNewRecord(withCompletion
-        completion: CompletionBlock?)
-    {
+    func addNewRecord(withCompletion completion: CompletionBlock?) {
         completion?()
     }
     

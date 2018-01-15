@@ -6,32 +6,28 @@
 //
 
 import Foundation
+@testable import ClipboardManager
 
 class TestRecord: RecordModel, CustomStringConvertible {
     private static var counter = 0
     private static var date = Date()
     
-    var recordId: Int
-    var text: String?
-    var imageData: Data?
-    var created: Date = Date()
-    var updated: Date = Date()
-    
-    init(
+    convenience init(
         text: String? = nil,
         imageData: Data? = nil,
-        createdDate: Date = TestRecord.date,
-        updatedDate: Date = TestRecord.date)
+        created createdDate: Date = TestRecord.date,
+        updated updatedDate: Date = TestRecord.date)
     {
-        self.recordId = TestRecord.counter
+        let recordId = TestRecord.counter
         TestRecord.counter += 1
         if createdDate == TestRecord.date || updatedDate == TestRecord.date {
             TestRecord.date = Date(timeInterval: -5, since: TestRecord.date)
         }
-        self.text = text
-        self.imageData = imageData
-        self.created = createdDate
-        self.updated = updatedDate
+        self.init(id: recordId,
+                   text: text,
+                   imageData: imageData,
+                   created: createdDate,
+                   updated: updatedDate)
     }
     
     // MARK: CustomStringConvertible

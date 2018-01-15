@@ -11,25 +11,26 @@
 		559CC41E4FC72E24DA34E5C4 /* Pods_ClipboardManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9BDB5C378D4EAA40A5EAAC /* Pods_ClipboardManagerUITests.framework */; };
 		762E943B851E5C07A5BCC344 /* Pods_QuickButtons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233896EA0AA307B74509B6CE /* Pods_QuickButtons.framework */; };
 		831427132008F72B00C5F094 /* ClipboardViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831427122008F72B00C5F094 /* ClipboardViewControllerUITests.swift */; };
-		832524E82003D7D2005AF677 /* ClipboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* ClipboardViewModel.swift */; };
-		8325388D2003ED980090DF96 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
+		83297C07200D44C500BE0540 /* ClipboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F41E9565B0007A6C39 /* ClipboardViewController.swift */; };
+		83297C08200D44F300BE0540 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
+		83297C09200D450100BE0540 /* ImageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815721EA6ACB50030CD07 /* ImageTVCell.swift */; };
+		83297C0A200D450100BE0540 /* ImageTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 837815731EA6ACB50030CD07 /* ImageTVCell.xib */; };
+		83297C0B200D450100BE0540 /* TextTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378156B1EA696720030CD07 /* TextTVCell.swift */; };
+		83297C0C200D450100BE0540 /* TextTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8378156C1EA696720030CD07 /* TextTVCell.xib */; };
 		8330DBDA1F51A9F500B81CCD /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330DBD91F51A9F500B81CCD /* NotificationCenter.framework */; };
 		8330DBDD1F51A9F500B81CCD /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8330DBDC1F51A9F500B81CCD /* TodayViewController.swift */; };
 		8330DBE01F51A9F500B81CCD /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8330DBDE1F51A9F500B81CCD /* MainInterface.storyboard */; };
 		8330DBE41F51A9F500B81CCD /* QuickButtons.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8330DBD81F51A9F500B81CCD /* QuickButtons.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		833CB594200CE66700C1E9C6 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833CB593200CE66700C1E9C6 /* RecordModel.swift */; };
+		833CB595200CE76200C1E9C6 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833CB593200CE66700C1E9C6 /* RecordModel.swift */; };
 		833EF1772008C038001CD7D1 /* test-image-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 833EF1752008C037001CD7D1 /* test-image-1.jpeg */; };
 		833EF1782008C038001CD7D1 /* test-image-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 833EF1762008C038001CD7D1 /* test-image-2.jpeg */; };
-		8347B9D02008F98B00824602 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
-		8347B9D12008F99200824602 /* ClipboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F41E9565B0007A6C39 /* ClipboardViewController.swift */; };
 		8347B9D32008FE0800824602 /* TestClipboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347B9D22008FE0800824602 /* TestClipboardViewModel.swift */; };
 		8347B9D52008FE1F00824602 /* Resolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347B9D42008FE1F00824602 /* Resolution.swift */; };
-		8347B9D62008FEF000824602 /* ImageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815721EA6ACB50030CD07 /* ImageTVCell.swift */; };
-		8347B9D72008FEF700824602 /* ImageTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 837815731EA6ACB50030CD07 /* ImageTVCell.xib */; };
-		8347B9D82008FEFB00824602 /* TextTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378156B1EA696720030CD07 /* TextTVCell.swift */; };
-		8347B9D92008FEFE00824602 /* TextTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8378156C1EA696720030CD07 /* TextTVCell.xib */; };
 		8350D3771E97F7E000B20551 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350D3761E97F7E000B20551 /* Record.swift */; };
 		836834BE2006623700C69A42 /* WidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836834BD2006623700C69A42 /* WidgetView.xib */; };
 		836834C0200662DF00C69A42 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836834BF200662DF00C69A42 /* WidgetView.swift */; };
+		83683EB7200D06B200A7498E /* RecordsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83683EB6200D06B200A7498E /* RecordsProviderTests.swift */; };
 		8378156D1EA696720030CD07 /* TextTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378156B1EA696720030CD07 /* TextTVCell.swift */; };
 		8378156E1EA696720030CD07 /* TextTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8378156C1EA696720030CD07 /* TextTVCell.xib */; };
 		837815711EA69E180030CD07 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
@@ -44,14 +45,15 @@
 		83827F322006B1300097C548 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83827F302006B1300097C548 /* Constants.swift */; };
 		8384E32420090A1A00FF34E9 /* test-image-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 833EF1752008C037001CD7D1 /* test-image-1.jpeg */; };
 		8384E32520090A1C00FF34E9 /* test-image-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 833EF1762008C038001CD7D1 /* test-image-2.jpeg */; };
-		8384E32620090F6700FF34E9 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836834BF200662DF00C69A42 /* WidgetView.swift */; };
-		8384E32720090F6F00FF34E9 /* WidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836834BD2006623700C69A42 /* WidgetView.xib */; };
 		8384E32920090FA800FF34E9 /* WidgetViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8384E32820090FA800FF34E9 /* WidgetViewUITests.swift */; };
 		8392E6D81E9A360200539037 /* ClipboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392E6D71E9A360200539037 /* ClipboardViewModel.swift */; };
 		83936D631FF7F90300554E39 /* ClipboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83936D621FF7F90300554E39 /* ClipboardViewModelTests.swift */; };
 		839589321E95506400CC7045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839589301E95506400CC7045 /* Main.storyboard */; };
 		839589341E95506400CC7045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839589331E95506400CC7045 /* Assets.xcassets */; };
 		839589371E95506400CC7045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839589351E95506400CC7045 /* LaunchScreen.storyboard */; };
+		839D7F62200D48C40045D3C1 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836834BF200662DF00C69A42 /* WidgetView.swift */; };
+		839D7F63200D48CA0045D3C1 /* WidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836834BD2006623700C69A42 /* WidgetView.xib */; };
+		839D7F65200D4A180045D3C1 /* RecordsFabricator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D7F64200D4A180045D3C1 /* RecordsFabricator.swift */; };
 		83A0C3F31E956542007A6C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F21E956542007A6C39 /* AppDelegate.swift */; };
 		83A0C3F51E9565B0007A6C39 /* ClipboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0C3F41E9565B0007A6C39 /* ClipboardViewController.swift */; };
 		83B72D3920066A030006CA9E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815701EA69E180030CD07 /* Protocols.swift */; };
@@ -114,6 +116,7 @@
 		8330DBDC1F51A9F500B81CCD /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		8330DBDF1F51A9F500B81CCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8330DBE11F51A9F500B81CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		833CB593200CE66700C1E9C6 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		833EF1752008C037001CD7D1 /* test-image-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test-image-1.jpeg"; sourceTree = "<group>"; };
 		833EF1762008C038001CD7D1 /* test-image-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test-image-2.jpeg"; sourceTree = "<group>"; };
 		8347B9D22008FE0800824602 /* TestClipboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClipboardViewModel.swift; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 		8350D3761E97F7E000B20551 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		836834BD2006623700C69A42 /* WidgetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetView.xib; sourceTree = "<group>"; };
 		836834BF200662DF00C69A42 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		83683EB6200D06B200A7498E /* RecordsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsProviderTests.swift; sourceTree = "<group>"; };
 		8378156B1EA696720030CD07 /* TextTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTVCell.swift; sourceTree = "<group>"; };
 		8378156C1EA696720030CD07 /* TextTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTVCell.xib; sourceTree = "<group>"; };
 		837815701EA69E180030CD07 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 		839589331E95506400CC7045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		839589361E95506400CC7045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		839589381E95506400CC7045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		839D7F64200D4A180045D3C1 /* RecordsFabricator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsFabricator.swift; sourceTree = "<group>"; };
 		83A0C3F21E956542007A6C39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A0C3F41E9565B0007A6C39 /* ClipboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardViewController.swift; sourceTree = "<group>"; };
 		83EA7717200901C7006DC03F /* FBSnapshotTestCase+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FBSnapshotTestCase+Extensions.swift"; sourceTree = "<group>"; };
@@ -265,6 +270,7 @@
 		838196952004D3E800DBA6F6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				839D7F64200D4A180045D3C1 /* RecordsFabricator.swift */,
 				838196962004D40800DBA6F6 /* TestRecordsProvider.swift */,
 				838196982004D43300DBA6F6 /* TestRecord.swift */,
 				8381969A2004D44C00DBA6F6 /* TestPasteboardManager.swift */,
@@ -304,6 +310,7 @@
 			children = (
 				838196952004D3E800DBA6F6 /* Helpers */,
 				83936D621FF7F90300554E39 /* ClipboardViewModelTests.swift */,
+				83683EB6200D06B200A7498E /* RecordsProviderTests.swift */,
 				83936D641FF7F90300554E39 /* Info.plist */,
 			);
 			path = ClipboardManagerTests;
@@ -362,6 +369,7 @@
 		83A0C3F11E956503007A6C39 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				833CB593200CE66700C1E9C6 /* RecordModel.swift */,
 				8350D3761E97F7E000B20551 /* Record.swift */,
 			);
 			path = Models;
@@ -546,11 +554,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8384E32720090F6F00FF34E9 /* WidgetView.xib in Resources */,
+				839D7F63200D48CA0045D3C1 /* WidgetView.xib in Resources */,
+				83297C0A200D450100BE0540 /* ImageTVCell.xib in Resources */,
 				8384E32520090A1C00FF34E9 /* test-image-2.jpeg in Resources */,
+				83297C0C200D450100BE0540 /* TextTVCell.xib in Resources */,
 				8384E32420090A1A00FF34E9 /* test-image-1.jpeg in Resources */,
-				8347B9D92008FEFE00824602 /* TextTVCell.xib in Resources */,
-				8347B9D72008FEF700824602 /* ImageTVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,16 +802,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8347B9D12008F99200824602 /* ClipboardViewController.swift in Sources */,
-				8347B9D82008FEFB00824602 /* TextTVCell.swift in Sources */,
 				831427132008F72B00C5F094 /* ClipboardViewControllerUITests.swift in Sources */,
-				8347B9D02008F98B00824602 /* Protocols.swift in Sources */,
+				83297C09200D450100BE0540 /* ImageTVCell.swift in Sources */,
 				8347B9D52008FE1F00824602 /* Resolution.swift in Sources */,
+				83297C08200D44F300BE0540 /* Protocols.swift in Sources */,
+				839D7F62200D48C40045D3C1 /* WidgetView.swift in Sources */,
 				83EA7718200901C7006DC03F /* FBSnapshotTestCase+Extensions.swift in Sources */,
+				83297C07200D44C500BE0540 /* ClipboardViewController.swift in Sources */,
+				83297C0B200D450100BE0540 /* TextTVCell.swift in Sources */,
 				8384E32920090FA800FF34E9 /* WidgetViewUITests.swift in Sources */,
-				8384E32620090F6700FF34E9 /* WidgetView.swift in Sources */,
 				8347B9D32008FE0800824602 /* TestClipboardViewModel.swift in Sources */,
-				8347B9D62008FEF000824602 /* ImageTVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,6 +821,7 @@
 			files = (
 				83B72D3920066A030006CA9E /* Protocols.swift in Sources */,
 				836834C0200662DF00C69A42 /* WidgetView.swift in Sources */,
+				833CB595200CE76200C1E9C6 /* RecordModel.swift in Sources */,
 				83C5C5DB2006952D00490DB0 /* Record.swift in Sources */,
 				83C5C5DC2006953000490DB0 /* RecordsProvider.swift in Sources */,
 				83C5C5DD2006953200490DB0 /* PasteboardManager.swift in Sources */,
@@ -826,11 +835,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8325388D2003ED980090DF96 /* Protocols.swift in Sources */,
 				838196992004D43300DBA6F6 /* TestRecord.swift in Sources */,
+				839D7F65200D4A180045D3C1 /* RecordsFabricator.swift in Sources */,
 				8381969B2004D44C00DBA6F6 /* TestPasteboardManager.swift in Sources */,
 				838196972004D40800DBA6F6 /* TestRecordsProvider.swift in Sources */,
-				832524E82003D7D2005AF677 /* ClipboardViewModel.swift in Sources */,
+				83683EB7200D06B200A7498E /* RecordsProviderTests.swift in Sources */,
 				83936D631FF7F90300554E39 /* ClipboardViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -848,6 +857,7 @@
 				837815741EA6ACB50030CD07 /* ImageTVCell.swift in Sources */,
 				837815711EA69E180030CD07 /* Protocols.swift in Sources */,
 				8392E6D81E9A360200539037 /* ClipboardViewModel.swift in Sources */,
+				833CB594200CE66700C1E9C6 /* RecordModel.swift in Sources */,
 				8350D3771E97F7E000B20551 /* Record.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

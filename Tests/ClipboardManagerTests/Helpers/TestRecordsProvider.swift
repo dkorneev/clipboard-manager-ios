@@ -6,6 +6,7 @@
 //
 
 import Foundation
+@testable import ClipboardManager
 
 class TestRecordsProvider: RecordsProviderProtocol {
     private var records: Array<TestRecord>
@@ -17,16 +18,16 @@ class TestRecordsProvider: RecordsProviderProtocol {
     
     // MARK: RecordsProviderProtocol
     
-    func getAllRecords() -> Array<RecordModel> {
+    func getAllRecords() -> Array<RecordModelProtocol> {
         return records
     }
     
-    func updateRecord(_ record: RecordModel,
+    func updateRecord(_ record: RecordModelProtocol,
                       updatedDate: Date,
                       withCompletion completion: CompletionBlock?)
     {
         guard let record = record as? TestRecord else { return }
-        if let existingRecord = self.records.first(where: { $0.recordId == record.recordId }) {
+        if let existingRecord = self.records.first(where: { $0.id == record.id }) {
             existingRecord.updated = Date()
         }
         self.recordsDidChangeBlock?()
@@ -53,11 +54,11 @@ class TestRecordsProvider: RecordsProviderProtocol {
         completion?()
     }
     
-    func deleteRecord(_ record: RecordModel,
+    func deleteRecord(_ record: RecordModelProtocol,
                       withCompletion completion: CompletionBlock?)
     {
         guard let record = record as? TestRecord else { return }
-        if let index = self.records.index(where: { $0.recordId == record.recordId }) {
+        if let index = self.records.index(where: { $0.id == record.id }) {
             records.remove(at: index)
         }
         self.recordsDidChangeBlock?()
