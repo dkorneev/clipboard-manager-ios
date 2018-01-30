@@ -10,11 +10,6 @@ import UIKit
 
 class ClipboardViewController: UITableViewController {
     private var viewModel: ClipboardViewModelProtocol
-    private lazy var timer: Timer = { () -> Timer in
-        return Timer.init(timeInterval: 0.2, repeats: true, block: { [weak self] _ in
-            self?.refreshCells()
-        })
-    }()
     
     init(viewModel: ClipboardViewModelProtocol) {
         self.viewModel = viewModel
@@ -25,10 +20,6 @@ class ClipboardViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    deinit {
-        self.timer.invalidate()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()        
         self.navigationItem.title = "Clipboard manager"
@@ -36,11 +27,12 @@ class ClipboardViewController: UITableViewController {
                                         target: self,
                                         action: #selector(didTapAddButton))
         self.navigationItem.rightBarButtonItem = addButton
-        self.viewModel.updateBlock = { [weak self] _ in
+        self.viewModel.reloadDataBlock = { [weak self] in
             self?.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
         }
-        
-        RunLoop.current.add(self.timer, forMode: .defaultRunLoopMode)
+        self.viewModel.refreshRowsBlock = { [weak self] in
+            self?.refreshCells()
+        }
         
         self.tableView.alwaysBounceVertical = false
         self.tableView.tableFooterView = UIView()

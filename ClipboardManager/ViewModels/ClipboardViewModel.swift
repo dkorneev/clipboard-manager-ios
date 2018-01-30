@@ -38,6 +38,12 @@ class ClipboardViewModel: ClipboardViewModelProtocol {
     private let pasteboard: PasteboardManagerProtocol
     private let recordsProvider: RecordsProviderProtocol
     
+    private lazy var timer: Timer = { () -> Timer in
+        return Timer.init(timeInterval: 0.2, repeats: true, block: { [weak self] _ in
+            self?.refreshRowsBlock?()
+        })
+    }()
+    
     init(pasteboardManager: PasteboardManagerProtocol,
          recordsProvider: RecordsProviderProtocol)
     {
@@ -45,9 +51,14 @@ class ClipboardViewModel: ClipboardViewModelProtocol {
         self.recordsProvider = recordsProvider
         self.recordsProvider.observeChanges { [weak self] in
             self?.resetObjects()
-            self?.updateBlock?(nil)
+            self?.reloadDataBlock?()
         }
         self.resetObjects()
+        RunLoop.current.add(self.timer, forMode: .defaultRunLoopMode)
+    }
+    
+    deinit {
+        self.timer.invalidate()
     }
     
     private func resetObjects() {
@@ -92,7 +103,8 @@ class ClipboardViewModel: ClipboardViewModelProtocol {
     
     // MARK: - ClipboardViewModelProtocol
     
-    var updateBlock: ((_ rowIndex: Int?) -> Void)?
+    var reloadDataBlock: (() -> Void)?
+    var refreshRowsBlock: (() -> Void)?
     
     func numberOfRecords() -> Int {
         return self.objects.count

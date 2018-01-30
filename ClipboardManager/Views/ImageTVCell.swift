@@ -35,13 +35,6 @@ class ImageTVCell: UITableViewCell, RefreshableTVCell {
         self.dateLabel.layer.cornerRadius = 5
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        self.date = nil
-        self.dateLabel.text = nil
-        self.recordImageView.image = nil
-    }
-    
     func setImage(_ image: UIImage?, date: Date?) {
         self.recordImageView.image = image
         self.date = date

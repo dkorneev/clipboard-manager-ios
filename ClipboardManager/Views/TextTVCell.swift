@@ -34,13 +34,6 @@ class TextTVCell: UITableViewCell, RefreshableTVCell {
         self.clipsToBounds = true
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        self.date = nil
-        self.textLabel?.text = nil
-        self.detailTextLabel?.text = nil
-    }
-    
     func setText(_ text: String?, date: Date?) {
         self.textLabel?.text = text
         self.date = date

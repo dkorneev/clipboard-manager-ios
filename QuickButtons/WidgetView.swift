@@ -14,7 +14,7 @@ class WidgetView: UIView, UITableViewDelegate, UITableViewDataSource {
     private let maxDisplayedRecords = 2;
     private var viewModel: ClipboardViewModelProtocol? {
         didSet {
-            viewModel?.updateBlock = { [weak self] _ in
+            viewModel?.reloadDataBlock = { [weak self] in
                 self?.tableView.reloadData()
             }
         }

@@ -16,7 +16,8 @@ class TestClipboardViewModel: ClipboardViewModelProtocol {
     
     // MARK: ClipboardViewModelProtocol
 
-    var updateBlock: ((_ rowIndex: Int?) -> Void)?
+    var reloadDataBlock: (() -> Void)?
+    var refreshRowsBlock: (() -> Void)?
     
     func numberOfRecords() -> Int {
         return self.records.count

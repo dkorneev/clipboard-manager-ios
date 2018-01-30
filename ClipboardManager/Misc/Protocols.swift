@@ -19,5 +19,6 @@ protocol ClipboardViewModelProtocol {
     func addNewRecord(withCompletion: CompletionBlock?)
     func selectRecord(atIndex index: Int, withCompletion: CompletionBlock?)
     func removeRecord(atIndex index: Int, withCompletion: CompletionBlock?)
-    var updateBlock: ((_ rowIndex: Int?) -> Void)? { get set }
+    var reloadDataBlock: (() -> Void)? { get set }
+    var refreshRowsBlock: (() -> Void)? { get set }
 }
