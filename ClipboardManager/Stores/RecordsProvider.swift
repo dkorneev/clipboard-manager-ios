@@ -8,16 +8,6 @@
 import Foundation
 import RealmSwift
 
-extension Realm {
-    static func sharedRealm() -> Realm {
-        let directory: URL = FileManager.default.containerURL(
-            forSecurityApplicationGroupIdentifier: K_GROUP_ID)!
-        let fileURL = directory.appendingPathComponent(K_DB_NAME)
-        let realm = try! Realm(fileURL: fileURL)
-        return realm
-    }
-}
-
 extension RecordModel {
     convenience init(withRealmRecord record: Record) {
         self.init(
@@ -29,14 +19,21 @@ extension RecordModel {
     }
 }
 
+protocol RealmProviderProtocol {
+    func realmInstance() -> Realm
+}
+
 class RecordsProvider: RecordsProviderProtocol {
     private let writeQueue = DispatchQueue(label: "realm-write-queue")
-    private let realm = Realm.sharedRealm()
+    private let realm: Realm
+    private let realmProvider: RealmProviderProtocol
     private var notificationToken: NotificationToken? = nil
     private var observeBlock: (() -> Void)?
     private var allRecords: Results<Record>
     
-    init() {
+    init(withRealmProvider realmProvider: RealmProviderProtocol) {
+        self.realmProvider = realmProvider
+        self.realm = self.realmProvider.realmInstance()
         self.allRecords = self.realm.objects(Record.self)
             .sorted(byKeyPath: "updated", ascending: false)
         self.notificationToken = realm.objects(Record.self)
@@ -50,10 +47,11 @@ class RecordsProvider: RecordsProviderProtocol {
     }
     
     private func performAsyncRealmOperation(_ performBlock: @escaping (_ realm: Realm) -> Void) {
-        self.writeQueue.async {
+        self.writeQueue.async { [weak self] in
             autoreleasepool {
-                let localRealm = Realm.sharedRealm()
-                performBlock(localRealm)
+                if let localRealm = self?.realmProvider.realmInstance() {
+                    performBlock(localRealm)
+                }
             }
         }
     }

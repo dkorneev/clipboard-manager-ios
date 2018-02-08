@@ -61,6 +61,8 @@
 		83C5C5DB2006952D00490DB0 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350D3761E97F7E000B20551 /* Record.swift */; };
 		83C5C5DC2006953000490DB0 /* RecordsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8380FC6C1FF8068D00BD3C46 /* RecordsProvider.swift */; };
 		83C5C5DD2006953200490DB0 /* PasteboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837815761EA6B7D60030CD07 /* PasteboardManager.swift */; };
+		83E0D474202C8AD500CA9F87 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0D473202C8AD500CA9F87 /* RealmProvider.swift */; };
+		83E0D475202C8B3000CA9F87 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0D473202C8AD500CA9F87 /* RealmProvider.swift */; };
 		83EA7718200901C7006DC03F /* FBSnapshotTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA7717200901C7006DC03F /* FBSnapshotTestCase+Extensions.swift */; };
 		B6738E15E7FE261BC5943D9A /* Pods_ClipboardManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E450BCF3DEDFDB032098AB4C /* Pods_ClipboardManagerTests.framework */; };
 /* End PBXBuildFile section */
@@ -151,6 +153,7 @@
 		839D7F64200D4A180045D3C1 /* RecordsFabricator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsFabricator.swift; sourceTree = "<group>"; };
 		83A0C3F21E956542007A6C39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A0C3F41E9565B0007A6C39 /* ClipboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardViewController.swift; sourceTree = "<group>"; };
+		83E0D473202C8AD500CA9F87 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		83EA7717200901C7006DC03F /* FBSnapshotTestCase+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FBSnapshotTestCase+Extensions.swift"; sourceTree = "<group>"; };
 		8D720678880D20132E64F68F /* Pods_ClipboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF0C0247FD82BBE77CFD496 /* Pods-ClipboardManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipboardManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipboardManagerTests/Pods-ClipboardManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -281,6 +284,7 @@
 		8381969C2004D71500DBA6F6 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				83E0D473202C8AD500CA9F87 /* RealmProvider.swift */,
 				8380FC6C1FF8068D00BD3C46 /* RecordsProvider.swift */,
 				837815761EA6B7D60030CD07 /* PasteboardManager.swift */,
 			);
@@ -823,6 +827,7 @@
 				836834C0200662DF00C69A42 /* WidgetView.swift in Sources */,
 				833CB595200CE76200C1E9C6 /* RecordModel.swift in Sources */,
 				83C5C5DB2006952D00490DB0 /* Record.swift in Sources */,
+				83E0D475202C8B3000CA9F87 /* RealmProvider.swift in Sources */,
 				83C5C5DC2006953000490DB0 /* RecordsProvider.swift in Sources */,
 				83C5C5DD2006953200490DB0 /* PasteboardManager.swift in Sources */,
 				83C5C5DA2006952400490DB0 /* ClipboardViewModel.swift in Sources */,
@@ -850,6 +855,7 @@
 			files = (
 				8380FC6D1FF8068D00BD3C46 /* RecordsProvider.swift in Sources */,
 				83A0C3F31E956542007A6C39 /* AppDelegate.swift in Sources */,
+				83E0D474202C8AD500CA9F87 /* RealmProvider.swift in Sources */,
 				8378156D1EA696720030CD07 /* TextTVCell.swift in Sources */,
 				837815771EA6B7D60030CD07 /* PasteboardManager.swift in Sources */,
 				83A0C3F51E9565B0007A6C39 /* ClipboardViewController.swift in Sources */,

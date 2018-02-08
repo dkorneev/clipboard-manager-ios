@@ -12,7 +12,7 @@ import NotificationCenter
 class TodayViewController: UIViewController, NCWidgetProviding {
     private lazy var widgetView: WidgetView = {
         let pbManager = PasteboardManager()
-        let recordsProvider = RecordsProvider()
+        let recordsProvider = RecordsProvider(withRealmProvider: RealmProvider())
         let viewModel = ClipboardViewModel(pasteboardManager: pbManager,
                                          recordsProvider: recordsProvider)
         let view = WidgetView.create(withViewModel: viewModel)

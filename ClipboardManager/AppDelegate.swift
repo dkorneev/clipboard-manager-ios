@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         let viewModel = ClipboardViewModel(
             pasteboardManager: PasteboardManager(),
-            recordsProvider: RecordsProvider())
+            recordsProvider: RecordsProvider(withRealmProvider: RealmProvider()))
         let controller = ClipboardViewController(viewModel: viewModel)
         self.window?.rootViewController = UINavigationController.init(rootViewController: controller)
         return true

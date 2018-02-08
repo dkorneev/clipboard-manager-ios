@@ -19,20 +19,20 @@ private extension Record {
     }
 }
 
+private class TestRealmProvider: RealmProviderProtocol {
+    func realmInstance() -> Realm {
+        return try! Realm()
+    }
+}
+
 class RecordsProviderTests: XCTestCase {
     private let expectationTimeout: TimeInterval = 5
-    private let realm = Realm.sharedRealm()
+    private var realm = TestRealmProvider().realmInstance()
 
     override func setUp() {
         super.setUp()
-        realm.refresh()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-        try! realm.write {
-            realm.deleteAll()
-        }
+        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
+        self.realm = TestRealmProvider().realmInstance()
     }
     
     func testGetAllRecords() {
@@ -40,7 +40,7 @@ class RecordsProviderTests: XCTestCase {
         let firstRecord = fabricator.createRecord(withText: "first")
         let secondRecord = fabricator.createRecord(withText: "second")
         let thirdRecord = fabricator.createRecord(withText: "third")
-        let recordsProvider = RecordsProvider()
+        let recordsProvider = RecordsProvider(withRealmProvider: TestRealmProvider())
         XCTAssertEqual(recordsProvider.getAllRecords().count, 3)
         XCTAssertEqual(recordsProvider.getAllRecords()[0].text, firstRecord.text)
         XCTAssertEqual(recordsProvider.getAllRecords()[1].text, secondRecord.text)
@@ -50,7 +50,7 @@ class RecordsProviderTests: XCTestCase {
     func testAddTextRecord() {
         let expect = expectation(description: "Add text record")
         let text = "test record"
-        let recordsProvider = RecordsProvider()
+        let recordsProvider = RecordsProvider(withRealmProvider: TestRealmProvider())
         recordsProvider.createRecord(withText: text) { [unowned self] in
             self.realm.refresh()
             let records = self.realm.objects(Record.self)
@@ -71,7 +71,7 @@ class RecordsProviderTests: XCTestCase {
                 return
         }
         let expect = expectation(description: "Add image record")
-        let recordsProvider = RecordsProvider()
+        let recordsProvider = RecordsProvider(withRealmProvider: TestRealmProvider())
         recordsProvider.createRecord(withImageData: imageData) {
             self.realm.refresh()
             let records = self.realm.objects(Record.self)
@@ -90,7 +90,7 @@ class RecordsProviderTests: XCTestCase {
         let newDate = Date()
 
         let expect = expectation(description: "Update record")
-        let recordsProvider = RecordsProvider()
+        let recordsProvider = RecordsProvider(withRealmProvider: TestRealmProvider())
         recordsProvider.updateRecord(recordModel, updatedDate: newDate) {
             self.realm.refresh()
             let records = self.realm.objects(Record.self)
@@ -113,7 +113,7 @@ class RecordsProviderTests: XCTestCase {
         let recordModel = RecordModel(withRealmRecord: record)
 
         let expect = expectation(description: "Update record")
-        let recordsProvider = RecordsProvider()
+        let recordsProvider = RecordsProvider(withRealmProvider: TestRealmProvider())
         recordsProvider.deleteRecord(recordModel) {
             self.realm.refresh()
             let records = self.realm.objects(Record.self)
