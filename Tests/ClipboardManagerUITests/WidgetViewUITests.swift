@@ -9,16 +9,9 @@ import XCTest
 import FBSnapshotTestCase
 
 class WidgetViewUITests: FBSnapshotTestCase {
-    private var keyWindow: UIWindow?
-    
     override func setUp() {
         super.setUp()
         self.recordMode = false
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-        self.keyWindow = nil
     }
     
     private func createWidgetView(
@@ -27,12 +20,7 @@ class WidgetViewUITests: FBSnapshotTestCase {
     {
         let viewModel = TestClipboardViewModel(withRecords: data)
         let view = WidgetView.create(withViewModel: viewModel)
-        
-        self.keyWindow = UIWindow(frame: resolution)
-        self.keyWindow?.makeKeyAndVisible()
-        self.keyWindow?.addSubview(view)
         view.frame = resolution
-        self.usesDrawViewHierarchyInRect = true
         return view
     }
     
