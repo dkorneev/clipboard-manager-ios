@@ -75,7 +75,10 @@ class ClipboardViewController: UITableViewController {
                             forRowAt indexPath: IndexPath)
     {
         if (editingStyle == .delete) {
-            self.viewModel.removeRecord(atIndex: indexPath.row, withCompletion: nil)
+            self.viewModel.removeRecord(atIndex: indexPath.row, withCompletion: {
+                tableView.reloadRows(at: [indexPath], with: .fade)
+                tableView.isEditing = false
+            })
         }
     }
     
